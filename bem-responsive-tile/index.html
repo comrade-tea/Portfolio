@@ -2,555 +2,562 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
-  <title>creative_people</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>???</title>
 
 
   <script src="js/jquery.min.js"></script>
-
-  <!--<script type="application/javascript" src="js/isotope.pkgd.min.js"></script>-->
-  <!--<script type="application/javascript" src="js/packery-mode.pkgd.min.js"></script>-->
   <script src="bower_components/packery/dist/packery.pkgd.min.js"></script>
 
-  <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.1/masonry.pkgd.min.js"></script>-->
-
+  <link rel="stylesheet" href="bower_components/jquery-colorbox/example3/colorbox.css"/>
 
   <link rel="stylesheet" href="css/base.css"/>
   <link rel="stylesheet" href="css/style.css"/>
 
 
-  <!--<link rel="stylesheet" href="css/lightbox.css"/>-->
-
   <script src="js/bs-carousel.js"></script>
   <script src="js/bs-transition.js"></script>
-  <script type="application/javascript" src="js/lazy-bootstrap-carousel-v3.js"></script>
+  <script src="js/lazy-bootstrap-carousel-v3.js"></script>
 
   <!--colorbox-->
-  <link rel="stylesheet" href="bower_components/jquery-colorbox/example1/colorbox.css"/>
   <script src="bower_components/jquery-colorbox/jquery.colorbox-min.js"></script>
 
-  <script src="js/js.js"></script>
+  <script src="js/main.js"></script>
 </head>
 <body>
-<header class="header">
-  <div class="container"><a href="#" class="logo">
-    <div class="logo_img"></div>
-    <div class="logo_divide">
-      <div class="logo__brand">adventure</div>
-      <span class="logo__caption">оставь свой след, где его еще нет...</span>
-    </div>
-  </a></div>
-</header>
+<div class="page-wrap">
+  <header id="header" class="header">
+    <div class="container"><a href="#" id="logo" class="logo">
+      <div class="logo_img"></div>
+      <div class="logo_divide">
+        <div class="logo__brand">adventure</div>
+        <span class="logo__caption">оставь свой след, где его еще нет...</span>
+      </div>
+    </a></div>
+  </header>
 
-<div class="main-content">
-  <div class="container">
-    <ul id="nav-filter" class="nav">
-      <li filter="all" class="nav__item active-nav">Все страны</li>
-      <li filter="2" class="nav__item">Культура</li>
-      <li filter="3" class="nav__item">Экстрим</li>
-      <li filter="4" class="nav__item">Атмосфера</li>
-      <li filter="5" class="nav__item">Люди</li>
-    </ul>
-    <!-- SLIDER-->
+  <div class="main-content">
+    <div class="container">
+      <ul id="nav-filter" class="nav">
+        <li filter="all" class="nav__item active-nav">Все страны</li>
+        <li filter="2" class="nav__item">Культура</li>
+        <li filter="3" class="nav__item">Экстрим</li>
+        <li filter="4" class="nav__item">Атмосфера</li>
+        <li filter="5" class="nav__item">Люди</li>
+      </ul>
+      <!-- SLIDER-->
 
 
-    <ul id="grid" class="grid">
-      <div class="disable_layer"></div>
-      <li filter="2" class="grid__item">
-        <div id="cuba_sl" data-ride="carousel" class="carousel slide carousel-fade">
-          <div class="carousel-inner">
-            <div class="item active">
-              <img alt="cuba_1" title="cuba_1" src="img/cuba_1.jpg"/>
+      <ul id="grid" class="grid">
+        <div class="disable_layer"></div>
+        <li filter="2" class="grid__item">
+          <div id="cuba_sl" data-ride="carousel" class="carousel slide carousel-fade">
+            <div class="carousel-inner">
+              <div class="item active">
+                <img alt="cuba_1" title="cuba_1" src="img/cuba_1.jpg"/>
 
-              <div class="tile-name">Cuba</div>
-            </div>
+                <div class="tile-name">Cuba</div>
+              </div>
 
-            <div class="item">
+              <div class="item">
 
-              <div class="tile-info">
-                <p class="tile-info__text">Хэмингуэй, став весьма знаменитым, естественно, мог выбрать любое место
-                  в мире. Почему же он 22 года прожил
-                  в Гаване? Потому что это свобода!</p>
+                <div class="tile-info">
+                  <p class="tile-info__text">Хэмингуэй, став весьма знаменитым, естественно, мог выбрать любое место
+                    в мире. Почему же он 22 года прожил
+                    в Гаване? Потому что это свобода!</p>
+                  <span class="tile-name--small">Cuba</span>
+                </div>
+              </div>
+              <a href="img/cuba_2pop.jpg" class="item">
+                <img alt="cuba_2" title="cuba_2" lazy-src="img/cuba_2.jpg"/>
+
+                <div class="tile-center">
+                  <span class="tile-center__ic tile-center__ic--mag"></span>
+                </div>
                 <span class="tile-name--small">Cuba</span>
-              </div>
+              </a>
+              <a href="http://www.youtube.com/embed/VOJyrQa_WR4?rel=0&wmode=transparent" class="item youtube">
+                <img alt="cuba_3" title="cuba_3" lazy-src="img/cuba_3.jpg"/>
+
+                <div class="tile-center">
+                  <span class="tile-center__ic tile-center__ic--play"></span>
+                </div>
+                <span class="tile-name--small">Cuba</span>
+              </a>
             </div>
-            <a href="img/russia_big.jpg" class="item">
-              <img alt="cuba_2" title="cuba_2" lazy-src="img/cuba_2.jpg"/>
 
-              <div class="tile-center">
-                <span class="tile-center__ic tile-center__ic--mag"></span>
-              </div>
-              <span class="tile-name--small">Cuba</span>
+            <!--ajax loader-->
+            <div class="loading hide"><img src="img/black.png"/></div>
+
+            <!--slider arrows-->
+            <a href="#cuba_sl" data-slide="prev" class="tile-control tile-control--left">
+              <span class="sl-prev-ic"></span>
             </a>
-            <a href="http://www.youtube.com/embed/VOJyrQa_WR4?rel=0&wmode=transparent" class="item youtube">
-              <img alt="cuba_3" title="cuba_3" lazy-src="img/cuba_3.jpg"/>
-
-              <div class="tile-center">
-                <span class="tile-center__ic tile-center__ic--play"></span>
-              </div>
-              <span class="tile-name--small">Cuba</span>
+            <a href="#cuba_sl" data-slide="next" class="tile-control tile-control--right">
+              <span class="sl-next-ic"></span>
             </a>
           </div>
+          <!--slider end-->
 
-          <!--ajax loader-->
-          <div class="loading hide"><img src="img/black.png"/></div>
+        </li>
+        <!--cuba-->
 
-          <!--slider arrows-->
-          <a href="#cuba_sl" data-slide="prev" class="tile-control tile-control--left">
-            <span class="sl-prev-ic"></span>
-          </a>
-          <a href="#cuba_sl" data-slide="next" class="tile-control tile-control--right">
-            <span class="sl-next-ic"></span>
-          </a>
-        </div>
-        <!--slider end-->
+        <li filter="5" class="grid__item">
+          <div id="russia_sl" data-ride="carousel" class="carousel slide carousel-fade">
+            <div class="carousel-inner">
+              <div class="item active">
+                <img alt="russia_1" title="russia_1" src="img/russia_1.jpg"/>
 
-      </li>
-      <!--cuba-->
+                <div class="tile-name">Russia</div>
+              </div>
 
-      <li filter="5" class="grid__item">
-        <div id="russia_sl" data-ride="carousel" class="carousel slide carousel-fade">
-          <div class="carousel-inner">
-            <div class="item active">
-              <img alt="russia_1" title="russia_1" src="img/russia_1.jpg"/>
+              <div class="item">
 
-              <div class="tile-name">Russia</div>
-            </div>
+                <div class="tile-info">
+                  <p class="tile-info__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aut
+                    consequatur
+                    error vero. Enim esse inventore porro quas quia reprehenderit!</p>
+                  <span class="tile-name--small">Russia</span>
+                </div>
+              </div>
+              <a href="img/russia_2.jpg" class="item">
+                <img alt="russia_2" title="russia_2" lazy-src="http://lorempixel.com/300/200/cats/1/"/>
 
-            <div class="item">
-
-              <div class="tile-info">
-                <p class="tile-info__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aut consequatur
-                  error vero. Enim esse inventore porro quas quia reprehenderit!</p>
+                <div class="tile-center">
+                  <span class="tile-center__ic tile-center__ic--mag"></span>
+                </div>
                 <span class="tile-name--small">Russia</span>
-              </div>
-            </div>
-            <a href="img/russia_2.jpg" class="item">
-              <img alt="russia_2" title="russia_2" lazy-src="http://lorempixel.com/300/200/cats/1/"/>
+              </a>
+              <a href="https://www.youtube.com/embed/f4Mc-NYPHaQ" class="item youtube">
+                <img alt="cuba_3" title="russia_3" lazy-src="http://lorempixel.com/300/200/cats/2/"/>
 
-              <div class="tile-center">
-                <span class="tile-center__ic tile-center__ic--mag"></span>
-              </div>
-              <span class="tile-name--small">Russia</span>
-            </a>
-            <a href="https://www.youtube.com/embed/f4Mc-NYPHaQ" class="item youtube">
-              <img alt="cuba_3" title="russia_3" lazy-src="http://lorempixel.com/300/200/cats/2/"/>
-
-              <div class="tile-center">
-                <span class="tile-center__ic tile-center__ic--play"></span>
-              </div>
-              <span class="tile-name--small">Russia</span>
-            </a>
-          </div>
-
-          <!--ajax loader-->
-          <div class="loading hide"><img src="img/black.png"/></div>
-
-          <!--slider arrows-->
-          <a href="#russia_sl" data-slide="prev" class="tile-control tile-control--left">
-            <span class="sl-prev-ic"></span>
-          </a>
-          <a href="#russia_sl" data-slide="next" class="tile-control tile-control--right">
-            <span class="sl-next-ic"></span>
-          </a>
-        </div>
-        <!--slider end-->
-
-      </li>
-      <!--russia-->
-
-      <li filter="3" class="grid__item grid__item--width2">
-        <div href="img/big_brick.jpg">
-          <div class="big-tile">
-            <h2 class="big-tile__headline">Latin America</h2>
-            <ul class="big-tile__list">
-              <li class="big-tile__list__item">1. Honduras</li>
-              <li class="big-tile__list__item">2. Columbia</li>
-              <li class="big-tile__list__item">3. Panama</li>
-              <li class="big-tile__list__item">4. Brazil</li>
-              <li class="big-tile__list__item">5. Peru</li>
-            </ul>
-          </div>
-          <img src="img/big_brick.jpg" alt=""/>
-        </div>
-      </li>
-      <!-- l.a.-->
-
-      <li filter="2" class="grid__item">
-        <div id="england_sl" data-ride="carousel" class="carousel slide carousel-fade">
-          <div class="carousel-inner">
-            <div class="item active">
-              <img alt="england_1" title="england_1" src="img/england.jpg"/>
-
-              <div class="tile-name">England</div>
+                <div class="tile-center">
+                  <span class="tile-center__ic tile-center__ic--play"></span>
+                </div>
+                <span class="tile-name--small">Russia</span>
+              </a>
             </div>
 
-            <div class="item">
+            <!--ajax loader-->
+            <div class="loading hide"><img src="img/black.png"/></div>
 
-              <div class="tile-info">
-                <p class="tile-info__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, dicta dolorem
-                  illo natus quam quibusdam tenetur totam voluptatum?</p>
+            <!--slider arrows-->
+            <a href="#russia_sl" data-slide="prev" class="tile-control tile-control--left">
+              <span class="sl-prev-ic"></span>
+            </a>
+            <a href="#russia_sl" data-slide="next" class="tile-control tile-control--right">
+              <span class="sl-next-ic"></span>
+            </a>
+          </div>
+          <!--slider end-->
+
+        </li>
+        <!--russia-->
+
+        <li filter="3" class="grid__item grid__item--width2">
+          <div class="slide">
+            <div class="big-tile">
+              <h2 class="big-tile__headline">Latin America</h2>
+              <ul class="big-tile__list">
+                <li class="big-tile__list__item">1. Honduras</li>
+                <li class="big-tile__list__item">2. Columbia</li>
+                <li class="big-tile__list__item">3. Panama</li>
+                <li class="big-tile__list__item">4. Brazil</li>
+                <li class="big-tile__list__item">5. Peru</li>
+              </ul>
+            </div>
+            <img src="img/big_brick.jpg" alt=""/>
+          </div>
+        </li>
+        <!-- l.a.-->
+
+        <li filter="2" class="grid__item">
+          <div id="england_sl" data-ride="carousel" class="carousel slide carousel-fade">
+            <div class="carousel-inner">
+              <div class="item active">
+                <img alt="england_1" title="england_1" src="img/england.jpg"/>
+
+                <div class="tile-name">England</div>
+              </div>
+
+              <div class="item">
+
+                <div class="tile-info">
+                  <p class="tile-info__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, dicta
+                    dolorem
+                    illo natus quam quibusdam tenetur totam voluptatum?</p>
+                  <span class="tile-name--small">England</span>
+                </div>
+              </div>
+              <a href="img/england_2.jpg" class="item">
+                <img alt="England_2" title="England_2" lazy-src="http://lorempixel.com/300/200/cats/3/"/>
+
+                <div class="tile-center">
+                  <span class="tile-center__ic tile-center__ic--mag"></span>
+                </div>
                 <span class="tile-name--small">England</span>
-              </div>
+              </a>
+              <a href="https://www.youtube.com/embed/V1bFr2SWP1I" class="item youtube">
+                <img alt="cuba_3" title="cuba_3" lazy-src="http://lorempixel.com/300/200/cats/4/"/>
+
+                <div class="tile-center">
+                  <span class="tile-center__ic tile-center__ic--play"></span>
+                </div>
+                <span class="tile-name--small">England</span>
+              </a>
             </div>
-            <a href="img/england_2.jpg" class="item">
-              <img alt="England_2" title="England_2" lazy-src="http://lorempixel.com/300/200/cats/3/"/>
 
-              <div class="tile-center">
-                <span class="tile-center__ic tile-center__ic--mag"></span>
-              </div>
-              <span class="tile-name--small">England</span>
+            <!--ajax loader-->
+            <div class="loading hide"><img src="img/black.png"/></div>
+
+            <!--slider arrows-->
+            <a href="#england_sl" data-slide="prev" class="tile-control tile-control--left">
+              <span class="sl-prev-ic"></span>
             </a>
-            <a href="https://www.youtube.com/embed/V1bFr2SWP1I" class="item youtube">
-              <img alt="cuba_3" title="cuba_3" lazy-src="http://lorempixel.com/300/200/cats/4/"/>
-
-              <div class="tile-center">
-                <span class="tile-center__ic tile-center__ic--play"></span>
-              </div>
-              <span class="tile-name--small">England</span>
+            <a href="#england_sl" data-slide="next" class="tile-control tile-control--right">
+              <span class="sl-next-ic"></span>
             </a>
           </div>
+          <!--slider end-->
 
-          <!--ajax loader-->
-          <div class="loading hide"><img src="img/black.png"/></div>
+        </li>
+        <!--england-->
 
-          <!--slider arrows-->
-          <a href="#england_sl" data-slide="prev" class="tile-control tile-control--left">
-            <span class="sl-prev-ic"></span>
-          </a>
-          <a href="#england_sl" data-slide="next" class="tile-control tile-control--right">
-            <span class="sl-next-ic"></span>
-          </a>
-        </div>
-        <!--slider end-->
+        <li filter="4" class="grid__item">
+          <div id="norway_sl" data-ride="carousel" class="carousel slide carousel-fade">
+            <div class="carousel-inner">
+              <div class="item active">
+                <img alt="norway_1" title="norway_1" src="img/norway.jpg"/>
 
-      </li>
-      <!--england-->
+                <div class="tile-name">Norway</div>
+              </div>
 
-      <li filter="4" class="grid__item">
-        <div id="norway_sl" data-ride="carousel" class="carousel slide carousel-fade">
-          <div class="carousel-inner">
-            <div class="item active">
-              <img alt="norway_1" title="norway_1" src="img/norway.jpg"/>
+              <div class="item">
 
-              <div class="tile-name">Norway</div>
-            </div>
+                <div class="tile-info">
+                  <p class="tile-info__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, dicta
+                    dolorem
+                    illo natus quam quibusdam tenetur totam voluptatum?</p>
+                  <span class="tile-name--small">Norway</span>
+                </div>
+              </div>
+              <a href="img/england_2.jpg" class="item">
+                <img alt="Norway_2" title="Norway_2" lazy-src="http://lorempixel.com/300/200/cats/5/"/>
 
-            <div class="item">
-
-              <div class="tile-info">
-                <p class="tile-info__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, dicta dolorem
-                  illo natus quam quibusdam tenetur totam voluptatum?</p>
+                <div class="tile-center">
+                  <span class="tile-center__ic tile-center__ic--mag"></span>
+                </div>
                 <span class="tile-name--small">Norway</span>
-              </div>
-            </div>
-            <a href="img/england_2.jpg" class="item">
-              <img alt="Norway_2" title="Norway_2" lazy-src="http://lorempixel.com/300/200/cats/5/"/>
+              </a>
+              <a href="http://www.youtube.com/embed/KWRB-maTVyM" class="item youtube">
+                <img alt="Norway_3" title="Norway_3" lazy-src="http://lorempixel.com/300/200/cats/6/"/>
 
-              <div class="tile-center">
-                <span class="tile-center__ic tile-center__ic--mag"></span>
-              </div>
-              <span class="tile-name--small">Norway</span>
+                <div class="tile-center">
+                  <span class="tile-center__ic tile-center__ic--play"></span>
+                </div>
+                <span class="tile-name--small">Norway</span>
+              </a>
+            </div>
+
+            <!--ajax loader-->
+            <div class="loading hide"><img src="img/black.png"/></div>
+
+            <!--slider arrows-->
+            <a href="#norway_sl" data-slide="prev" class="tile-control tile-control--left">
+              <span class="sl-prev-ic"></span>
             </a>
-            <a href="http://www.youtube.com/embed/KWRB-maTVyM" class="item youtube">
-              <img alt="Norway_3" title="Norway_3" lazy-src="http://lorempixel.com/300/200/cats/6/"/>
-
-              <div class="tile-center">
-                <span class="tile-center__ic tile-center__ic--play"></span>
-              </div>
-              <span class="tile-name--small">Norway</span>
+            <a href="#norway_sl" data-slide="next" class="tile-control tile-control--right">
+              <span class="sl-next-ic"></span>
             </a>
           </div>
+          <!--slider end-->
 
-          <!--ajax loader-->
-          <div class="loading hide"><img src="img/black.png"/></div>
+        </li>
+        <!--norway-->
 
-          <!--slider arrows-->
-          <a href="#norway_sl" data-slide="prev" class="tile-control tile-control--left">
-            <span class="sl-prev-ic"></span>
-          </a>
-          <a href="#norway_sl" data-slide="next" class="tile-control tile-control--right">
-            <span class="sl-next-ic"></span>
-          </a>
-        </div>
-        <!--slider end-->
+        <li filter="2" class="grid__item">
+          <div id="switz_sl" data-ride="carousel" class="carousel slide carousel-fade">
+            <div class="carousel-inner">
+              <div class="item active">
+                <img alt="Switzerland" title="Switzerland" src="img/switzerland.jpg"/>
 
-      </li>
-      <!--norway-->
+                <div class="tile-name">Switzerland</div>
+              </div>
 
-      <li filter="2" class="grid__item">
-        <div id="switz_sl" data-ride="carousel" class="carousel slide carousel-fade">
-          <div class="carousel-inner">
-            <div class="item active">
-              <img alt="Switzerland" title="Switzerland" src="img/switzerland.jpg"/>
+              <div class="item">
 
-              <div class="tile-name">Switzerland</div>
-            </div>
-
-            <div class="item">
-
-              <div class="tile-info">
-                <p class="tile-info__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aut consequatur
-                  error vero. Enim esse inventore porro quas quia reprehenderit!</p>
-                <span class="tile-name--small">Switzerland</span>
+                <div class="tile-info">
+                  <p class="tile-info__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aut
+                    consequatur
+                    error vero. Enim esse inventore porro quas quia reprehenderit!</p>
+                  <span class="tile-name--small">Switzerland</span>
+                </div>
               </div>
             </div>
+            <!--ajax loader-->
+            <div class="loading hide"><img src="img/black.png"/></div>
+
+            <!--slider arrows-->
+            <a href="#switz_sl" data-slide="prev" class="tile-control tile-control--left">
+              <span class="sl-prev-ic"></span>
+            </a>
+            <a href="#switz_sl" data-slide="next" class="tile-control tile-control--right">
+              <span class="sl-next-ic"></span>
+            </a>
           </div>
-          <!--ajax loader-->
-          <div class="loading hide"><img src="img/black.png"/></div>
+          <!--slider end-->
 
-          <!--slider arrows-->
-          <a href="#switz_sl" data-slide="prev" class="tile-control tile-control--left">
-            <span class="sl-prev-ic"></span>
-          </a>
-          <a href="#switz_sl" data-slide="next" class="tile-control tile-control--right">
-            <span class="sl-next-ic"></span>
-          </a>
-        </div>
-        <!--slider end-->
+        </li>
+        <!--switzerland-->
 
-      </li>
-      <!--switzerland-->
+        <li filter="3" class="grid__item">
+          <div id="china_sl" data-ride="carousel" class="carousel slide carousel-fade">
+            <div class="carousel-inner">
+              <div class="item active">
+                <img alt="Switzerland" title="Switzerland" src="img/china.jpg"/>
 
-      <li filter="3" class="grid__item">
-        <div id="china_sl" data-ride="carousel" class="carousel slide carousel-fade">
-          <div class="carousel-inner">
-            <div class="item active">
-              <img alt="Switzerland" title="Switzerland" src="img/china.jpg"/>
+                <div class="tile-name">China</div>
+              </div>
 
-              <div class="tile-name">China</div>
-            </div>
+              <div class="item">
 
-            <div class="item">
-
-              <div class="tile-info">
-                <p class="tile-info__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aut consequatur
-                  error vero. Enim esse inventore porro quas quia reprehenderit!</p>
-                <span class="tile-name--small">China</span>
+                <div class="tile-info">
+                  <p class="tile-info__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aut
+                    consequatur
+                    error vero. Enim esse inventore porro quas quia reprehenderit!</p>
+                  <span class="tile-name--small">China</span>
+                </div>
               </div>
             </div>
+            <!--ajax loader-->
+            <div class="loading hide"><img src="img/black.png"/></div>
+
+            <!--slider arrows-->
+            <a href="#china_sl" data-slide="prev" class="tile-control tile-control--left">
+              <span class="sl-prev-ic"></span>
+            </a>
+            <a href="#china_sl" data-slide="next" class="tile-control tile-control--right">
+              <span class="sl-next-ic"></span>
+            </a>
           </div>
-          <!--ajax loader-->
-          <div class="loading hide"><img src="img/black.png"/></div>
+          <!--slider end-->
 
-          <!--slider arrows-->
-          <a href="#china_sl" data-slide="prev" class="tile-control tile-control--left">
-            <span class="sl-prev-ic"></span>
-          </a>
-          <a href="#china_sl" data-slide="next" class="tile-control tile-control--right">
-            <span class="sl-next-ic"></span>
-          </a>
-        </div>
-        <!--slider end-->
+        </li>
+        <!--china-->
 
-      </li>
-      <!--china-->
+        <li filter="5" class="grid__item">
+          <div id="germany_sl" data-ride="carousel" class="carousel slide carousel-fade">
+            <div class="carousel-inner">
+              <div class="item active">
+                <img alt="Switzerland" title="Switzerland" src="img/germany.jpg"/>
 
-      <li filter="5" class="grid__item">
-        <div id="germany_sl" data-ride="carousel" class="carousel slide carousel-fade">
-          <div class="carousel-inner">
-            <div class="item active">
-              <img alt="Switzerland" title="Switzerland" src="img/germany.jpg"/>
+                <div class="tile-name">Germany</div>
+              </div>
 
-              <div class="tile-name">Germany</div>
-            </div>
+              <div class="item">
 
-            <div class="item">
-
-              <div class="tile-info">
-                <p class="tile-info__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aut consequatur
-                  error vero. Enim esse inventore porro quas quia reprehenderit!</p>
-                <span class="tile-name--small">Germany</span>
+                <div class="tile-info">
+                  <p class="tile-info__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aut
+                    consequatur
+                    error vero. Enim esse inventore porro quas quia reprehenderit!</p>
+                  <span class="tile-name--small">Germany</span>
+                </div>
               </div>
             </div>
+            <!--ajax loader-->
+            <div class="loading hide"><img src="img/black.png"/></div>
+
+            <!--slider arrows-->
+            <a href="#germany_sl" data-slide="prev" class="tile-control tile-control--left">
+              <span class="sl-prev-ic"></span>
+            </a>
+            <a href="#germany_sl" data-slide="next" class="tile-control tile-control--right">
+              <span class="sl-next-ic"></span>
+            </a>
           </div>
-          <!--ajax loader-->
-          <div class="loading hide"><img src="img/black.png"/></div>
+          <!--slider end-->
 
-          <!--slider arrows-->
-          <a href="#germany_sl" data-slide="prev" class="tile-control tile-control--left">
-            <span class="sl-prev-ic"></span>
-          </a>
-          <a href="#germany_sl" data-slide="next" class="tile-control tile-control--right">
-            <span class="sl-next-ic"></span>
-          </a>
-        </div>
-        <!--slider end-->
+        </li>
+        <!--germany-->
 
-      </li>
-      <!--germany-->
+        <li filter="2" class="grid__item">
+          <div id="japan_sl" data-ride="carousel" class="carousel slide carousel-fade">
+            <div class="carousel-inner">
+              <div class="item active">
+                <img src="img/japan.jpg"/>
 
-      <li filter="2" class="grid__item">
-        <div id="japan_sl" data-ride="carousel" class="carousel slide carousel-fade">
-          <div class="carousel-inner">
-            <div class="item active">
-              <img src="img/japan.jpg"/>
+                <div class="tile-name">Japan</div>
+              </div>
 
-              <div class="tile-name">Japan</div>
-            </div>
+              <div class="item">
 
-            <div class="item">
-
-              <div class="tile-info">
-                <p class="tile-info__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aut consequatur
-                  error vero. Enim esse inventore porro quas quia reprehenderit!</p>
-                <span class="tile-name--small">Japan</span>
+                <div class="tile-info">
+                  <p class="tile-info__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aut
+                    consequatur
+                    error vero. Enim esse inventore porro quas quia reprehenderit!</p>
+                  <span class="tile-name--small">Japan</span>
+                </div>
               </div>
             </div>
+            <!--ajax loader-->
+            <div class="loading hide"><img src="img/black.png"/></div>
+
+            <!--slider arrows-->
+            <a href="#japan_sl" data-slide="prev" class="tile-control tile-control--left">
+              <span class="sl-prev-ic"></span>
+            </a>
+            <a href="#japan_sl" data-slide="next" class="tile-control tile-control--right">
+              <span class="sl-next-ic"></span>
+            </a>
           </div>
-          <!--ajax loader-->
-          <div class="loading hide"><img src="img/black.png"/></div>
+          <!--slider end-->
 
-          <!--slider arrows-->
-          <a href="#japan_sl" data-slide="prev" class="tile-control tile-control--left">
-            <span class="sl-prev-ic"></span>
-          </a>
-          <a href="#japan_sl" data-slide="next" class="tile-control tile-control--right">
-            <span class="sl-next-ic"></span>
-          </a>
-        </div>
-        <!--slider end-->
+        </li>
+        <!--japan-->
 
-      </li>
-      <!--japan-->
+        <li filter="5" class="grid__item">
+          <div id="australia_sl" data-ride="carousel" class="carousel slide carousel-fade">
+            <div class="carousel-inner">
+              <div class="item active">
+                <img src="img/australia.jpg"/>
 
-      <li filter="5" class="grid__item">
-        <div id="australia_sl" data-ride="carousel" class="carousel slide carousel-fade">
-          <div class="carousel-inner">
-            <div class="item active">
-              <img src="img/australia.jpg"/>
+                <div class="tile-name">Australia</div>
+              </div>
 
-              <div class="tile-name">Australia</div>
-            </div>
+              <div class="item">
 
-            <div class="item">
-
-              <div class="tile-info">
-                <p class="tile-info__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aut consequatur
-                  error vero. Enim esse inventore porro quas quia reprehenderit!</p>
-                <span class="tile-name--small">Australia</span>
+                <div class="tile-info">
+                  <p class="tile-info__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aut
+                    consequatur
+                    error vero. Enim esse inventore porro quas quia reprehenderit!</p>
+                  <span class="tile-name--small">Australia</span>
+                </div>
               </div>
             </div>
+            <!--ajax loader-->
+            <div class="loading hide"><img src="img/black.png"/></div>
+
+            <!--slider arrows-->
+            <a href="#australia_sl" data-slide="prev" class="tile-control tile-control--left">
+              <span class="sl-prev-ic"></span>
+            </a>
+            <a href="#australia_sl" data-slide="next" class="tile-control tile-control--right">
+              <span class="sl-next-ic"></span>
+            </a>
           </div>
-          <!--ajax loader-->
-          <div class="loading hide"><img src="img/black.png"/></div>
+          <!--slider end-->
 
-          <!--slider arrows-->
-          <a href="#australia_sl" data-slide="prev" class="tile-control tile-control--left">
-            <span class="sl-prev-ic"></span>
-          </a>
-          <a href="#australia_sl" data-slide="next" class="tile-control tile-control--right">
-            <span class="sl-next-ic"></span>
-          </a>
-        </div>
-        <!--slider end-->
+        </li>
+        <!--Australia-->
 
-      </li>
-      <!--Australia-->
+        <li filter="3" class="grid__item">
+          <div id="india_sl" data-ride="carousel" class="carousel slide carousel-fade">
+            <div class="carousel-inner">
+              <div class="item active">
+                <img src="img/india.jpg"/>
 
-      <li filter="3" class="grid__item">
-        <div id="india_sl" data-ride="carousel" class="carousel slide carousel-fade">
-          <div class="carousel-inner">
-            <div class="item active">
-              <img src="img/india.jpg"/>
+                <div class="tile-name">India</div>
+              </div>
 
-              <div class="tile-name">India</div>
-            </div>
+              <div class="item">
 
-            <div class="item">
-
-              <div class="tile-info">
-                <p class="tile-info__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aut consequatur
-                  error vero. Enim esse inventore porro quas quia reprehenderit!</p>
-                <span class="tile-name--small">India</span>
+                <div class="tile-info">
+                  <p class="tile-info__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aut
+                    consequatur
+                    error vero. Enim esse inventore porro quas quia reprehenderit!</p>
+                  <span class="tile-name--small">India</span>
+                </div>
               </div>
             </div>
+            <!--ajax loader-->
+            <div class="loading hide"><img src="img/black.png"/></div>
+
+            <!--slider arrows-->
+            <a href="#india_sl" data-slide="prev" class="tile-control tile-control--left">
+              <span class="sl-prev-ic"></span>
+            </a>
+            <a href="#india_sl" data-slide="next" class="tile-control tile-control--right">
+              <span class="sl-next-ic"></span>
+            </a>
           </div>
-          <!--ajax loader-->
-          <div class="loading hide"><img src="img/black.png"/></div>
+          <!--slider end-->
 
-          <!--slider arrows-->
-          <a href="#india_sl" data-slide="prev" class="tile-control tile-control--left">
-            <span class="sl-prev-ic"></span>
-          </a>
-          <a href="#india_sl" data-slide="next" class="tile-control tile-control--right">
-            <span class="sl-next-ic"></span>
-          </a>
-        </div>
-        <!--slider end-->
+        </li>
+        <!--india-->
 
-      </li>
-      <!--india-->
+        <li filter="4" class="grid__item">
+          <div id="finland_sl" data-ride="carousel" class="carousel slide carousel-fade">
+            <div class="carousel-inner">
+              <div class="item active">
+                <img src="img/finland.jpg"/>
 
-      <li filter="4" class="grid__item">
-        <div id="finland_sl" data-ride="carousel" class="carousel slide carousel-fade">
-          <div class="carousel-inner">
-            <div class="item active">
-              <img src="img/finland.jpg"/>
+                <div class="tile-name">Finland</div>
+              </div>
 
-              <div class="tile-name">Finland</div>
-            </div>
+              <div class="item">
 
-            <div class="item">
-
-              <div class="tile-info">
-                <p class="tile-info__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aut consequatur
-                  error vero. Enim esse inventore porro quas quia reprehenderit!</p>
-                <span class="tile-name--small">Finland</span>
+                <div class="tile-info">
+                  <p class="tile-info__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aut
+                    consequatur
+                    error vero. Enim esse inventore porro quas quia reprehenderit!</p>
+                  <span class="tile-name--small">Finland</span>
+                </div>
               </div>
             </div>
+            <!--ajax loader-->
+            <div class="loading hide"><img src="img/black.png"/></div>
+
+            <!--slider arrows-->
+            <a href="#finland_sl" data-slide="prev" class="tile-control tile-control--left">
+              <span class="sl-prev-ic"></span>
+            </a>
+            <a href="#finland_sl" data-slide="next" class="tile-control tile-control--right">
+              <span class="sl-next-ic"></span>
+            </a>
           </div>
-          <!--ajax loader-->
-          <div class="loading hide"><img src="img/black.png"/></div>
+          <!--slider end-->
 
-          <!--slider arrows-->
-          <a href="#finland_sl" data-slide="prev" class="tile-control tile-control--left">
-            <span class="sl-prev-ic"></span>
-          </a>
-          <a href="#finland_sl" data-slide="next" class="tile-control tile-control--right">
-            <span class="sl-next-ic"></span>
-          </a>
-        </div>
-        <!--slider end-->
+        </li>
+        <!--finland-->
 
-      </li>
-      <!--finland-->
+        <li filter="3" class="grid__item">
+          <div id="new_zeal_sl" data-ride="carousel" class="carousel slide carousel-fade">
+            <div class="carousel-inner">
+              <div class="item active">
+                <img src="img/new_zealand.jpg"/>
 
-      <li filter="3" class="grid__item">
-        <div id="new_zeal_sl" data-ride="carousel" class="carousel slide carousel-fade">
-          <div class="carousel-inner">
-            <div class="item active">
-              <img src="img/new_zealand.jpg"/>
+                <div class="tile-name">New Zealand</div>
+              </div>
 
-              <div class="tile-name">New Zealand</div>
-            </div>
+              <div class="item">
 
-            <div class="item">
-
-              <div class="tile-info">
-                <p class="tile-info__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aut consequatur
-                  error vero. Enim esse inventore porro quas quia reprehenderit!</p>
-                <span class="tile-name--small">New Zealand</span>
+                <div class="tile-info">
+                  <p class="tile-info__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aut
+                    consequatur
+                    error vero. Enim esse inventore porro quas quia reprehenderit!</p>
+                  <span class="tile-name--small">New Zealand</span>
+                </div>
               </div>
             </div>
+            <!--ajax loader-->
+            <div class="loading hide"><img src="img/black.png"/></div>
+
+            <!--slider arrows-->
+            <a href="#new_zeal_sl" data-slide="prev" class="tile-control tile-control--left">
+              <span class="sl-prev-ic"></span>
+            </a>
+            <a href="#new_zeal_sl" data-slide="next" class="tile-control tile-control--right">
+              <span class="sl-next-ic"></span>
+            </a>
           </div>
-          <!--ajax loader-->
-          <div class="loading hide"><img src="img/black.png"/></div>
+          <!--slider end-->
 
-          <!--slider arrows-->
-          <a href="#new_zeal_sl" data-slide="prev" class="tile-control tile-control--left">
-            <span class="sl-prev-ic"></span>
-          </a>
-          <a href="#new_zeal_sl" data-slide="next" class="tile-control tile-control--right">
-            <span class="sl-next-ic"></span>
-          </a>
-        </div>
-        <!--slider end-->
-
-      </li>
-      <!--New zealand-->
+        </li>
+        <!--New zealand-->
 
 
-    </ul>
+      </ul>
+    </div>
   </div>
 </div>
 
