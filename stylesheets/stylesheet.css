@@ -423,3 +423,8 @@ Small Device Styles
   }
 
 }
+
+.list-title{
+    text-indent: 20px;
+    font-size: 20px;
+}
