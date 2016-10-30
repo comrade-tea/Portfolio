@@ -1,0 +1,46 @@
+@import "_lib/_lib-includer"
+@import "Devices"
+
+body
+	min-width: 320px
+
+.header_bot
+	+max-screen($common-tablet)
+		padding: 80px 0
+.arr_down
+	+max-screen($common-tablet) 
+		display: none
+
+.work_box
+	+max-screen($smartphone-landscape)
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-flow: row wrap
+.w_box_brick
+	+max-screen($smartphone-landscape)
+		width: 50%
+	&:last-child
+		+max-screen($smartphone-landscape)
+			display: none
+/*  */
+.map
+	+max-screen($small-tablet)	
+		height: 300px
+/*  */
+.form_item
+	+max-screen($smartphone-portrait)
+		margin-bottom: 0
+	&:last-child
+		+max-screen($smartphone-portrait)
+			margin-top: 30px
+.label_wrap_v1
+	+max-screen($smartphone-portrait)
+		position: static
+		text-align: left
+		line-height: inherit
+.form_wrap_v1
+	+max-screen($smartphone-portrait)
+		padding: 0

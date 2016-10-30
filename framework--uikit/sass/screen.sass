@@ -1,0 +1,13 @@
+@import "_lib/_lib-includer"
+@import "Devices"
+
+body
+	min-width: 320px
+
+.nav_toogle_butt
+	+max-screen($common-tablet)
+		margin-top: 20px
+
+.brand_caption
+	+max-screen($smartphone-portrait)
+		display: none

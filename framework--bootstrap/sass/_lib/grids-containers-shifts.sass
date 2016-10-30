@@ -1,0 +1,55 @@
+/*
+		|--------------------------------------------------------------------------
+		| Make container
+		|--------------------------------------------------------------------------
+		| defaults vars in global.sass
+	*//
+=container($maw: $container-lg, $gutter: $container-gutter)
+	max-width: $maw
+	padding-left: $gutter
+	padding-right: $gutter
+	margin-left: auto
+	margin-right: auto
+
+/*
+		|--------------------------------------------------------------------------
+		| Tea-grids
+		|--------------------------------------------------------------------------
+		| it applies to the parent
+	*//
+=make-grid($col-width, $col-gutter, $margin-top : null)
+	//width: 100%
+	display: flex
+	flex-flow: row wrap
+	margin-left: -$col-gutter
+	> *
+		width: $col-width
+		padding-left: $col-gutter
+		float: left
+		@if ($margin-top != null)
+			margin-top: $margin-top
+
+=break-grid($col-width, $col-gutter, $margin-top: null)
+	margin-left: -$col-gutter
+	//@if $col-width == 50%
+		justify-content: center
+	> *
+		width: $col-width
+		padding-left: $col-gutter
+		@if ($margin-top != null)
+			margin-top: $margin-top
+
+/*
+		|--------------------------------------------------------------------------
+		| Block shift (like a bootstrap)
+		|--------------------------------------------------------------------------
+		|
+	*//
+$block-shift-cols: 12 !default
+=block-shift($col-offset, $col-width, $col-shift-col: $col-shift-cols)
+	width: (100 / $col-shift-col) * $col-width + %
+	margin-left: (100 / $col-shift-col) * $col-offset + %
+	//@if ($col-shift-col != null)
+	//width: 50px
+	//@else
+	//width: 150px
