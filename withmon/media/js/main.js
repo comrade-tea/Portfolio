@@ -9,6 +9,8 @@ $(function () {
 	
 	// set width for navbar
 	$window.resize(function () {
+		navBarWidth = 0;
+		
 		$navbarItems.each(function (index, el) {
 			var $el = $(el);
 			navBarWidth += $el.width();
