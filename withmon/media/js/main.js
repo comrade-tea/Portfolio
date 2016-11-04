@@ -6,12 +6,17 @@ $(function () {
 	var $navbarItems = $navBar.find("li");
 	var navBarWidth = 0;
 	
-	$navbarItems.each(function (index, el) {
-		var $el = $(el);
-		navBarWidth += $el.width();
-	});
 	
-	$navBar.css({width: navBarWidth + 20});
+	// set width for navbar
+	$window.resize(function () {
+		$navbarItems.each(function (index, el) {
+			var $el = $(el);
+			navBarWidth += $el.width();
+		});
+		
+		$navBar.css({width: navBarWidth + 20});
+	}).resize();
+	
 	 
 	// mobile dropdown handler
 	$navDropdownLinks.on("click", function () {
