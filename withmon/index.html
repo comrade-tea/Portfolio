@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>main page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700&amp;subset=devanagari,latin-ext,vietnamese" rel="stylesheet">
+    <link rel="stylesheet" href="media/css/screen.css">
+  </head>
+  <body>
+    <!--include header-->
+    <header class="header">
+      <div class="header__inner">
+        <div class="header__top">
+          <div class="uk-container uk-container-center uk-flex uk-flex-bottom"><a href="#left-menu" data-uk-offcanvas="" class="header__left-nav uk-hidden-large"><i class="uk-icon-navicon"></i></a>
+            <div class="header__logo"><img src="media/img/logo.png" alt=""></div>
+            <div class="header__search">
+              <form action="" class="uk-form search">
+                <div class="search__input">
+                  <input type="search" placeholder="원하는 서비스 검색">
+                </div>
+                <button class="uk-button uk-button-danger search__btn"><i class="uk-icon-search"></i></button>
+              </form>
+            </div><a href="#right-menu" data-uk-offcanvas="" class="header__right-nav uk-hidden-large"><i class="uk-icon-th"></i></a>
+            <div class="header__ui uk-flex uk-flex-middle uk-visible-large">
+              <div class="header__auth"><a href="#">로그인</a><a href="#">무료 회원가입</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="header__bot">
+          <div class="uk-container uk-container-center">
+            <nav class="uk-navbar">
+              <ul class="uk-navbar-nav">
+                <li data-uk-dropdown="" class="uk-parent"><a href="#">번역</a>
+                  <div class="uk-dropdown uk-dropdown-navbar uk-dropdown-bottom">
+                    <ul class="uk-nav uk-nav-navbar">
+                      <li><a href="#">로고 / 명함 디자인</a></li>
+                      <li><a href="#">사진 / 포토샵</a></li>
+                      <li><a href="#">웹 / 모바일 디자인</a></li>
+                      <li><a href="#">일러스트 / 캐릭터</a></li>
+                      <li><a href="#">블로그 / 카페</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li><a href="#">문서작성</a></li>
+                <li data-uk-dropdown="" class="uk-parent"><a href="#">마케팅</a>
+                  <div class="uk-dropdown uk-dropdown-navbar uk-dropdown-bottom">
+                    <ul class="uk-nav uk-nav-navbar">
+                      <li><a href="#">로고 / 명함 디자인</a></li>
+                      <li><a href="#">사진 / 포토샵</a></li>
+                      <li><a href="#">웹 / 모바일 디자인</a></li>
+                      <li><a href="#">일러스트 / 캐릭터</a></li>
+                      <li><a href="#">블로그 / 카페</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li><a href="#">프로그래밍</a></li>
+                <li><a href="#">게임강의</a></li>
+                <li><a href="#">음악/영상</a></li>
+                <li><a href="#">과외/레슨</a></li>
+                <li><a href="#">생활서비스</a></li>
+                <li><a href="#">도와주세요</a></li>
+                <li><a href="#">디자인.</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div id="left-menu" class="uk-offcanvas">
+      <div class="uk-offcanvas-bar">
+        <div class="uk-panel">
+          <ul data-uk-nav="" class="uk-nav uk-nav-offcanvas uk-nav-parent-icon">
+            <li class="uk-nav-header">left-menu</li>
+            <li class="uk-parent"><a href="#">문서작성</a>
+              <ul class="uk-nav-sub">
+                <li><a href="#">로고 / 명함 디자인</a></li>
+                <li><a href="#">사진 / 포토샵</a></li>
+                <li><a href="#">웹 / 모바일 디자인</a></li>
+                <li><a href="#">일러스트 / 캐릭터</a></li>
+                <li><a href="#">블로그 / 카페</a></li>
+              </ul>
+            </li>
+            <li><a href="#">마케팅</a></li>
+            <li><a href="#">프로그래밍</a></li>
+            <li><a href="#">게임강의</a></li>
+            <li><a href="#">음악/영상</a></li>
+            <li><a href="#">과외/레슨</a></li>
+            <li><a href="#">생활서비스</a></li>
+            <li><a href="#">도와주세요</a></li>
+            <li><a href="#">디자인.</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="right-menu" class="uk-offcanvas">
+      <div class="uk-offcanvas-bar uk-offcanvas-bar-flip">
+        <div class="uk-panel">
+          <ul data-uk-nav="" class="uk-nav uk-nav-offcanvas uk-nav-parent-icon">
+            <li class="uk-nav-header">right-menu</li>
+            <li class="uk-parent"><a href="#">문서작성</a>
+              <ul class="uk-nav-sub">
+                <li><a href="#">로고 / 명함 디자인</a></li>
+                <li><a href="#">사진 / 포토샵</a></li>
+                <li><a href="#">웹 / 모바일 디자인</a></li>
+                <li><a href="#">일러스트 / 캐릭터</a></li>
+                <li><a href="#">블로그 / 카페</a></li>
+              </ul>
+            </li>
+            <li><a href="#">마케팅</a></li>
+            <li><a href="#">프로그래밍</a></li>
+            <li><a href="#">게임강의</a></li>
+            <li><a href="#">음악/영상</a></li>
+            <li><a href="#">과외/레슨</a></li>
+            <li><a href="#">생활서비스</a></li>
+            <li><a href="#">도와주세요</a></li>
+            <li><a href="#">디자인.</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="home">
+        <div class="main-slider">
+          <ul data-uk-slideshow="{autoplay:true}" class="uk-slideshow uk-overlay-active">
+            <li>
+              <div class="uk-overlay-panel uk-overlay-background uk-overlay-fade uk-flex uk-flex-center uk-flex-middle uk-text-center">
+                <div>
+                  <h1 class="uk-margin-bottom">전문가 검색. 구매. 끝 위드몬만의 상상력!</h1>
+                  <div class="h4">원하는 서비스를 찾아보세요.</div>
+                </div>
+              </div><img src="media/img/main-slide-1.jpg" alt="">
+            </li>
+            <li>
+              <div class="uk-overlay-panel uk-overlay-background uk-overlay-fade uk-flex uk-flex-center uk-flex-middle uk-text-center">
+                <div>
+                  <div class="uk-h1 uk-margin-bottom">전문가 검색. 구매. 끝 위드몬만의 상상력!</div>
+                  <div class="h4">원하는 서비스를 찾아보세요.</div>
+                </div>
+              </div><img src="media/img/main-slide-2.jpg" alt="">
+            </li>
+          </ul>
+        </div>
+        <!--section-->
+        <div class="promotions uk-block-large">
+          <div class="uk-container uk-container-center">
+            <div class="uk-text-center uk-margin-large-bottom">
+              <h2 class="uk-margin-small-bottom">프로모션 안내</h2>
+              <div class="uk-h4 uk-margin-top-remove uk-text-muted">프로모션을 확인하고 서비스를 구매하세요.</div>
+            </div>
+            <div data-uk-slider>
+              <div class="uk-slider-container">
+                <ul class="uk-slider uk-grid-width-large-1-3 uk-grid-width-medium-1-2 uk-text-center-medium">
+                  <li><img src="media/img/promotion.jpg" alt=""></li>
+                  <li><img src="media/img/promotion.jpg" alt=""></li>
+                  <li><img src="media/img/promotion.jpg" alt=""></li>
+                  <li><img src="media/img/promotion.jpg" alt=""></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--section-->
+        <div class="about-services uk-block-large uk-block-primary">
+          <div class="uk-container uk-container-center">
+            <div class="about-services__intro">
+              <div class="uk-text-center">
+                <h2 class="uk-margin-small-bottom">서비스 소개</h2>
+                <div class="uk-h4 uk-margin-top-remove uk-text-muted">프로모션을 확인하고 서비스를 구매하세요.</div>
+              </div>
+            </div>
+            <div class="about-services__grid">
+              <ul data-uk-grid-margin="" class="uk-grid uk-grid-width-xlarge-1-5 uk-grid-width-large-1-4 uk-grid-width-medium-1-3 uk-grid-width-small-1-2 uk-grid-width-1-1">
+                <li>
+                  <div class="about-card"><a href="#" class="about-card__head"><span class="about-card__img-w"><img src="media/img/news-img.jpg" alt=""></span><span class="about-card__badge"><img src="media/img/badge.png" alt=""></span><span class="about-card__author"><span class="ac-author"><span class="ac-author__info"><img src="media/img/about-card-author.png" alt=""><span>hyerin55</span></span><span class="ac-author__review"><span class="ac-author__stars"><i class="uk-icon-star"></i><i class="uk-icon-star"></i><i class="uk-icon-star"></i><i class="uk-icon-star"></i><i class="uk-icon-star"></i></span><span class="ac-author__num">(7)</span></span></span></span></a>
+                    <div class="about-card__body"><a href="#" class="about-card__text">
+                        [게임, 애니메이션, 광고 ]사운드 디자
+                        인 및 BGM 제작해드립니다.</a>
+                      <div class="about-card__footer uk-flex uk-flex-middle">
+                        <div class="about-card__actions"><a href="#" class="uk-icon-heart-o"></a><a href="#" class="uk-icon-phone"></a><a href="#" class="uk-icon-envelope"></a><a href="#" class="uk-icon-plus"></a></div>
+                        <div class="about-card__price"> <span class="nums">50,000</span>원</div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="about-card"><a href="#" class="about-card__head"><span class="about-card__img-w"><img src="media/img/news-img.jpg" alt=""></span><span class="about-card__badge"><img src="media/img/badge.png" alt=""></span><span class="about-card__author"><span class="ac-author"><span class="ac-author__info"><img src="media/img/about-card-author.png" alt=""><span>hyerin55</span></span><span class="ac-author__review"><span class="ac-author__stars"><i class="uk-icon-star"></i><i class="uk-icon-star"></i><i class="uk-icon-star"></i><i class="uk-icon-star"></i><i class="uk-icon-star"></i></span><span class="ac-author__num">(7)</span></span></span></span></a>
+                    <div class="about-card__body"><a href="#" class="about-card__text">
+                        [게임, 애니메이션, 광고 ]사운드 디자
+                        인 및 BGM 제작해드립니다.</a>
+                      <div class="about-card__footer uk-flex uk-flex-middle">
+                        <div class="about-card__actions"><a href="#" class="uk-icon-heart-o"></a><a href="#" class="uk-icon-phone"></a><a href="#" class="uk-icon-envelope"></a><a href="#" class="uk-icon-plus"></a></div>
+                        <div class="about-card__price"> <span class="nums">50,000</span>원</div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="about-card"><a href="#" class="about-card__head"><span class="about-card__img-w"><img src="media/img/news-img.jpg" alt=""></span><span class="about-card__badge"><img src="media/img/badge.png" alt=""></span><span class="about-card__author"><span class="ac-author"><span class="ac-author__info"><img src="media/img/about-card-author.png" alt=""><span>hyerin55</span></span><span class="ac-author__review"><span class="ac-author__stars"><i class="uk-icon-star"></i><i class="uk-icon-star"></i><i class="uk-icon-star"></i><i class="uk-icon-star"></i><i class="uk-icon-star"></i></span><span class="ac-author__num">(7)</span></span></span></span></a>
+                    <div class="about-card__body"><a href="#" class="about-card__text">
+                        [게임, 애니메이션, 광고 ]사운드 디자
+                        인 및 BGM 제작해드립니다.</a>
+                      <div class="about-card__footer uk-flex uk-flex-middle">
+                        <div class="about-card__actions"><a href="#" class="uk-icon-heart-o"></a><a href="#" class="uk-icon-phone"></a><a href="#" class="uk-icon-envelope"></a><a href="#" class="uk-icon-plus"></a></div>
+                        <div class="about-card__price"> <span class="nums">50,000</span>원</div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="about-card"><a href="#" class="about-card__head"><span class="about-card__img-w"><img src="media/img/news-img.jpg" alt=""></span><span class="about-card__badge"><img src="media/img/badge.png" alt=""></span><span class="about-card__author"><span class="ac-author"><span class="ac-author__info"><img src="media/img/about-card-author.png" alt=""><span>hyerin55</span></span><span class="ac-author__review"><span class="ac-author__stars"><i class="uk-icon-star"></i><i class="uk-icon-star"></i><i class="uk-icon-star"></i><i class="uk-icon-star"></i><i class="uk-icon-star"></i></span><span class="ac-author__num">(7)</span></span></span></span></a>
+                    <div class="about-card__body"><a href="#" class="about-card__text">
+                        [게임, 애니메이션, 광고 ]사운드 디자
+                        인 및 BGM 제작해드립니다.</a>
+                      <div class="about-card__footer uk-flex uk-flex-middle">
+                        <div class="about-card__actions"><a href="#" class="uk-icon-heart-o"></a><a href="#" class="uk-icon-phone"></a><a href="#" class="uk-icon-envelope"></a><a href="#" class="uk-icon-plus"></a></div>
+                        <div class="about-card__price"> <span class="nums">50,000</span>원</div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="about-card"><a href="#" class="about-card__head"><span class="about-card__img-w"><img src="media/img/news-img.jpg" alt=""></span><span class="about-card__badge"><img src="media/img/badge.png" alt=""></span><span class="about-card__author"><span class="ac-author"><span class="ac-author__info"><img src="media/img/about-card-author.png" alt=""><span>hyerin55</span></span><span class="ac-author__review"><span class="ac-author__stars"><i class="uk-icon-star"></i><i class="uk-icon-star"></i><i class="uk-icon-star"></i><i class="uk-icon-star"></i><i class="uk-icon-star"></i></span><span class="ac-author__num">(7)</span></span></span></span></a>
+                    <div class="about-card__body"><a href="#" class="about-card__text">
+                        [게임, 애니메이션, 광고 ]사운드 디자
+                        인 및 BGM 제작해드립니다.</a>
+                      <div class="about-card__footer uk-flex uk-flex-middle">
+                        <div class="about-card__actions"><a href="#" class="uk-icon-heart-o"></a><a href="#" class="uk-icon-phone"></a><a href="#" class="uk-icon-envelope"></a><a href="#" class="uk-icon-plus"></a></div>
+                        <div class="about-card__price"> <span class="nums">50,000</span>원</div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="about-card"><a href="#" class="about-card__head"><span class="about-card__img-w"><img src="media/img/news-img.jpg" alt=""></span><span class="about-card__badge"><img src="media/img/badge.png" alt=""></span><span class="about-card__author"><span class="ac-author"><span class="ac-author__info"><img src="media/img/about-card-author.png" alt=""><span>hyerin55</span></span><span class="ac-author__review"><span class="ac-author__stars"><i class="uk-icon-star"></i><i class="uk-icon-star"></i><i class="uk-icon-star"></i><i class="uk-icon-star"></i><i class="uk-icon-star"></i></span><span class="ac-author__num">(7)</span></span></span></span></a>
+                    <div class="about-card__body"><a href="#" class="about-card__text">
+                        [게임, 애니메이션, 광고 ]사운드 디자
+                        인 및 BGM 제작해드립니다.</a>
+                      <div class="about-card__footer uk-flex uk-flex-middle">
+                        <div class="about-card__actions"><a href="#" class="uk-icon-heart-o"></a><a href="#" class="uk-icon-phone"></a><a href="#" class="uk-icon-envelope"></a><a href="#" class="uk-icon-plus"></a></div>
+                        <div class="about-card__price"> <span class="nums">50,000</span>원</div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="about-card"><a href="#" class="about-card__head"><span class="about-card__img-w"><img src="media/img/news-img.jpg" alt=""></span><span class="about-card__badge"><img src="media/img/badge.png" alt=""></span><span class="about-card__author"><span class="ac-author"><span class="ac-author__info"><img src="media/img/about-card-author.png" alt=""><span>hyerin55</span></span><span class="ac-author__review"><span class="ac-author__stars"><i class="uk-icon-star"></i><i class="uk-icon-star"></i><i class="uk-icon-star"></i><i class="uk-icon-star"></i><i class="uk-icon-star"></i></span><span class="ac-author__num">(7)</span></span></span></span></a>
+                    <div class="about-card__body"><a href="#" class="about-card__text">
+                        [게임, 애니메이션, 광고 ]사운드 디자
+                        인 및 BGM 제작해드립니다.</a>
+                      <div class="about-card__footer uk-flex uk-flex-middle">
+                        <div class="about-card__actions"><a href="#" class="uk-icon-heart-o"></a><a href="#" class="uk-icon-phone"></a><a href="#" class="uk-icon-envelope"></a><a href="#" class="uk-icon-plus"></a></div>
+                        <div class="about-card__price"> <span class="nums">50,000</span>원</div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="about-card"><a href="#" class="about-card__head"><span class="about-card__img-w"><img src="media/img/news-img.jpg" alt=""></span><span class="about-card__badge"><img src="media/img/badge.png" alt=""></span><span class="about-card__author"><span class="ac-author"><span class="ac-author__info"><img src="media/img/about-card-author.png" alt=""><span>hyerin55</span></span><span class="ac-author__review"><span class="ac-author__stars"><i class="uk-icon-star"></i><i class="uk-icon-star"></i><i class="uk-icon-star"></i><i class="uk-icon-star"></i><i class="uk-icon-star"></i></span><span class="ac-author__num">(7)</span></span></span></span></a>
+                    <div class="about-card__body"><a href="#" class="about-card__text">
+                        [게임, 애니메이션, 광고 ]사운드 디자
+                        인 및 BGM 제작해드립니다.</a>
+                      <div class="about-card__footer uk-flex uk-flex-middle">
+                        <div class="about-card__actions"><a href="#" class="uk-icon-heart-o"></a><a href="#" class="uk-icon-phone"></a><a href="#" class="uk-icon-envelope"></a><a href="#" class="uk-icon-plus"></a></div>
+                        <div class="about-card__price"> <span class="nums">50,000</span>원</div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="about-card"><a href="#" class="about-card__head"><span class="about-card__img-w"><img src="media/img/news-img.jpg" alt=""></span><span class="about-card__badge"><img src="media/img/badge.png" alt=""></span><span class="about-card__author"><span class="ac-author"><span class="ac-author__info"><img src="media/img/about-card-author.png" alt=""><span>hyerin55</span></span><span class="ac-author__review"><span class="ac-author__stars"><i class="uk-icon-star"></i><i class="uk-icon-star"></i><i class="uk-icon-star"></i><i class="uk-icon-star"></i><i class="uk-icon-star"></i></span><span class="ac-author__num">(7)</span></span></span></span></a>
+                    <div class="about-card__body"><a href="#" class="about-card__text">
+                        [게임, 애니메이션, 광고 ]사운드 디자
+                        인 및 BGM 제작해드립니다.</a>
+                      <div class="about-card__footer uk-flex uk-flex-middle">
+                        <div class="about-card__actions"><a href="#" class="uk-icon-heart-o"></a><a href="#" class="uk-icon-phone"></a><a href="#" class="uk-icon-envelope"></a><a href="#" class="uk-icon-plus"></a></div>
+                        <div class="about-card__price"> <span class="nums">50,000</span>원</div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="about-card"><a href="#" class="about-card__head"><span class="about-card__img-w"><img src="media/img/news-img.jpg" alt=""></span><span class="about-card__badge"><img src="media/img/badge.png" alt=""></span><span class="about-card__author"><span class="ac-author"><span class="ac-author__info"><img src="media/img/about-card-author.png" alt=""><span>hyerin55</span></span><span class="ac-author__review"><span class="ac-author__stars"><i class="uk-icon-star"></i><i class="uk-icon-star"></i><i class="uk-icon-star"></i><i class="uk-icon-star"></i><i class="uk-icon-star"></i></span><span class="ac-author__num">(7)</span></span></span></span></a>
+                    <div class="about-card__body"><a href="#" class="about-card__text">
+                        [게임, 애니메이션, 광고 ]사운드 디자
+                        인 및 BGM 제작해드립니다.</a>
+                      <div class="about-card__footer uk-flex uk-flex-middle">
+                        <div class="about-card__actions"><a href="#" class="uk-icon-heart-o"></a><a href="#" class="uk-icon-phone"></a><a href="#" class="uk-icon-envelope"></a><a href="#" class="uk-icon-plus"></a></div>
+                        <div class="about-card__price"> <span class="nums">50,000</span>원</div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="about-card"><a href="#" class="about-card__head"><span class="about-card__img-w"><img src="media/img/news-img.jpg" alt=""></span><span class="about-card__badge"><img src="media/img/badge.png" alt=""></span><span class="about-card__author"><span class="ac-author"><span class="ac-author__info"><img src="media/img/about-card-author.png" alt=""><span>hyerin55</span></span><span class="ac-author__review"><span class="ac-author__stars"><i class="uk-icon-star"></i><i class="uk-icon-star"></i><i class="uk-icon-star"></i><i class="uk-icon-star"></i><i class="uk-icon-star"></i></span><span class="ac-author__num">(7)</span></span></span></span></a>
+                    <div class="about-card__body"><a href="#" class="about-card__text">
+                        [게임, 애니메이션, 광고 ]사운드 디자
+                        인 및 BGM 제작해드립니다.</a>
+                      <div class="about-card__footer uk-flex uk-flex-middle">
+                        <div class="about-card__actions"><a href="#" class="uk-icon-heart-o"></a><a href="#" class="uk-icon-phone"></a><a href="#" class="uk-icon-envelope"></a><a href="#" class="uk-icon-plus"></a></div>
+                        <div class="about-card__price"> <span class="nums">50,000</span>원</div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="about-card"><a href="#" class="about-card__head"><span class="about-card__img-w"><img src="media/img/news-img.jpg" alt=""></span><span class="about-card__badge"><img src="media/img/badge.png" alt=""></span><span class="about-card__author"><span class="ac-author"><span class="ac-author__info"><img src="media/img/about-card-author.png" alt=""><span>hyerin55</span></span><span class="ac-author__review"><span class="ac-author__stars"><i class="uk-icon-star"></i><i class="uk-icon-star"></i><i class="uk-icon-star"></i><i class="uk-icon-star"></i><i class="uk-icon-star"></i></span><span class="ac-author__num">(7)</span></span></span></span></a>
+                    <div class="about-card__body"><a href="#" class="about-card__text">
+                        [게임, 애니메이션, 광고 ]사운드 디자
+                        인 및 BGM 제작해드립니다.</a>
+                      <div class="about-card__footer uk-flex uk-flex-middle">
+                        <div class="about-card__actions"><a href="#" class="uk-icon-heart-o"></a><a href="#" class="uk-icon-phone"></a><a href="#" class="uk-icon-envelope"></a><a href="#" class="uk-icon-plus"></a></div>
+                        <div class="about-card__price"> <span class="nums">50,000</span>원</div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="about-card"><a href="#" class="about-card__head"><span class="about-card__img-w"><img src="media/img/news-img.jpg" alt=""></span><span class="about-card__badge"><img src="media/img/badge.png" alt=""></span><span class="about-card__author"><span class="ac-author"><span class="ac-author__info"><img src="media/img/about-card-author.png" alt=""><span>hyerin55</span></span><span class="ac-author__review"><span class="ac-author__stars"><i class="uk-icon-star"></i><i class="uk-icon-star"></i><i class="uk-icon-star"></i><i class="uk-icon-star"></i><i class="uk-icon-star"></i></span><span class="ac-author__num">(7)</span></span></span></span></a>
+                    <div class="about-card__body"><a href="#" class="about-card__text">
+                        [게임, 애니메이션, 광고 ]사운드 디자
+                        인 및 BGM 제작해드립니다.</a>
+                      <div class="about-card__footer uk-flex uk-flex-middle">
+                        <div class="about-card__actions"><a href="#" class="uk-icon-heart-o"></a><a href="#" class="uk-icon-phone"></a><a href="#" class="uk-icon-envelope"></a><a href="#" class="uk-icon-plus"></a></div>
+                        <div class="about-card__price"> <span class="nums">50,000</span>원</div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="about-card"><a href="#" class="about-card__head"><span class="about-card__img-w"><img src="media/img/news-img.jpg" alt=""></span><span class="about-card__badge"><img src="media/img/badge.png" alt=""></span><span class="about-card__author"><span class="ac-author"><span class="ac-author__info"><img src="media/img/about-card-author.png" alt=""><span>hyerin55</span></span><span class="ac-author__review"><span class="ac-author__stars"><i class="uk-icon-star"></i><i class="uk-icon-star"></i><i class="uk-icon-star"></i><i class="uk-icon-star"></i><i class="uk-icon-star"></i></span><span class="ac-author__num">(7)</span></span></span></span></a>
+                    <div class="about-card__body"><a href="#" class="about-card__text">
+                        [게임, 애니메이션, 광고 ]사운드 디자
+                        인 및 BGM 제작해드립니다.</a>
+                      <div class="about-card__footer uk-flex uk-flex-middle">
+                        <div class="about-card__actions"><a href="#" class="uk-icon-heart-o"></a><a href="#" class="uk-icon-phone"></a><a href="#" class="uk-icon-envelope"></a><a href="#" class="uk-icon-plus"></a></div>
+                        <div class="about-card__price"> <span class="nums">50,000</span>원</div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="about-card"><a href="#" class="about-card__head"><span class="about-card__img-w"><img src="media/img/news-img.jpg" alt=""></span><span class="about-card__badge"><img src="media/img/badge.png" alt=""></span><span class="about-card__author"><span class="ac-author"><span class="ac-author__info"><img src="media/img/about-card-author.png" alt=""><span>hyerin55</span></span><span class="ac-author__review"><span class="ac-author__stars"><i class="uk-icon-star"></i><i class="uk-icon-star"></i><i class="uk-icon-star"></i><i class="uk-icon-star"></i><i class="uk-icon-star"></i></span><span class="ac-author__num">(7)</span></span></span></span></a>
+                    <div class="about-card__body"><a href="#" class="about-card__text">
+                        [게임, 애니메이션, 광고 ]사운드 디자
+                        인 및 BGM 제작해드립니다.</a>
+                      <div class="about-card__footer uk-flex uk-flex-middle">
+                        <div class="about-card__actions"><a href="#" class="uk-icon-heart-o"></a><a href="#" class="uk-icon-phone"></a><a href="#" class="uk-icon-envelope"></a><a href="#" class="uk-icon-plus"></a></div>
+                        <div class="about-card__price"> <span class="nums">50,000</span>원</div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="about-services__pager">
+              <ul class="uk-pagination">
+                <li><a href="#" class="arrow"><i class="uk-icon-angle-left"></i></a></li>
+                <li><a href="#">1</a></li>
+                <li class="uk-active"><span>2</span></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#" class="arrow"><i class="uk-icon-angle-right"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!--section-->
+        <div class="reviews uk-block-large">
+          <div class="uk-container uk-container-center">
+            <div class="uk-text-center uk-margin-large-bottom">
+              <h2 class="reviews__hline"><span class="clr-orange">104</span>개의 서비스 후기</h2>
+              <div class="h3 uk-text-muted">믿고 보는 솔직한 후기를 확인해보세요!</div>
+            </div>
+            <div data-uk-slideshow="" class="uk-position-relative uk-margin-large-bottom">
+              <ul class="uk-slideshow">
+                <li>
+                  <div class="uk-width-small-8-10 uk-width-medium-6-10 uk-container-center">
+                    <div class="review-card">
+                      <div class="review-card__body uk-grid">
+                        <div class="uk-width-small-1-5 uk-width-medium-1-3 review-card__img-w uk-text-center-medium"><img src="media/img/review.png" alt=""></div>
+                        <div class="uk-width-small-4-5 uk-width-medium-2-3 review-card__info">
+                          <div class="review-card__head uk-margin-bottom">
+                            <div class="btn-round">로고디자인</div><span class="uk-text-bold uk-margin-left uk-vertical-align-middle">jkdong님</span>
+                            <div class="review-card__rating uk-margin-left"><i class="uk-icon-star"></i><i class="uk-icon-star"></i><i class="uk-icon-star"></i><i class="uk-icon-star"></i></div>
+                          </div>
+                          <div class="review-card__text">
+                            <p>
+                              처음 이용해 보았는데 예상 했던것 보다 양질의 디자인을 많이 보내 주셔서
+                              뜻밖이라고 생각했습니다. 대체적으로 만족스러웠지만, 1차 선발을 한 디자인
+                              중에 기존 제품과 너무나도 흡사한 이미지가 있어..
+                            </p>
+                            <p>서비스 가격 : 10,000원</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="uk-width-small-8-10 uk-width-medium-6-10 uk-container-center">
+                    <div class="review-card">
+                      <div class="review-card__body uk-grid">
+                        <div class="uk-width-small-1-5 uk-width-medium-1-3 review-card__img-w uk-text-center-medium"><img src="media/img/review.png" alt=""></div>
+                        <div class="uk-width-small-4-5 uk-width-medium-2-3 review-card__info">
+                          <div class="review-card__head uk-margin-bottom">
+                            <div class="btn-round">로고디자인</div><span class="uk-text-bold uk-margin-left uk-vertical-align-middle">jkdong님</span>
+                            <div class="review-card__rating uk-margin-left"><i class="uk-icon-star"></i><i class="uk-icon-star"></i><i class="uk-icon-star"></i></div>
+                          </div>
+                          <div class="review-card__text">
+                            <p>
+                              처음 이용해 보았는데 예상 했던것 보다 양질의 디자인을 많이 보내 주셔서
+                              뜻밖이라고 생각했습니다. 대체적으로 만족스러웠지만, 1차 선발을 한 디자인
+                            </p>
+                            <p>
+                              서비스 가격 : 10,000원
+                              
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul><a href="" data-uk-slideshow-item="previous" class="reviews__arrow reviews__arrow--left"><i class="uk-icon-angle-left"></i></a><a href="" data-uk-slideshow-item="next" class="reviews__arrow reviews__arrow--right"><i class="uk-icon-angle-right"></i></a>
+            </div>
+            <div class="uk-text-center"><a href="#" class="uk-block btn-empty">더보기</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="m-footer">
+      <div class="m-footer__inner uk-container">
+        <div class="uk-flex uk-flex-space-between">
+          <div><a href="#" class="m-footer__link"><i class="uk-icon-home"></i><span>홈</span></a></div>
+          <div><a href="#" class="m-footer__link"><i class="uk-icon-envelope"></i><span>메세지</span></a></div>
+          <div><a href="#" class="m-footer__link"><i class="uk-icon-bell"></i><span>메세지</span></a></div>
+          <div><a href="#" class="m-footer__link"><i class="uk-icon-th-large"></i><span>마이페이지</span></a></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="footer__top uk-block">
+        <div class="uk-container uk-container-center">
+          <div class="uk-grid footer__main-grid">
+            <div class="uk-width-medium-1-3 uk-width-large-1-4 uk-margin-bottom"><a href="#" class="#"><img src="media/img/logo-footer.png" alt="" class="uk-hidden-small"><img src="media/img/footer-mobile-logo.png" alt="" class="uk-visible-small"></a>
+              <p>
+                회사명: 위드몬 (주)   대표자: 임민영   정보처리책임자: 이중원
+                주소: 서울특별시 금천구 디지털로9길 99, 803호 (가산동, 스타밸리)
+                통신판매업신고: 2016-서울금천-0056 호
+                사업자번호: 667-87-00288
+                업무 시간 : 09:00 ~ 18:00, 주말 · 공휴일 휴무
+                
+              </p>
+            </div>
+            <div class="footer__list-col uk-width-medium-1-3">
+              <div class="uk-grid">
+                <div class="uk-width-1-2">
+                  <div class="h4 headline-yellow clr-white">사용자 메뉴</div>
+                  <ul class="footer-list">
+                    <li><a href="#" class="footer-list__link">메인페이지</a></li>
+                    <li><a href="#" class="footer-list__link">이용안내</a></li>
+                    <li><a href="#" class="footer-list__link">찾아오시는 길</a></li>
+                    <li><a href="#" class="footer-list__link">로그인</a></li>
+                    <li><a href="#" class="footer-list__link">회원 가입</a></li>
+                  </ul>
+                </div>
+                <div class="uk-width-1-2">
+                  <div class="h4 headline-yellow clr-white">이용관련 정보</div>
+                  <ul class="footer-list">
+                    <li><a href="#" class="footer-list__link">FAQ</a></li>
+                    <li><a href="#" class="footer-list__link">문의하기</a></li>
+                    <li><a href="#" class="footer-list__link">판매자 등급</a></li>
+                    <li><a href="#" class="footer-list__link">이용약관</a></li>
+                    <li><a href="#" class="footer-list__link">개인정보 보호정책</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bot">
+          <div class="footer__bot-inner uk-flex uk-flex-middle uk-container uk-container-center">
+            <div class="footer__social">
+              <div class="social">
+                <div><a href="#" class="social__link"><img src="media/img/social-twitter.png" alt=""></a></div>
+                <div><a href="#" class="social__link"><img src="media/img/social-fb.png" alt=""></a></div>
+                <div><a href="#" class="social__link"><img src="media/img/social-google.png" alt=""></a></div>
+              </div>
+            </div>
+            <div class="footer__contacts uk-flex">
+              <div>E-mail : help@withmon.com</div>
+              <div>Tel : 1544-1817</div>
+            </div>
+            <div class="footer__copyright">© 2015 withmon.com<a href="#" class="m-analytics uk-hidden-large"><img src="media/img/m-analytics.png" alt=""></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script defer="defer" src="media/js/jquery-2.1.4.js"></script>
+  <script defer="defer" src="media/js/uikit.min.js"></script>
+  <script defer="defer" src="media/js/components/slideshow.min.js"></script>
+  <script defer="defer" src="media/js/components/slider.min.js"></script>
+  <script defer="defer" src="media/js/main.js"></script>
+  <!--script(defer="defer" src='media/js/es5.js')-->
+  <!--script(defer="defer" src='media/js/tweenmax.min.js')-->
+  <!--script(defer="defer" src='media/js/slick.min.js')-->
+  <!--script(defer="defer" src='media/js/tea-grid.js')-->
+  <!--script(defer="defer" src='media/js/pace.min.js')-->
+</html>
