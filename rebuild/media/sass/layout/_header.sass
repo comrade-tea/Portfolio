@@ -1,0 +1,143 @@
+.header
+	z-index: 2
+	.top
+		color: $color-white
+		background: $color-black--light
+		padding: 15px 0
+		.uk-flex
+			//+max-screen($smartphone-portrait)
+				align-items: center
+		.uk-button
+			transition: all .2s
+		a
+			color: $color-white
+	.bot
+		background: $color-white
+		> .uk-container
+			+max-screen($big-tablet)
+				padding: 0
+		.uk-navbar
+			background: $color-white
+			+max-screen($big-tablet)
+				overflow: auto
+				-webkit-overflow-scrolling: touch
+		.uk-navbar-nav
+			> li > a
+				font-size: 1.4em
+				cursor: pointer
+				height: 70px
+				line-height: 70px
+				&:hover, &:focus
+					background: transparent
+					color: $color-orange
+			.uk-open
+				a
+					color: $color-orange
+					background: $color-white
+			.uk-dropdown
+				background: $color-bg-smokie
+				border-bottom: 3px solid $color-orange
+				a
+					font-size: 1.2em
+					color: $color-black--light
+					background: transparent
+					cursor: pointer
+					&:hover, &:focus
+						color: $color-orange
+	 
+	&__left-nav,
+	&__right-nav
+		font-size: 2em
+		
+	&__right-nav
+		margin-left: 14px
+		
+	.logo
+		img
+			width: 176px
+			height: 35px
+		+max-screen($big-tablet)
+			margin-left: 20px
+			max-width: 160px
+		+max-screen($smartphone-portrait)
+			margin-bottom: 4px
+			max-width: 120px
+	.search-block
+		margin-left: 60px
+		+max-screen($big-tablet)
+			margin-left: auto
+	.header-ui
+		margin-left: auto
+		+max-screen($mid-tablet)
+			display: none
+		> *
+			&:nth-child(1n+2)
+				margin-left: 30px
+		.uk-icon-sort-down
+			margin-left: 6px
+			transform: translateY(-4px)
+			//&:before
+				display: inline-block
+				margin-top: -4px
+		.icon
+			transition: color .2s
+			&:hover, &:focus
+				color: $color-orange
+		.auth
+			+max-screen($big-tablet)
+				display: none
+			a
+				display: inline-block
+				font-size: 1.3em
+				transition: all .2s
+				&:nth-child(1n+2)
+					margin-left: 25px
+				&:hover, &:focus
+					color: $color-yellow
+					text-decoration: none
+
+.search
+	position: relative
+	.input-wrap
+		display: inline-block
+		vertical-align: middle
+		input
+			display: block
+			width: 280px
+		&.is-open
+			opacity: 1
+			visibility: visible
+		+max-screen($small-tablet)
+			position: absolute
+			display: block
+			width: 300px
+			top: 0
+			right: 25px
+			opacity: 0
+			visibility: hidden
+			transition: all .2s 0.15s
+			+max-screen($smartphone-landscape - 1)
+				width: 180px
+			
+	.uk-button
+		background: $color-orange
+		transition: all .2s
+		&:hover, &:focus
+			background: $color-orange--dark
+		+max-screen($small-tablet)
+			background: transparent
+			font-size: 23px
+			padding: 0
+			transition: all .4s
+			&.is-active
+				color: $color-orange!important
+			&:hover, &:focus
+				background: inherit
+				color: inherit
+.profile
+	&__i-wrap
+	&__info
+		margin-left: 10px
+	&__name
+	&__balance
+		font-size: 12px

@@ -1,0 +1,68 @@
+.subpage
+	margin-bottom: 120px
+	input[type="checkbox"]
+		margin-right: 10px
+		
+.subpage-lbar
+	.uk-h4
+		line-height: 29px
+	.gray-capture
+		font-size: 12px
+		float: right
+		color: $color-text-gray
+		margin-top: 4px
+		+max-screen($desktop)
+			float: none
+			margin-bottom: 10px
+	&__inner
+
+
+.uk-list
+	li
+		&:nth-child(1n+2)
+			margin-top: 20px
+	a
+		transition: all .2s
+		&.active, &:hover, &:focus
+			color: $color-orange
+			text-decoration: none
+		
+.subpage-sort
+	+max-screen($big-tablet)
+		flex-flow: row wrap
+		background: transparent
+		padding: 0
+		box-shadow: none
+		border-left: none
+		border-left: none
+		margin-left: -20px
+		margin-right: -20px
+		border-radius: 0
+	&__btns
+		+max-screen($big-tablet)
+			width: 100%
+			padding: 10px 20px
+			background: $color-white
+			margin-left: -5px
+		.uk-button
+			padding: 0 30px
+			margin: 2px 0 2px 5px
+		
+	&__form
+		margin-left: auto
+		+max-screen($big-tablet)
+			display: flex
+			width: 100%
+			padding: 14px 20px
+		[class*="uk-icon"]
+			font-size: 22px
+		a
+			&:nth-child(1n+2)
+				margin-left: 40px
+				+max-screen($smartphone-portrait)
+					margin-left: 20px
+		select
+			+max-screen($big-tablet)
+				margin-left: auto
+	
+		

@@ -1,0 +1,125 @@
+extends layout/master
+
+block title
+	title single-job
+block header
+	include layout/header-nonauth
+block content
+	div.s-job
+		div.s-job__main
+			include layout/breadcrumb
+			div.uk-container.uk-container-center
+				div.uk-grid
+					div.uk-width-medium-1-2
+						img(src="media/img/single-job-offer.jpg" alt="")
+					div.uk-width-medium-1-2
+						div.job-info
+							div.job-info__body
+								div.job-info__title.uk-h3  솔 디자인 공방 / 모든 디자인 작업 도와드립니다
+								div.job-info__desc
+									div.item
+										div.key 가격
+										div.value 10,000원
+									div.item
+										div.key 진행중인 작업수
+										div.value 10,000원
+									div.item
+										div.key 기본 작업일
+										div.value 3개
+									div.item
+										div.key 기본 수정 횟수
+										div.value 3일
+									div.item
+										div.key 평점
+										div.value 1회
+									div.item
+										div.key 기본제공
+										div.value
+											div.rating
+												div.rating__stars
+													i.uk-icon-star
+													i.uk-icon-star
+													i.uk-icon-star
+													i.uk-icon-star
+													i.uk-icon-star
+												div.rating__rev (23)
+									div.item
+										div.key 기본제공
+										div.value.
+											기본 가격 결제시 720HD, MP4,
+											재생 시간~4 :기본 배경 음악 제공
+						form.dd-options.uk-form(action="")
+							div.dd-options__toggle.uk-panel-box.uk-panel-box--sm
+								i.uk-icon-plus-circle
+								| 추가 옵션 선택
+							div.dd-options__body.uk-panel-box.uk-panel-box--sm
+								div.dd-options__body-inner
+									div.item
+										label
+											input(type='checkbox')
+											| 빠른배송 (+1day)
+										div
+											|+ 10,000원
+											select.uk-form-small
+												option 1
+												option 2
+												option 3
+									div.item
+										label
+											input(type='checkbox')
+											| 1080HD (+1day)
+										div
+											| + 15,000원
+											select.uk-form-small
+												option 1
+												option 2
+												option 3
+									div.item
+										label
+											input(type='checkbox')
+											| 추가 수정 (+1day)
+										div
+											| + 5,000원
+											select.uk-form-small
+												option 1
+												option 2
+												option 3
+							div.dd-options__footer.uk-panel-box.uk-panel-box--sm.uk-margin-bottom.
+								(기본 10,000원 + 옵션 15,000원) = #[span(class="clr-orange") 25,000원]
+
+							div.dd-options__controls
+								button.uk-button.btn-comments
+									i.uk-icon-comments
+									|견적 문의하기
+								button.uk-button.btn-cart
+									i.uk-icon-shopping-cart
+									|구매하기 (10,000원)
+								button.uk-button.btn-add
+									i.uk-icon-heart
+									|찜하기
+
+		div.s-job__user
+			div.uk-container.uk-container-center
+				div.user-box
+					div.uk-grid.user-box__grid
+
+						div.user-box__col.user-box__col--left.uk-width-7-10
+							div.user-info
+								div.user-info__grid.uk-grid
+									div.uk-width-1-4
+										img(src="media/img/job-user.png" alt="")
+									div.uk-width-3-4
+										div.type.uk-h4
+											div.lvl lv.1
+											div.prof Soldesign
+										p.text.
+											신뢰와 책임감을 가지고 프로젝트를 진행합니다.
+											홈페이지,쇼핑몰,웹디자인,게임,채팅 개발 등 기획 및 설계, 사이트운영
+										div.tag-list
+											a(href="#" class="tag") 웹디자인
+											a(href="#" class="tag") 앱디자인
+											a(href="#" class="tag") 로고 디자인
+
+						div.user-box__col.user-box__col--right.uk-width-3-10
+							div.
+								기본 가격

@@ -1,0 +1,149 @@
+.home
+
+.banner
+	background-image: url("../img/banner.jpg")
+	height: 360px
+	+max-screen($desktop)
+		height: 300px
+.banner-text
+	margin: auto
+	h1
+		font-size: 2.8em
+	div
+		font-size: 1.4em
+//
+.about-services
+	//padding: 90px 0 140px
+	//background: $color-bg-sky
+
+	.grid
+		margin-bottom: 100px
+	.pager
+		.uk-pagination
+			
+	
+.about-card
+	background: $color-white
+	position: relative
+	border: 1px solid $color-border-gray
+	box-shadow: 1.9px 2.3px 3px rgba(42, 42, 42, 0.07)
+	+max-screen($smartphone-landscape)
+		max-width: 225px
+		margin: 0 auto
+	.head
+		position: relative
+		display: block
+	.img-w
+		img
+			width: 100%
+	.badge
+		position: absolute
+		top: -2px
+		left: 10px
+	.author
+		position: absolute
+		bottom: 0
+		left: 0
+		width: 100%
+		background: rgba(50, 50, 50, 0.5)
+		color: $color-white
+		padding: 4px 8px
+		transition: all .3s ease-out
+		.author-thumb
+			display: flex
+			.info
+				img
+					margin-right: 10px
+			.review
+				margin-left: auto
+			.rating
+			.stars
+				color: $color-yellow--light
+				i
+					&:nth-child(1n+2)
+						margin-left: 2px
+			.num
+				margin-left: 5px
+	.body
+		//padding: 10px
+	.text
+		display: inline-block
+		padding: 10px
+	.foot
+		padding: 10px
+	.actions
+		a
+			font-size: 17px
+			transition: color .2s
+			&:hover, &:focus
+				color: $color-orange
+			&:nth-child(1n+2)
+				margin-left: 6px
+	.price
+		margin-left: auto
+		font-size: 16px
+		font-weight: 500
+		.nums
+			font-size: 24px
+			color: $color-orange
+			font-weight: 700
+		
+
+		
+//section
+//130
+.reviews
+	&__hline
+		position: relative
+		&:before, &:after
+			+centre(y)
+			display: inline-block
+			content: ""
+			height: 10px
+			background: $color-border-gray
+		&:before
+			left: 0
+			right: calc(50% - (-170px))
+		&:after
+			right: 0
+			left: calc(50% + 170px)
+		.clr-red
+			vertical-align: text-top
+	&__arrow
+		+centre(y)
+		font-size: 112px
+		transition: color .2s
+		+max-screen($common-tablet)
+			font-size: 60px
+			top: 24%
+		+max-screen($smartphone-landscape - 1)
+			top: 35%
+		&--left
+			left: 30px
+			+max-screen($common-tablet)
+				left: 0
+		&--right
+			right: 30px
+			+max-screen($common-tablet)
+				right: 0
+.review-card
+	&__body
+	&__img-w
+		//width: 200px
+		+max-screen($common-tablet)
+			margin-top: 60px
+			margin-bottom: 20px
+	&__info
+		padding-top: 12px
+	&__head
+	&__rating
+		display: inline-block
+		color: $color-yellow--light
+		i
+			&:nth-child(1n+2)
+				margin-left: 3px
+		+max-screen($smartphone-portrait)
+			margin-top: 10px
+	&__main
+	&__text
+	&__more

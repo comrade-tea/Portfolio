@@ -1,0 +1,157 @@
+extends layout/master
+
+block title
+	title sub page
+block header
+	include layout/header-nonauth
+block content
+	div.subpage
+		include layout/breadcrumb
+		div.uk-container.uk-container-center
+			div.subpage__grid.uk-grid
+				div#a-search.subpage-lbar.uk-width-large-1-5
+					div.subpage-lbar__inner
+						div.uk-panel-box.uk-margin-bottom
+							div.uk-panel-box-section.uk-text-center
+								div.uk-h4.uk-text-bold 디자인
+							div.uk-panel-box-section
+								ul.uk-list
+									li
+										a(href="#" class="active") 로고 / 명함 디자인
+									li
+										a(href="#" class="") 사진 / 포토샵
+									li
+										a(href="#" class="") 웹 / 모바일 디자인
+									li
+										a(href="#" class="") 일러스트 / 캐릭터
+									li
+										a(href="#" class="") 블로그 / 카페
+									li
+										a(href="#" class="") 3D 모델링 / 도면
+									li
+										a(href="#" class="") 만화 / 웹툰
+									li
+										a(href="#" class="") PPT / 템플릿
+									li
+										a(href="#" class="") 인쇄물 디자인
+
+						div.uk-panel-box
+							form.uk-form(action="")
+								div.uk-panel-box-section
+									div.uk-h4.uk-text-bold.uk-margin-bottom 결과 내 검색
+									input(type="search" placeholder="검색어 입력")
+								div.uk-panel-box-section
+									div.uk-h4.uk-text-bold.uk-margin-bottom 상품 보기
+									div.uk-form-row
+										label
+											input(type='checkbox')
+											| 레스트 서비스 제외
+
+									div.uk-form-row
+										label
+											input(type='checkbox')
+											| 미팅 가능 서비스 보기
+
+								div.uk-panel-box-section
+									div.uk-h4.uk-text-bold.uk-margin-bottom 납기일
+									div.uk-form-row
+										label
+											input(type='checkbox')
+											| 전체
+									div.uk-form-row
+										label
+											input(type='checkbox')
+											| 당일
+									div.uk-form-row
+										label
+											input(type='checkbox')
+											| 2-3일
+									div.uk-form-row
+										label
+											input(type='checkbox')
+											| 일주일
+									div.uk-form-row
+										label
+											input(type='checkbox')
+											| 일주일  이상
+								div.uk-panel-box-section
+									div.uk-h4.uk-text-bold.uk-margin-bottom
+										| 가격 검색
+										div.gray-capture 단위 : 만원
+
+									input#price-search(type='text', name='price-search', value='')
+
+
+				//content bar
+				div.subpage__content.uk-width-large-4-5
+					div.subpage-sort.uk-flex.uk-panel-box.uk-margin-bottom
+						div.subpage-sort__btns
+							a(href="#" class="uk-button uk-button-danger") 인기순
+							a(href="#" class="uk-button") 최신순
+							a(href="#" class="uk-button") 평점순
+
+						div.subpage-sort__form.uk-form
+							a.uk-hidden-large(href='#a-search', data-uk-offcanvas='')
+								i.uk-icon-filter
+								| 상세검색
+							a.uk-hidden-large(href='#')
+								i.uk-icon-sort-amount-desc
+								| 최신순
+
+							select
+								option 16개 정렬
+								option item 01
+								option item 02
+								option item 03
+
+
+					ul.uk-grid.uk-grid-width-xlarge-1-4.uk-grid-width-medium-1-3.uk-grid-width-small-1-2.uk-margin-large-bottom(data-uk-grid-margin="")
+						-for (var x = 0; x < 16; x++)
+							li
+								div.about-card
+									a(href="#" class="about-card__head")
+										span.about-card__img-w
+											img(src="media/img/news-img.jpg" alt="")
+										span.about-card__badge
+											img(src="media/img/badge.png" alt="")
+										span.about-card__author
+											span.ac-author
+												span.ac-author__info
+													img(src="media/img/about-card-author.png" alt="")
+													span hyerin55
+												span.ac-author__review
+													span.ac-author__stars
+														i.uk-icon-star
+														i.uk-icon-star
+														i.uk-icon-star
+														i.uk-icon-star
+														i.uk-icon-star
+													span.ac-author__num (7)
+									div.about-card__body
+										a(href="#" class="about-card__text").
+											[게임, 애니메이션, 광고 ]사운드 디자
+											인 및 BGM 제작해드립니다.
+										div.about-card__footer.uk-flex.uk-flex-middle
+											div.about-card__actions
+												a(href="#" class="uk-icon-heart-o")
+												a(href="#" class="uk-icon-phone")
+												a(href="#" class="uk-icon-envelope")
+												a(href="#" class="uk-icon-plus")
+											div.about-card__price  #[span(class="nums") 50,000]원
+
+					ul.uk-pagination
+						li
+							a(href="#" class="arrow")
+								i.uk-icon-angle-left
+						li
+							a(href="#") 1
+						li.uk-active
+							span 2
+						li
+							a(href="#") 3
+						li
+							a(href="#") 4
+						li
+							a(href="#" class="arrow")
+								i.uk-icon-angle-right
+

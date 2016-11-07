@@ -1,0 +1,44 @@
+*
+	+box
+	padding: 0
+	margin: 0
+	border-collapse: collapse
+	&:before,&:after
+		+box
+html, body
+	//width: 100%
+	//height: 100%
+body
+	//font: 14px/1.3 'geo', sans-serif
+	//color: $color-text-black
+	// overflow-x: hidden
+	background: $color-bg-sky
+	min-width: 320px
+	+max-screen($smartphone-landscape)
+		font-size: 12px
+
+img
+	max-width: 100%
+	height: auto
+	border: 0
+	vertical-align: middle
+ul,li
+	list-style: none
+a, input, textarea
+	color: inherit
+a
+	//color: $color-text-highlight
+	//text-transform: uppercase
+	font-size: 14px
+	text-decoration: none
+//textarea
+	resize: none
+	//resize: vertical
+//button
+	margin: 0
+	font-size: 14px
+	background: transparent
+	outline: none
+	border: none
+	cursor: pointer
+	overflow: visible

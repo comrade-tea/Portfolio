@@ -1,0 +1,125 @@
+.m-footer
+	position: fixed
+	bottom: 0
+	left: 0
+	z-index: 2
+	width: 100%
+	text-align: center
+	padding: 10px 0
+	background: $color-white
+	i
+		font-size: 30px
+	span
+		display: block
+	a
+		color: #aeaeae
+		transition: color .2s
+		&:hover, &:focus
+			color: $color-orange
+			text-decoration: none
+	
+.footer
+	color: $color-text-white--light
+	padding: 0 40px
+	background: $color-black--light
+	+max-screen($big-tablet)
+		padding: 0 20px
+	+max-screen($common-tablet)
+		padding-bottom: 60px
+	&__top
+		//padding: 70px 0
+		//border-bottom: 1px solid #505050
+		+max-screen($common-tablet)
+			border-bottom: none
+	&__main-grid
+		border-bottom: 1px solid #505050
+		padding-bottom: 30px
+		+max-screen($common-tablet)
+			border-bottom: none
+			flex-flow: column-reverse nowrap
+	&__list-col
+		position: relative
+		margin-left: auto
+		+max-screen($common-tablet)
+		&:before
+			+b
+			display: none
+			left: 0
+			right: -20px
+			height: 1px
+			//width: 100%
+			bottom: 0
+			background: #505050
+			+max-screen($common-tablet)
+				display: block
+		+max-screen($common-tablet)
+			padding-top: 20px
+			padding-bottom: 20px
+			//border-bottom: 1px solid #505050
+			margin-bottom: 20px
+	&__bot
+		//padding: 30px 0
+		padding-top: 30px
+	&__bot-inner
+		+max-screen($big-tablet)
+			flex-flow: row wrap
+	&__contacts
+		margin-left: 80px
+		+max-screen($big-tablet)
+			margin-left: auto
+			margin-bottom: 20px
+		+max-screen($small-tablet)
+			flex-flow: column wrap
+		+max-screen($smartphone-portrait)
+			width: 100%
+			display: block
+			margin-left: 0
+			//text-align: center
+		div + div
+			margin-left: 24px
+			+max-screen($small-tablet)
+				margin-left: 0
+			+max-screen($smartphone-portrait)
+				margin-top: 10px
+				margin-left: 0
+		.tel
+			+max-screen($smartphone-portrait)
+				display: block
+	&__copyright
+		margin-left: auto
+		+max-screen($big-tablet)
+			width: 100%
+		+max-screen($big-tablet)
+			display: flex
+			align-items: center
+		.m-analytics
+			+max-screen($big-tablet)
+				margin-left: auto
+	ul
+		padding: 0
+		li
+			&:nth-child(1n+2)
+				margin-top: 6px
+	a
+		color: #707070
+		font-size: 16px
+		+max-screen($smartphone-landscape)
+			font-size: 12px
+	
+	
+.social
+	display: flex
+	+max-screen($big-tablet)
+		margin-bottom: 20px
+	div
+		&:nth-child(1n+2)
+			margin-left: 26px
+			+max-screen($big-tablet)
+				margin-left: 20px
+	&__link
+		display: block
+		transition: opacity .2s
+		+max-screen($small-tablet)
+			max-width: 34px
+		&:hover, &:focus
+			opacity: .9

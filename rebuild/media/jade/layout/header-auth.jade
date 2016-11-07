@@ -1,0 +1,102 @@
+header.header
+	div.header__inner
+		div.header__top
+			div.uk-container.uk-container-center.uk-flex.uk-flex-bottom
+				div.header__logo
+						img(src="media/img/logo.png" alt="")
+
+				div.header__search.uk-hidden-small
+					div.uk-form
+						input(type="search" placeholder="원하는 서비스 검색")
+						button.uk-button.uk-button-danger
+							i.uk-icon-search
+				div.header__ui.uk-flex.uk-flex-middle
+					div.service-center.uk-button-dropdown.uk-visible-large(data-uk-dropdown='')
+						div 고객센터
+							i.uk-icon-sort-down
+						div.uk-dropdown.uk-dropdown-bottom
+							ul.uk-nav.uk-nav-dropdown
+								li
+									a(href='#') Item 1
+								li
+									a(href='#') item 2
+					a(href="#" class="icon uk-icon-small uk-icon-bell")
+					a(href="#" class="icon uk-icon-small uk-icon-envelope")
+					div.profile.uk-flex
+						div.profile__i-wrap: img(src="media/img/profile-img.png" alt="")
+						div.profile__info
+							div.profile__name.uk-text-center admin
+							div.profile__balance.btn-round.btn-round--sm 10,000,000 원
+
+		div.header__bot
+			div.uk-container.uk-container-center
+				nav.uk-navbar
+					a.uk-navbar-toggle.uk-hidden-large(href='#nav-menu', data-uk-offcanvas='')
+					div#nav-menu.uk-offcanvas
+						div.uk-offcanvas-bar.uk-offcanvas-bar-show
+							div.uk-panel
+								ul.uk-nav.uk-nav-offcanvas.uk-nav-parent-icon(data-uk-nav="")
+									li.uk-nav-header navigation
+									li.uk-parent
+										a(href="#") 문서작성
+										ul.uk-nav-sub
+											li
+												a(href='#') 로고 / 명함 디자인
+											li
+												a(href='#') 사진 / 포토샵
+											li
+												a(href='#') 웹 / 모바일 디자인
+											li
+												a(href='#') 일러스트 / 캐릭터
+											li
+												a(href='#') 블로그 / 카페
+									li
+										a(href="#") 마케팅
+									li
+										a(href="#") 프로그래밍
+									li
+										a(href="#") 게임강의
+									li
+										a(href="#") 음악/영상
+									li
+										a(href="#") 과외/레슨
+									li
+										a(href="#") 생활서비스
+									li
+										a(href="#") 도와주세요
+									li
+										a(href="#") 디자인.
+					ul.uk-navbar-nav.uk-visible-large
+						li.uk-parent(data-uk-dropdown="")
+							a(href="#") 번역
+							div.uk-dropdown.uk-dropdown-navbar.uk-dropdown-bottom
+								ul.uk-nav.uk-nav-navbar
+									li
+										a(href='#') 로고 / 명함 디자인
+									li
+										a(href='#') 사진 / 포토샵
+									li
+										a(href='#') 웹 / 모바일 디자인
+									li
+										a(href='#') 일러스트 / 캐릭터
+									li
+										a(href='#') 블로그 / 카페
+
+						li
+							a(href="#") 문서작성
+						li
+							a(href="#") 마케팅
+						li
+							a(href="#") 프로그래밍
+						li
+							a(href="#") 게임강의
+						li
+							a(href="#") 음악/영상
+						li
+							a(href="#") 과외/레슨
+						li
+							a(href="#") 생활서비스
+						li
+							a(href="#") 도와주세요
+						li
+							a(href="#") 디자인.
