@@ -6,26 +6,15 @@ jQuery(function () {
 	var $navbarItems = $navBar.find("li");
 	var navBarWidth = 0;
 	
-	//pager change active
-/*	var pagerItems = jQuery(".custom-pager li");
-	pagerItems.on("click", function () {
-		var $this = jQuery(this);
-		
-		pagerItems.removeClass("uk-active");
-		$this.addClass("uk-active");
-	});*/
-	
-	// set width for navbar
+
+	// remove nav dropdown on touch devices
+	if ($("html").hasClass("uk-touch")) {
+		jQuery(".header").find(".uk-parent").removeAttr("data-uk-dropdown");
+	}
+
+	// subpage leftbar
 	$window.resize(function () {
-		//topnav set width
-		navBarWidth = 0;
-		$navbarItems.each(function (index, el) {
-			var $el = jQuery(el);
-			navBarWidth += $el.width();
-		});
-		$navBar.css({width: navBarWidth + 20});
-		
-		//subpage leftbar
+
 		var $subLeftBar = jQuery(".subpage-lbar"),
 			$subLeftBarInner = jQuery(".subpage-lbar__inner");
 		
@@ -40,27 +29,6 @@ jQuery(function () {
 	}).resize();
 	
 	 
-	// mobile dropdown handler
-	$navDropdownLinks.on("click", function () {
-		var $this = jQuery(this);
-		var $dropdown = $this.find(".uk-dropdown");
-		
-		var offset = $this[0].getBoundingClientRect(),
-			offsetX = offset.left,
-			offsetY = offset.bottom - 1;
-		
-		setTimeout(function () {
-			$dropdown[0].style.setProperty("top", offsetY + "px", "important");
-			$dropdown[0].style.setProperty("left", offsetX + "px", "important");
-		}, 0);
-		
-	});
-	
-	//remove nav-dropdown on mobile
-	$window.on("touchmove", function () {
-		$navDropdownLinks.removeClass("uk-open")
-	});
-	
 	//search toggler
 	if ($window.width() <= 640) {
 		jQuery(".header-search-btn").on("click", function (e) {
@@ -73,7 +41,7 @@ jQuery(function () {
 		});
 	}
 	
-	
+
 	jQuery("#price-search").ionRangeSlider({
 		type: "double",
 		grid: true,
@@ -89,6 +57,5 @@ jQuery(function () {
 		
 		$body.slideToggle("slow");
 	});
-	
 	
 });

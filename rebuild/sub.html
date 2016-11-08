@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="media/css/components/slider.css">
     <link rel="stylesheet" href="media/css/components/slideshow.css">
     <link rel="stylesheet" href="media/css/uikit.min.css">
-    <link rel="stylesheet" href="media/css/screen.css">
+    <link rel="stylesheet" href="media/css/customize.css">
   </head>
   <body>
     <!--include header-->
@@ -430,20 +430,22 @@
       </div>
     </div>
     <div class="m-footer uk-hidden-large">
-      <div class="m-footer__inner uk-container">
+      <div class="m-footer-inner uk-container">
         <div class="uk-flex uk-flex-space-between">
-          <div><a href="#" class="m-footer__link"><i class="uk-icon-home"></i><span>홈</span></a></div>
-          <div><a href="#" class="m-footer__link"><i class="uk-icon-envelope"></i><span>메세지</span></a></div>
-          <div><a href="#" class="m-footer__link"><i class="uk-icon-bell"></i><span>메세지</span></a></div>
-          <div><a href="#" class="m-footer__link"><i class="uk-icon-th-large"></i><span>마이페이지</span></a></div>
+          <div><a href="#" class="m-footer-link"><i class="uk-icon-home"></i><span>홈</span></a></div>
+          <div><a href="#" class="m-footer-link"><i class="uk-icon-envelope"></i><span>메세지</span></a></div>
+          <div><a href="#" class="m-footer-link"><i class="uk-icon-bell"></i><span>메세지</span></a></div>
+          <div><a href="#" class="m-footer-link"><i class="uk-icon-th-large"></i><span>마이페이지</span></a></div>
         </div>
       </div>
     </div>
     <div class="footer">
-      <div class="footer__top uk-block">
+      <div class="footer-top uk-block">
         <div class="uk-container uk-container-center">
-          <div class="uk-grid footer__main-grid">
-            <div class="uk-width-medium-1-3 uk-width-large-1-4 uk-margin-bottom"><a href="#" class="#"><img src="media/img/logo-footer.png" alt="" class="uk-hidden-small"><img src="media/img/footer-mobile-logo.png" alt="" class="uk-visible-small"></a>
+          <div class="uk-grid footer-main-grid">
+            <div class="uk-width-medium-1-3 uk-margin-bottom"><a href="#" class="logo">
+                <!--img(src="media/img/logo-footer.png" class="uk-hidden-small" alt="")-->
+                <!--img(src="media/img/footer-mobile-logo.png" class="uk-visible-small" alt="")--><img src="media/svg/logo.svg" alt="" class="footer-logo"></a>
               <p>
                 회사명: 위드몬 (주)   대표자: 임민영   정보처리책임자: 이중원
                 주소: 서울특별시 금천구 디지털로9길 99, 803호 (가산동, 스타밸리)
@@ -453,46 +455,46 @@
                 
               </p>
             </div>
-            <div class="footer__list-col uk-width-medium-1-3">
+            <div class="footer-list-col uk-width-medium-1-3">
               <div class="uk-grid">
                 <div class="uk-width-1-2">
                   <div class="h4 headline-yellow clr-white">사용자 메뉴</div>
                   <ul class="footer-list">
-                    <li><a href="#" class="footer-list__link">메인페이지</a></li>
-                    <li><a href="#" class="footer-list__link">이용안내</a></li>
-                    <li><a href="#" class="footer-list__link">찾아오시는 길</a></li>
-                    <li><a href="#" class="footer-list__link">로그인</a></li>
-                    <li><a href="#" class="footer-list__link">회원 가입</a></li>
+                    <li><a href="#" class="footer-list-link">메인페이지</a></li>
+                    <li><a href="#" class="footer-list-link">이용안내</a></li>
+                    <li><a href="#" class="footer-list-link">찾아오시는 길</a></li>
+                    <li><a href="#" class="footer-list-link">로그인</a></li>
+                    <li><a href="#" class="footer-list-link">회원 가입</a></li>
                   </ul>
                 </div>
                 <div class="uk-width-1-2">
                   <div class="h4 headline-yellow clr-white">이용관련 정보</div>
                   <ul class="footer-list">
-                    <li><a href="#" class="footer-list__link">FAQ</a></li>
-                    <li><a href="#" class="footer-list__link">문의하기</a></li>
-                    <li><a href="#" class="footer-list__link">판매자 등급</a></li>
-                    <li><a href="#" class="footer-list__link">이용약관</a></li>
-                    <li><a href="#" class="footer-list__link">개인정보 보호정책</a></li>
+                    <li><a href="#" class="footer-list-link">FAQ</a></li>
+                    <li><a href="#" class="footer-list-link">문의하기</a></li>
+                    <li><a href="#" class="footer-list-link">판매자 등급</a></li>
+                    <li><a href="#" class="footer-list-link">이용약관</a></li>
+                    <li><a href="#" class="footer-list-link">개인정보 보호정책</a></li>
                   </ul>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="footer__bot">
-          <div class="footer__bot-inner uk-flex uk-flex-middle uk-container uk-container-center">
-            <div class="footer__social">
+        <div class="footer-bot">
+          <div class="footer-bot-inner uk-flex uk-flex-middle uk-container uk-container-center">
+            <div class="footer-social">
               <div class="social">
-                <div><a href="#" class="social__link"><img src="media/img/social-twitter.png" alt=""></a></div>
-                <div><a href="#" class="social__link"><img src="media/img/social-fb.png" alt=""></a></div>
-                <div><a href="#" class="social__link"><img src="media/img/social-google.png" alt=""></a></div>
+                <div><a href="#" class="social-link fb"><i class="uk-icon-facebook"></i></a></div>
+                <div><a href="#" class="social-link twitter"><i class="uk-icon-twitter"></i></a></div>
+                <div><a href="#" class="social-link google-plus"><i class="uk-icon-google-plus"></i></a></div>
               </div>
             </div>
-            <div class="footer__contacts uk-flex">
+            <div class="footer-contacts uk-flex">
               <div>E-mail : help@withmon.com</div>
               <div>Tel : 1544-1817</div>
             </div>
-            <div class="footer__copyright">© 2015 withmon.com<a href="#" class="m-analytics uk-hidden-large"><img src="media/img/m-analytics.png" alt=""></a></div>
+            <div class="footer-copyright">© 2015 withmon.com<a href="#" class="m-analytics uk-hidden-large"><img src="media/img/m-analytics.png" alt=""></a></div>
           </div>
         </div>
       </div>

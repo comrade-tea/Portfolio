@@ -22,6 +22,9 @@
 				overflow: auto
 				-webkit-overflow-scrolling: touch
 		.uk-navbar-nav
+			width: 1100px
+			+max-screen($smartphone-landscape)
+				width: 980px
 			> li > a
 				font-size: 1.4em
 				cursor: pointer
@@ -60,7 +63,7 @@
 			margin-left: 20px
 			max-width: 160px
 		+max-screen($smartphone-portrait)
-			margin-bottom: 4px
+			margin-bottom: -4px
 			max-width: 120px
 	.search-block
 		margin-left: 60px
@@ -110,7 +113,7 @@
 		+max-screen($small-tablet)
 			position: absolute
 			display: block
-			width: 300px
+			width: 285px
 			top: 0
 			right: 25px
 			opacity: 0

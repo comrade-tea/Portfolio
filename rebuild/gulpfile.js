@@ -55,7 +55,7 @@ gulp.task("jade-trigger", ["jade"], reload);
 
 // SASS
 gulp.task("sass", function () {
-	return gulp.src("media/sass/screen.sass")
+	return gulp.src("media/sass/customize.sass")
 		.pipe(plumber({errorHandler: onError}))
 		.pipe(sourcemaps.init())
 		.pipe(sass({

@@ -26,26 +26,11 @@
 @function icon-char($filename) {
   $char: "";
 
-  @if $filename == close-ic {
+  @if $filename == logo-old {
   $char: "\E001";
 }
-  @if $filename == eksprtn-01 {
+  @if $filename == logo {
   $char: "\E002";
-}
-  @if $filename == kvadrat-ic {
-  $char: "\E003";
-}
-  @if $filename == pin-button-ic {
-  $char: "\E004";
-}
-  @if $filename == serv-ic-1 {
-  $char: "\E005";
-}
-  @if $filename == serv-ic-2 {
-  $char: "\E006";
-}
-  @if $filename == serv-ic-3 {
-  $char: "\E007";
 }
 
 @return $char;
@@ -62,24 +47,9 @@
 }
 }
 
-.icon-close-ic {
-  @include icon(close-ic);
+.icon-logo-old {
+  @include icon(logo-old);
 }
-.icon-eksprtn-01 {
-  @include icon(eksprtn-01);
-}
-.icon-kvadrat-ic {
-  @include icon(kvadrat-ic);
-}
-.icon-pin-button-ic {
-  @include icon(pin-button-ic);
-}
-.icon-serv-ic-1 {
-  @include icon(serv-ic-1);
-}
-.icon-serv-ic-2 {
-  @include icon(serv-ic-2);
-}
-.icon-serv-ic-3 {
-  @include icon(serv-ic-3);
+.icon-logo {
+  @include icon(logo);
 }

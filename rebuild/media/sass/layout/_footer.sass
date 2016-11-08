@@ -26,18 +26,18 @@
 		padding: 0 20px
 	+max-screen($common-tablet)
 		padding-bottom: 60px
-	&__top
+	&-top
 		//padding: 70px 0
 		//border-bottom: 1px solid #505050
 		+max-screen($common-tablet)
 			border-bottom: none
-	&__main-grid
+	&-main-grid
 		border-bottom: 1px solid #505050
 		padding-bottom: 30px
 		+max-screen($common-tablet)
 			border-bottom: none
 			flex-flow: column-reverse nowrap
-	&__list-col
+	&-list-col
 		position: relative
 		margin-left: auto
 		+max-screen($common-tablet)
@@ -57,13 +57,15 @@
 			padding-bottom: 20px
 			//border-bottom: 1px solid #505050
 			margin-bottom: 20px
-	&__bot
+	&-logo
+		max-width: 160px
+	&-bot
 		//padding: 30px 0
 		padding-top: 30px
-	&__bot-inner
+	&-bot-inner
 		+max-screen($big-tablet)
 			flex-flow: row wrap
-	&__contacts
+	&-contacts
 		margin-left: 80px
 		+max-screen($big-tablet)
 			margin-left: auto
@@ -85,7 +87,7 @@
 		.tel
 			+max-screen($smartphone-portrait)
 				display: block
-	&__copyright
+	&-copyright
 		margin-left: auto
 		+max-screen($big-tablet)
 			width: 100%
@@ -100,12 +102,8 @@
 		li
 			&:nth-child(1n+2)
 				margin-top: 6px
-	a
-		color: #707070
-		font-size: 16px
-		+max-screen($smartphone-landscape)
-			font-size: 12px
-	
+
+
 	
 .social
 	display: flex
@@ -116,10 +114,34 @@
 			margin-left: 26px
 			+max-screen($big-tablet)
 				margin-left: 20px
-	&__link
+	&-link
+		position: relative
 		display: block
-		transition: opacity .2s
+		color: $color-white
+		width: 42px
+		height: 42px
+		border-radius: 50%
+		overflow: hidden
 		+max-screen($small-tablet)
-			max-width: 34px
+			width: 34px
+			height: 34px
+		&.fb
+			background: #55acee
+		&.twitter
+			background: #3b5998
+		&.google-plus
+			background: #dc4e41
 		&:hover, &:focus
-			opacity: .9
+			color: $color-white
+			&.fb
+				background: darken(#55acee, 6%)
+			&.twitter
+				background: darken(#3b5998, 6%)
+			&.google-plus
+				background: darken(#dc4e41, 6%)
+		i
+			+centre(both)
+			font-size: 20px
+			+max-screen($small-tablet)
+				font-size: 18px
+

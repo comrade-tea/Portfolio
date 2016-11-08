@@ -14,7 +14,8 @@ $section-sm-offset: 60px
 		font-size: 2.2em
 	.subtitle
 		font-size: 1.4em
-		
+
+
 .custom-pager
 	li
 		a, span
@@ -23,6 +24,8 @@ $section-sm-offset: 60px
 			border-radius: 5px
 			background: transparent
 			transition: all .2s
+			+max-screen($small-tablet)
+				padding: 5px 7px
 		a
 			&:hover
 				background: #cecece
@@ -35,8 +38,12 @@ $section-sm-offset: 60px
 	.arrow-item
 		&:first-child
 			margin-right: 24px
+			+max-screen($small-tablet)
+				margin-right: 15px
 		&:last-child
 			margin-left: 24px
+			+max-screen($small-tablet)
+				margin-left: 15px
 	.arrow
 		background: $color-black--light
 		color: $color-white
