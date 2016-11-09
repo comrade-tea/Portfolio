@@ -5,67 +5,68 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700&amp;subset=devanagari,latin-ext,vietnamese" rel="stylesheet">
+    <link rel="stylesheet" href="media/css/uikit.min.css">
     <link rel="stylesheet" href="media/css/components/slider.css">
     <link rel="stylesheet" href="media/css/components/slideshow.css">
-    <link rel="stylesheet" href="media/css/uikit.min.css">
+    <link rel="stylesheet" href="media/css/components/sticky.css">
+    <link rel="stylesheet" href="media/css/ion.rangeSlider.skinNice.css">
+    <link rel="stylesheet" href="media/css/ion.rangeSlider.css">
     <link rel="stylesheet" href="media/css/customize.css">
   </head>
   <body>
     <!--include header-->
-    <header class="header">
-      <div class="inner">
-        <div class="top">
-          <div class="uk-container uk-container-center uk-flex uk-flex-bottom"><a href="#left-menu" data-uk-offcanvas="" class="header__left-nav uk-hidden-large"><i class="uk-icon-navicon"></i></a><a href="#" class="logo"><img src="media/svg/logo.svg" alt=""></a>
-            <div class="search-block">
-              <form action="" class="uk-form search">
-                <div class="input-wrap header-search-input">
-                  <input type="search" placeholder="원하는 서비스 검색">
-                </div>
-                <button class="uk-button uk-button-danger header-search-btn"><i class="uk-icon-search"></i></button>
-              </form>
-            </div><a href="#right-menu" data-uk-offcanvas="" class="header__right-nav uk-hidden-large"><i class="uk-icon-th"></i></a>
-            <div class="header-ui uk-flex uk-flex-middle uk-visible-large">
-              <div class="auth"><a href="#">로그인</a><a href="#">무료 회원가입</a></div>
-            </div>
+    <header data-uk-sticky class="header">
+      <div class="header-top uk-navbar">
+        <div class="uk-container uk-container-center uk-flex uk-flex-bottom"><a href="#left-menu" data-uk-offcanvas="" class="uk-navbar-toggle uk-hidden-large"></a><a href="#" class="logo"><img src="media/svg/logo.svg" data-uk-svg alt=""></a>
+          <div class="search-block">
+            <form action="" class="uk-form search">
+              <div class="input-wrap header-search-input">
+                <input type="search" placeholder="원하는 서비스 검색">
+              </div>
+              <button class="uk-button uk-button-danger header-search-btn"><i class="uk-icon-search"></i></button>
+            </form>
+          </div><a href="#right-menu" data-uk-offcanvas="" class="header__right-nav uk-hidden-large"><i class="uk-icon-th"></i></a>
+          <div class="header-ui uk-flex uk-flex-middle uk-visible-large">
+            <div class="auth"><a href="#">로그인</a><a href="#">무료 회원가입</a></div>
           </div>
         </div>
-        <div class="bot">
-          <div class="uk-container uk-container-center">
-            <nav class="uk-navbar">
-              <ul class="uk-navbar-nav">
-                <li data-uk-dropdown="" class="uk-parent"><a href="#">번역</a>
-                  <div class="uk-dropdown uk-dropdown-navbar uk-dropdown-bottom">
-                    <ul class="uk-nav uk-nav-navbar">
-                      <li><a href="#">로고 / 명함 디자인</a></li>
-                      <li><a href="#">사진 / 포토샵</a></li>
-                      <li><a href="#">웹 / 모바일 디자인</a></li>
-                      <li><a href="#">일러스트 / 캐릭터</a></li>
-                      <li><a href="#">블로그 / 카페</a></li>
-                    </ul>
-                  </div>
-                </li>
-                <li><a href="#">문서작성</a></li>
-                <li data-uk-dropdown="" class="uk-parent"><a href="#">마케팅</a>
-                  <div class="uk-dropdown uk-dropdown-navbar uk-dropdown-bottom">
-                    <ul class="uk-nav uk-nav-navbar">
-                      <li><a href="#">로고 / 명함 디자인</a></li>
-                      <li><a href="#">사진 / 포토샵</a></li>
-                      <li><a href="#">웹 / 모바일 디자인</a></li>
-                      <li><a href="#">일러스트 / 캐릭터</a></li>
-                      <li><a href="#">블로그 / 카페</a></li>
-                    </ul>
-                  </div>
-                </li>
-                <li><a href="#">프로그래밍</a></li>
-                <li><a href="#">게임강의</a></li>
-                <li><a href="#">음악/영상</a></li>
-                <li><a href="#">과외/레슨</a></li>
-                <li><a href="#">생활서비스</a></li>
-                <li><a href="#">도와주세요</a></li>
-                <li><a href="#">디자인.</a></li>
-              </ul>
-            </nav>
-          </div>
+      </div>
+      <div class="header-bot">
+        <div class="uk-container uk-container-center">
+          <nav class="uk-navbar">
+            <ul class="uk-navbar-nav">
+              <li data-uk-dropdown="" class="uk-parent"><a href="#">번역</a>
+                <div class="uk-dropdown uk-dropdown-navbar uk-dropdown-bottom">
+                  <ul class="uk-nav uk-nav-navbar">
+                    <li><a href="#">로고 / 명함 디자인</a></li>
+                    <li><a href="#">사진 / 포토샵</a></li>
+                    <li><a href="#">웹 / 모바일 디자인</a></li>
+                    <li><a href="#">일러스트 / 캐릭터</a></li>
+                    <li><a href="#">블로그 / 카페</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li><a href="#">문서작성</a></li>
+              <li data-uk-dropdown="" class="uk-parent"><a href="#">마케팅</a>
+                <div class="uk-dropdown uk-dropdown-navbar uk-dropdown-bottom">
+                  <ul class="uk-nav uk-nav-navbar">
+                    <li><a href="#">로고 / 명함 디자인</a></li>
+                    <li><a href="#">사진 / 포토샵</a></li>
+                    <li><a href="#">웹 / 모바일 디자인</a></li>
+                    <li><a href="#">일러스트 / 캐릭터</a></li>
+                    <li><a href="#">블로그 / 카페</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li><a href="#">프로그래밍</a></li>
+              <li><a href="#">게임강의</a></li>
+              <li><a href="#">음악/영상</a></li>
+              <li><a href="#">과외/레슨</a></li>
+              <li><a href="#">생활서비스</a></li>
+              <li><a href="#">도와주세요</a></li>
+              <li><a href="#">디자인.</a></li>
+            </ul>
+          </nav>
         </div>
       </div>
     </header>
@@ -320,9 +321,9 @@
           <div class="footer-bot-inner uk-flex uk-flex-middle uk-container uk-container-center">
             <div class="footer-social">
               <div class="social">
-                <div><a href="#" class="social-link fb"><i class="uk-icon-facebook"></i></a></div>
-                <div><a href="#" class="social-link twitter"><i class="uk-icon-twitter"></i></a></div>
-                <div><a href="#" class="social-link google-plus"><i class="uk-icon-google-plus"></i></a></div>
+                <div><a href="#" class="uk-icon-button uk-icon-facebook"></a></div>
+                <div><a href="#" class="uk-icon-button uk-icon-twitter"></a></div>
+                <div><a href="#" class="uk-icon-button uk-icon-google-plus"></a></div>
               </div>
             </div>
             <div class="footer-contacts uk-flex">
@@ -339,6 +340,7 @@
   <script defer="defer" src="media/js/uikit.min.js"></script>
   <script defer="defer" src="media/js/components/slideshow.min.js"></script>
   <script defer="defer" src="media/js/components/slider.min.js"></script>
+  <script defer="defer" src="media/js/components/sticky.min.js"></script>
   <script defer="defer" src="media/js/ion.rangeSlider.min.js"></script>
   <script defer="defer" src="media/js/main.js"></script>
 </html>

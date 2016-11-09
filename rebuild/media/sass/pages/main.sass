@@ -94,18 +94,31 @@
 //130
 .reviews
 	.block-intro
+		.title-wrap
+			&:before
+				+centre(y)
+				left: 0
+				width: 100%
+				display: inline-block
+				content: ""
+				height: 10px
+				background: $color-border-gray
 		.title
 			position: relative
-			&:before, &:after
+			display: inline-block
+			padding: 0 36px
+			margin-bottom: 0
+			background: $color-white
+			//&:before, &:after
 				+centre(y)
 				display: inline-block
 				content: ""
 				height: 10px
 				background: $color-border-gray
-			&:before
+			//&:before
 				left: 0
 				right: calc(50% - (-170px))
-			&:after
+			//&:after
 				right: 0
 				left: calc(50% + 170px)
 			.clr-red
@@ -127,6 +140,7 @@
 			right: 30px
 			+max-screen($common-tablet)
 				right: 0
+
 .review-slide
 	&-body
 	&-img-w
@@ -137,6 +151,13 @@
 	&-info
 		padding-top: 12px
 	&-head
+	.uk-badge
+		padding: 6px 15px
+		font-size: 1em
+		background: $color-bg-sky
+		color: $color-black--light
+		border-radius: 12px
+		border: 1px solid #b5b5b5
 	&-rating
 		display: inline-block
 		color: $color-yellow--light

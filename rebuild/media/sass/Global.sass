@@ -1,53 +1,24 @@
-*
-	+box
-	padding: 0
-	margin: 0
-	border-collapse: collapse
-	&:before,&:after
-		+box
-html, body
-	//width: 100%
-	//height: 100%
 body
-	//font: 14px/1.3 'geo', sans-serif
-	//color: $color-text-black
-	// overflow-x: hidden
+	font: normal 14px / 20px "Noto Sans", Helvetica, Arial, sans-serif
 	background: $color-bg-sky
 	min-width: 320px
-	+max-screen($smartphone-landscape)
-		font-size: 12px
+
+//ul
+	list-style: none
 
 p
 	font-size: 1em
-a
-	font-size: 1em
-
-img
+//img
 	max-width: 100%
 	height: auto
 	border: 0
 	vertical-align: middle
-ul,li
-	list-style: none
-a, input, textarea
-	color: inherit
 a
-	//color: $color-text-highlight
-	//text-transform: uppercase
+	//font-family: 'Noto Sans', sans-serif
+	color: $color-black--light
 	font-size: .9em
 	text-decoration: none
 	transition: all .2s
 	&:hover
 		color: $color-orange
 		text-decoration: none
-//textarea
-	resize: none
-	//resize: vertical
-//button
-	margin: 0
-	font-size: 14px
-	background: transparent
-	outline: none
-	border: none
-	cursor: pointer
-	overflow: visible

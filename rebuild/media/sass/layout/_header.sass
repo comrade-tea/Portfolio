@@ -1,17 +1,18 @@
 .header
-	z-index: 2
-	.top
+	//z-index: 2
+	.header-top.uk-navbar
 		color: $color-white
 		background: $color-black--light
 		padding: 15px 0
-		.uk-flex
-			//+max-screen($smartphone-portrait)
+		//.uk-flex
+			+max-screen($smartphone-portrait)
 				align-items: center
 		.uk-button
 			transition: all .2s
 		a
 			color: $color-white
-	.bot
+
+	.header-bot
 		background: $color-white
 		> .uk-container
 			+max-screen($big-tablet)
@@ -30,6 +31,8 @@
 				cursor: pointer
 				height: 70px
 				line-height: 70px
+				+max-screen($smartphone-landscape)
+					font-size: 1.2em
 				&:hover, &:focus
 					background: transparent
 					color: $color-orange
@@ -48,17 +51,16 @@
 					&:hover, &:focus
 						color: $color-orange
 	 
-	&__left-nav,
-	&__right-nav
+	//&__left-nav,
+	//&__right-nav
 		font-size: 2em
 		
-	&__right-nav
+	//&__right-nav
 		margin-left: 14px
 		
 	.logo
-		img
-			width: 176px
-			height: 35px
+		display: block
+		width: 176px
 		+max-screen($big-tablet)
 			margin-left: 20px
 			max-width: 160px

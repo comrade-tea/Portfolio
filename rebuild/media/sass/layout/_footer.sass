@@ -19,21 +19,25 @@
 			text-decoration: none
 	
 .footer
-	color: $color-text-white--light
+	color: $color-white
 	padding: 0 40px
 	background: $color-black--light
+	a
+		color: $color-white
+		&:hover, &:focus
+			color: $color-orange
 	+max-screen($big-tablet)
 		padding: 0 20px
 	+max-screen($common-tablet)
 		padding-bottom: 60px
 	&-top
-		//padding: 70px 0
-		//border-bottom: 1px solid #505050
 		+max-screen($common-tablet)
 			border-bottom: none
 	&-main-grid
 		border-bottom: 1px solid #505050
 		padding-bottom: 30px
+		ul
+			list-style: none
 		+max-screen($common-tablet)
 			border-bottom: none
 			flex-flow: column-reverse nowrap
@@ -114,34 +118,23 @@
 			margin-left: 26px
 			+max-screen($big-tablet)
 				margin-left: 20px
-	&-link
-		position: relative
-		display: block
-		color: $color-white
+	.uk-icon-button
 		width: 42px
 		height: 42px
-		border-radius: 50%
-		overflow: hidden
-		+max-screen($small-tablet)
-			width: 34px
-			height: 34px
-		&.fb
+		font-size: 1.4em
+		line-height: 42px
+		color: $color-white
+		&.uk-icon-facebook
 			background: #55acee
-		&.twitter
+		&.uk-icon-twitter
 			background: #3b5998
-		&.google-plus
+		&.uk-icon-google-plus
 			background: #dc4e41
 		&:hover, &:focus
 			color: $color-white
-			&.fb
+			&.uk-icon-facebook
 				background: darken(#55acee, 6%)
-			&.twitter
+			&.uk-icon-twitter
 				background: darken(#3b5998, 6%)
-			&.google-plus
+			&.uk-icon-google-plus
 				background: darken(#dc4e41, 6%)
-		i
-			+centre(both)
-			font-size: 20px
-			+max-screen($small-tablet)
-				font-size: 18px
-

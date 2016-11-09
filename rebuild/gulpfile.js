@@ -55,18 +55,19 @@ gulp.task("jade-trigger", ["jade"], reload);
 
 // SASS
 gulp.task("sass", function () {
-	return gulp.src("media/sass/customize.sass")
+	return gulp.src("media/sass/screen.sass")
 		.pipe(plumber({errorHandler: onError}))
 		.pipe(sourcemaps.init())
 		.pipe(sass({
 			// includePaths: ["media/sass"],
-			// outputStyle: "nested"
-			outputStyle: "compressed"
+			outputStyle: "nested"
+			// outputStyle: "compressed"
 		}))
 		.pipe(autoprefixer({
 			browsers: ['last 3 versions', '> 5%'],
 			cascade: false
 		}))
+		.pipe(rename("customize.css"))
 		.pipe(sourcemaps.write("./"))
 		.pipe(gulp.dest("media/css"))
 		.pipe(notify({
