@@ -1,19 +1,26 @@
 header.header(data-uk-sticky)
 	div.header-top.uk-navbar
-		div.uk-container.uk-container-center.uk-flex.uk-flex-bottom
-			a.uk-navbar-toggle.uk-hidden-large(href='#left-menu', data-uk-offcanvas='')
+		div.uk-container.uk-container-center.uk-flex.uk-flex-middle
+			a.uk-navbar-toggle.uk-icon-medium.uk-hidden-large(href='#left-menu', data-uk-offcanvas='')
 
-			a(href="#" class="logo"): img(src="media/svg/logo.svg" data-uk-svg alt="")
+			a(href="#" class="header-logo"): img(src="media/svg/logo.svg" data-uk-svg alt="")
 
-			div.search-block
+			div.search-block.uk-hidden-small
 				form.uk-form.search(action="")
 					div.input-wrap.header-search-input
 						input(class="" type="search" placeholder="원하는 서비스 검색")
 					button.uk-button.uk-button-danger.header-search-btn
 						i.uk-icon-search
 
-			a.header__right-nav.uk-hidden-large(href='#right-menu', data-uk-offcanvas='')
-				i.uk-icon-th
+			div.m-search.uk-visible-small
+				form.uk-form.uk-flex
+					div.m-search-wrap
+						input(class="m-search-input uk-width-1-1" type="search" placeholder="원하는 서비스 검색")
+					button.uk-button.m-search-toggler
+						i.uk-icon-search.uk-icon-medium
+
+			a.uk-hidden-large(href='#right-menu', data-uk-offcanvas='')
+				i.uk-icon-th.uk-icon-large
 
 			div.header-ui.uk-flex.uk-flex-middle.uk-visible-large
 				div.auth
@@ -23,7 +30,7 @@ header.header(data-uk-sticky)
 	div.header-bot
 		div.uk-container.uk-container-center
 			nav.uk-navbar
-				ul.uk-navbar-nav
+				ul.uk-navbar-nav.uk-flex.uk-flex-space-between
 					li.uk-parent(data-uk-dropdown="")
 						a(href="#") 번역
 						div.uk-dropdown.uk-dropdown-navbar.uk-dropdown-bottom

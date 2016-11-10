@@ -1,4 +1,13 @@
 .home
+	.uk-block-large
+		padding-top: 60px
+		padding-bottom: 60px
+		+min-screen(960px)
+			padding-top: 100px
+			padding-bottom: 100px
+		+min-screen(1200px)
+			padding-top: 120px
+			padding-bottom: 120px
 
 .banner
 	background-image: url("../img/banner.jpg")
@@ -69,7 +78,6 @@
 	&-text
 		display: inline-block
 		padding: 10px
-		font-size: 1em
 	&-foot
 		padding: 10px
 	&-actions
@@ -92,7 +100,6 @@
 
 		
 //section
-//130
 .reviews
 	.block-intro
 		.title-wrap
@@ -110,18 +117,6 @@
 			padding: 0 36px
 			margin-bottom: 0
 			background: $color-white
-			//&:before, &:after
-				+centre(y)
-				display: inline-block
-				content: ""
-				height: 10px
-				background: $color-border-gray
-			//&:before
-				left: 0
-				right: calc(50% - (-170px))
-			//&:after
-				right: 0
-				left: calc(50% + 170px)
 			.clr-red
 				vertical-align: text-top
 	&-arrow

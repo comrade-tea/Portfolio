@@ -9,23 +9,28 @@
     <link rel="stylesheet" href="media/css/components/slider.css">
     <link rel="stylesheet" href="media/css/components/slideshow.css">
     <link rel="stylesheet" href="media/css/components/sticky.css">
-    <link rel="stylesheet" href="media/css/ion.rangeSlider.skinNice.css">
-    <link rel="stylesheet" href="media/css/ion.rangeSlider.css">
     <link rel="stylesheet" href="media/css/customize.css">
   </head>
   <body>
-    <!--include header-->
     <header data-uk-sticky class="header">
       <div class="header-top uk-navbar">
-        <div class="uk-container uk-container-center uk-flex uk-flex-bottom"><a href="#left-menu" data-uk-offcanvas="" class="uk-navbar-toggle uk-hidden-large"></a><a href="#" class="logo"><img src="media/svg/logo.svg" data-uk-svg alt=""></a>
-          <div class="search-block">
+        <div class="uk-container uk-container-center uk-flex uk-flex-middle"><a href="#left-menu" data-uk-offcanvas="" class="uk-navbar-toggle uk-icon-medium uk-hidden-large"></a><a href="#" class="header-logo"><img src="media/svg/logo.svg" data-uk-svg alt=""></a>
+          <div class="search-block uk-hidden-small">
             <form action="" class="uk-form search">
               <div class="input-wrap header-search-input">
                 <input type="search" placeholder="원하는 서비스 검색">
               </div>
               <button class="uk-button uk-button-danger header-search-btn"><i class="uk-icon-search"></i></button>
             </form>
-          </div><a href="#right-menu" data-uk-offcanvas="" class="header__right-nav uk-hidden-large"><i class="uk-icon-th"></i></a>
+          </div>
+          <div class="m-search uk-visible-small">
+            <form class="uk-form uk-flex">
+              <div class="m-search-wrap">
+                <input type="search" placeholder="원하는 서비스 검색" class="m-search-input uk-width-1-1">
+              </div>
+              <button class="uk-button m-search-toggler"><i class="uk-icon-search uk-icon-medium"></i></button>
+            </form>
+          </div><a href="#right-menu" data-uk-offcanvas="" class="uk-hidden-large"><i class="uk-icon-th uk-icon-large"></i></a>
           <div class="header-ui uk-flex uk-flex-middle uk-visible-large">
             <div class="auth"><a href="#">로그인</a><a href="#">무료 회원가입</a></div>
           </div>
@@ -34,7 +39,7 @@
       <div class="header-bot">
         <div class="uk-container uk-container-center">
           <nav class="uk-navbar">
-            <ul class="uk-navbar-nav">
+            <ul class="uk-navbar-nav uk-flex uk-flex-space-between">
               <li data-uk-dropdown="" class="uk-parent"><a href="#">번역</a>
                 <div class="uk-dropdown uk-dropdown-navbar uk-dropdown-bottom">
                   <ul class="uk-nav uk-nav-navbar">
@@ -265,13 +270,13 @@
         </div>
       </div>
     </div>
-    <div class="m-footer uk-navbar uk-hidden-medium">
-      <div class="m-footer-inner uk-container">
-        <div class="uk-flex uk-flex-space-between">
-          <div><a href="#" class="m-footer-link"><i class="uk-icon-home"></i><span>홈</span></a></div>
-          <div><a href="#" class="m-footer-link"><i class="uk-icon-envelope"></i><span>메세지</span></a></div>
-          <div><a href="#" class="m-footer-link"><i class="uk-icon-bell"></i><span>메세지</span></a></div>
-          <div><a href="#" class="m-footer-link"><i class="uk-icon-th-large"></i><span>마이페이지</span></a></div>
+    <div class="m-footer uk-navbar uk-visible-small">
+      <div class="uk-container">
+        <div class="uk-flex uk-flex-space-between uk-text-center">
+          <div><a href="#" class="m-footer-link"><i class="uk-icon-home uk-icon-large"></i><span>홈</span></a></div>
+          <div><a href="#" class="m-footer-link"><i class="uk-icon-envelope uk-icon-large"></i><span>메세지</span></a></div>
+          <div><a href="#" class="m-footer-link"><i class="uk-icon-bell uk-icon-large"></i><span>메세지</span></a></div>
+          <div><a href="#" class="m-footer-link"><i class="uk-icon-th-large uk-icon-large"></i><span>마이페이지</span></a></div>
         </div>
       </div>
     </div>
@@ -333,11 +338,10 @@
       </div>
     </div>
   </body>
-  <script defer="defer" src="media/js/jquery-2.1.4.js"></script>
-  <script defer="defer" src="media/js/uikit.min.js"></script>
-  <script defer="defer" src="media/js/components/slideshow.min.js"></script>
-  <script defer="defer" src="media/js/components/slider.min.js"></script>
-  <script defer="defer" src="media/js/components/sticky.min.js"></script>
-  <script defer="defer" src="media/js/ion.rangeSlider.min.js"></script>
-  <script defer="defer" src="media/js/main.js"></script>
+  <script defer="" src="media/js/jquery-2.1.4.js"></script>
+  <script defer="" src="media/js/uikit.min.js"></script>
+  <script defer="" src="media/js/components/slideshow.min.js"></script>
+  <script defer="" src="media/js/components/slider.min.js"></script>
+  <script defer="" src="media/js/components/sticky.min.js"></script>
+  <script defer="" src="media/js/main.js"></script>
 </html>
