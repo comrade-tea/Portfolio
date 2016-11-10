@@ -8,11 +8,41 @@ jQuery(function () {
 	
 
 	// remove nav dropdown on touch devices
-	if ($("html").hasClass("uk-touch")) {
-		jQuery(".header").find(".uk-parent").removeAttr("data-uk-dropdown");
+	$window.on("resize", function () {
+		if ($window.width() < 980) {
+			jQuery(".header").find(".uk-parent").removeAttr("data-uk-dropdown");
+		} else {
+			jQuery(".header").find(".uk-parent").attr("data-uk-dropdown", true);
+		}
+	});
+
+	var lastScrollTop = 0;
+	var mfooter = jQuery(".m-footer");
+	$(window).scroll(function(event){
+		var st = $(this).scrollTop();
+		if (st > lastScrollTop){
+			mfooter.removeClass("is-visible");
+		} else {
+			// upscroll code
+			mfooter.addClass("is-visible");
+		}
+		lastScrollTop = st;
+	});
+
+	//search toggler
+	if ($window.width() <= 640) {
+		jQuery(".header-search-btn").on("click", function (e) {
+			e.preventDefault();
+
+			var $this = jQuery(this);
+
+			$this.toggleClass("is-active");
+			$this.siblings(".header-search-input").toggleClass("is-open");
+		});
 	}
 
-	// subpage leftbar
+
+/*	// subpage leftbar
 	$window.resize(function () {
 
 		var $subLeftBar = jQuery(".subpage-lbar"),
@@ -28,19 +58,6 @@ jQuery(function () {
 		}
 	}).resize();
 	
-	 
-	//search toggler
-	if ($window.width() <= 640) {
-		jQuery(".header-search-btn").on("click", function (e) {
-			e.preventDefault();
-			
-			var $this = jQuery(this);
-			
-			$this.toggleClass("is-active");
-			$this.siblings(".header-search-input").toggleClass("is-open");
-		});
-	}
-	
 
 	jQuery("#price-search").ionRangeSlider({
 		type: "double",
@@ -49,13 +66,12 @@ jQuery(function () {
 		max: 50
 	});
 	
-	
-	/*single job page*/
+	/!*single job page*!/
 	jQuery(".dd-options__toggle").on("click", function () {
 		var $this = jQuery(this);
 		var $body = $this.siblings(".dd-options__body");
 		
 		$body.slideToggle("slow");
-	});
+	});*/
 	
 });
