@@ -5,87 +5,123 @@
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="description" content="Comrade-tea.GitHub.io : my last projects here">
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="_css/stylesheet.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="_css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="_css/bootstrap-theme.min.css">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="_css/custom.css">
     <title>comrade-tea's projects</title>
 </head>
 
 <body>
-    <!-- HEADER -->
-    <div class="wrap">
-        <div id="header_wrap" class="outer">
-            <header class="inner inner--lg">
-                <a id="forkme_banner" href="https://github.com/comrade-tea">View on GitHub</a>
-                <h1 id="project_title">Comrade-tea.GitHub.io</h1>
-                <!-- <h2 id="project_tagline">my last projects here</h2> -->
-            </header>
-        </div>
-        <!-- MAIN CONTENT -->
-        <div id="main_content_wrap" class="outer">
-            <section id="main_content" class="inner">
+<!-- HEADER -->
+<div id="wrapper" class="wrapper">
+    <!--<div id="header_wrap" class="outer">
+        <header class="inner inner&#45;&#45;lg">
+            <a id="forkme_banner" href="https://github.com/comrade-tea">View on GitHub</a>
+            <h1 id="project_title">Comrade-tea.GitHub.io</h1>
+            &lt;!&ndash; <h2 id="project_tagline">my last projects here</h2> &ndash;&gt;
+        </header>
+    </div>-->
+    <!-- MAIN CONTENT -->
+    <div id="main" class="main">
+        <div id="main_content" class="main__inner container well-lg">
+
+            <div class="main__intro">
+                <h1 class="text-center">Web projects</h1>
+                <div class="text-center">
+                    <div class="h6">HTML/CSS: All sites are responsive and created with BEM methodology</div>
+                    <div class="h6">JS: jQuery, TweenMax - for advanced animations</div>
+                </div>
+            </div>
+
+            <div class="web-projects">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h2 class="h3">Sites:</h2>
+                        <div class="row">
+                            <div class="col-md-6"><a href="http://starkwood.ru/ ">Starkwood</a></div>
+                            <div class="col-md-6"><a href="http://casyhome.com/">CasyHome</a></div>
+                            <div class="col-md-6"><a href="http://foodbuyerschool.ru/">Foodbuyerschool</a></div>
+                            <div class="col-md-6"><a href="http://trendisland.ru/">TrendIsland</a></div>
+                            <div class="col-md-6"><a href="http://demontage-m.ru/">Demontage-m</a></div>
+                            <div class="col-md-6"><a href="http://sedmax.ru/">Sedmax</a></div>
+                            <div class="col-md-6"><a href="http://aetrexnordic.com/">Aetrex</a></div>
+                            <div class="col-md-6"><a href="http://audit-and-safety.ru/">Audit</a></div>
+                            <div class="col-md-6"><a href="http://www.dotorg.ru/">DotOrg</a></div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <h2 class="h3">Landings:</h2>
+                        <div class="row">
+                            <div class="col-md-6"><a href="http://weightsoles.dev.dotorg.ru/">Weighsoles</a></div>
+                            <div class="col-md-6"><a href="http://tribeca-aparts.ru/">Tribeca-aparts</a></div>
+                            <div class="col-md-6"><a href="http://tribeca-office.ru/">Tribeca-office</a></div>
+                            <div class="col-md-6"><a href="http://central-yard2.ru/">Central-yard</a></div>
+                            <!-- <li> <a href="http://irrigator-bwell.ru/">Irrigator-bwell</a></li> -->
+                        </div>
+                    </div>
+                </div>
+
                 <div class="row">
                     <div class="col-md-6">
-                        <h2 class="pr-below">Links to projects below:</h2>
-                        
-                        <div class="list-title">Last working projects</div>
-                        <h4 class="h4-like">Sites:</h4>
+                        <h2 class="h3">Playground:</h2>
+                        <div class="h5">With css frameworks (bootstrap, uikit)</div>
                         <ul>
-                            <li> <a href="http://starkwood.ru/ ">Starkwood</a> </li>
-                            <li> <a href="http://casyhome.com/">CasyHome</a> </li>
-                            <li> <a href="http://foodbuyerschool.ru/">Foodbuyerschool</a></li>
-                            <li> <a href="http://trendisland.ru/">TrendIsland</a> </li>
-                            <li> <a href="http://aetrexnordic.com/">Aetrex</a> </li>
-                            <li> <a href="http://audit-and-safety.ru/">Audit</a></li>
-                            <li> <a href="http://demontage-m.ru/">Demontage-m</a> </li>
-                            <li> <a href="http://www.dotorg.ru/">DotOrg (html+css only)</a></li>
+                            <li><a href="http://comrade-tea.github.io/framework--uikit">framework --uikit (1)</a></li>
+                            <li><a href="http://comrade-tea.github.io/withmon-uikit">framework --uikit (2)</a></li>
+                            <li><a href="http://comrade-tea.github.io/framework--bootstrap">framework --bootstrap</a>
+                            </li>
                         </ul>
-                        <h4 class="h4-like">Landings</h4>
+                        <div class="h5">Without css frameworks</div>
                         <ul>
-                            <li> <a href="http://weightsoles.dev.dotorg.ru/">Weighsoles</a> </li>
-                            <li> <a href="http://tribeca-office.ru/">Tribeca-office</a></li>
-                            <li> <a href="http://central-yard2.ru/">Central-yard</a></li>
-                            <!-- <li> <a href="http://irrigator-bwell.ru/">Irrigator-bwell</a></li> -->
-                        </ul>
-
-                        <div class="list-title">With css frameworks (bootstrap, uikit)</div>
-                        <ul>
-                            <li><a href="http://comrade-tea.github.io/framework--uikit">framework --uikit (1)</a> </li>
-                            <li><a href="http://comrade-tea.github.io/withmon-uikit">framework --uikit (2)</a> </li>
-                            <li><a href="http://comrade-tea.github.io/framework--bootstrap">framework --bootstrap</a> </li>
-                        </ul>
-                        <div class="list-title">Without css frameworks</div>
-                        <ul>
-                            <li><a href="http://comrade-tea.github.io/bem-fixed/">bem-fixed</a> </li>
-                            <li><a href="http://comrade-tea.github.io/qiwi--bem-responsive-ie8">bem-responsive-ie8</a> </li>
+                            <li><a href="http://comrade-tea.github.io/bem-fixed/">bem-fixed</a></li>
+                            <li><a href="http://comrade-tea.github.io/qiwi--bem-responsive-ie8">bem-responsive-ie8</a>
+                            </li>
                             <!-- <li><a href="http://comrade-tea.github.io/bem-responsive-tile">bem-responsive-tile</a> </li> -->
                         </ul>
-                        
                     </div>
+                </div>
+            </div>
+
+
+            <div class="gamedev-projects">
+                <h2 class="h1 text-center">Gamedev experience</h2>
+                <div class="row">
                     <div class="col-md-6">
-                        <h2>Gamedev experience</h2>
-                        <div class="list-title">Html, css, js</div>
+                        <div class="h5">Html, css, js</div>
                         <ul>
                             <li><a href="http://comrade-tea.github.io/snake/">Snake</a></li>
                         </ul>
-                        <div class="list-title">Canvas</div>
+                        <div class="h5">Canvas</div>
                         <ul>
                             <li><a href="http://comrade-tea.github.io/arkanoid/">Arkanoid</a></li>
                             <li><a href="http://comrade-tea.github.io/dangeon/">Dangeon</a></li>
                         </ul>
-
                     </div>
                 </div>
-            </section>
+            </div>
+
         </div>
     </div>
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-        <footer class="inner inner--lg">
-            <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
-            <p>skype: lovebuzz9</p>
-        </footer>
-    </div>
-</body>
 
+
+</div>
+
+<footer class="footer">
+    <div class="footer__inner container">
+        <div class="pull-right">
+            <div class="h4">Contacts:</div>
+            <p>skype: lovebuzz9</p></div>
+    </div>
+</footer>
+
+
+
+<script defer src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/0.4.0/trianglify.min.js"></script>
+<script defer src="_js/main.js"></script>
+
+</body>
 </html>

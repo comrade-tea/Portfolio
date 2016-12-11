@@ -1,0 +1,54 @@
+$footer-height: 70px
+// base markdown
+body, html
+	width: 100%
+	height: 100%
+ul, li
+	padding-left: 20px
+	li
+		padding-left: 0
+a[href="#"]
+	color: darkgrey
+	text-decoration: line-through
+
+.container
+	max-width: 800px
+.row + .row
+	margin-top: 26px
+
+//sections
+.wrapper
+	position: relative
+	min-height: 100%
+	margin-bottom: -$footer-height
+	&:after
+		display: block
+		content: ""
+.footer,
+.wrapper:after
+	height: $footer-height
+
+
+.main
+	position: relative
+	padding: 60px 0
+	overflow: hidden
+	min-height: 100vh //test
+	&__inner
+		position: relative
+		background: rgba(255, 255, 255, 0.51)
+		z-index: 2
+	&__intro
+		margin-bottom: 30px
+
+.footer
+	&__inner
+
+//canvas background
+canvas
+	position: absolute
+	left: 50%
+	top: 50%
+	-webkit-transform: translate(-50%,-50%)
+	transform: translate(-50%,-50%)
+	min-width: 100%
