@@ -1,0 +1,54 @@
+.input-default
+	display: block
+	width: 100%
+	height: 100%
+	border: 1px solid #b8b8b8
+	margin: 0
+	//padding: 10px 20px
+	padding-left: 20px
+	padding-right: 20px
+	outline: 0
+	vertical-align: baseline
+	background: $color-white
+	font: 16px/1.37 "Open sans", Verdana, sans-serif
+	transition: all 0.5s ease
+	+max-screen($big-tablet)
+		padding: 12px
+	&:focus
+		border-color: #ccc
+		box-shadow: inset 0 1px 1px rgba(205, 205, 205, 0.075), 0 0 8px rgba(216, 216, 216, 0.69)
+		outline: 0
+	+placeholder
+		color: #b7b7b7
+		font-size: 16px
+		font-family: "Open sans", Verdana, sans-serif
+	//+max-screen($smartphone-portrait)
+		font-size: 13px
+	&.input-validation-error
+		border-color: #c00
+		box-shadow: 0 0 6px #ee4d55
+		+placeholder
+			color: #ee4d55
+
+// убрать встраиваемый крест закрытия search-a
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration
+	display: none
+
+
+
+
+// !!!!!!!!!!checkbox styles
+/* Base for span styling */
+
+
+/* accessibility */
+//[type="checkbox"]:checked:focus + span:before,
+//[type="checkbox"]:not(:checked):focus + span:before
+	border: 2px dotted blue
+
+/* hover style just for information */
+//span:hover:before
+	border: 2px solid #4778d9 !important

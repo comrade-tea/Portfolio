@@ -1,0 +1,27 @@
+.p-projects
+
+.projects-filter
+	position: relative
+	display: flex
+	flex-wrap: wrap
+	margin-top: 15px
+	font-family: "geo-bold"
+	font-size: 11px
+	color: $color-text-gray
+	text-transform: uppercase
+	&:before
+		+b
+		height: 2px
+		top: 50%
+		right: calc(100% + 14px)
+		margin-top: -1px
+		width: 2000px
+		background: $color-black
+	&__item
+		transition: color .2s
+		&:hover, &:focus
+			color: $color-text-default
+		&--current
+			color: $color-text-default
+	&__separ
+		margin: 0 4px

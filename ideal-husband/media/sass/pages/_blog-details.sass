@@ -1,0 +1,60 @@
+.p-blog-details
+
+.article
+	.block-title
+		margin-bottom: 30px
+
+	&__head
+		padding-bottom: 50px
+		+min-screen($small-tablet)
+			padding-left: 80px
+	&__date
+		font-size: 10px
+		margin: 35px 0
+	&__body
+		.static-block
+			padding-bottom: 50px
+			border-bottom: 1px solid $color-black
+
+.a-nav
+	margin-top: 140px
+	display: flex
+	&__item
+		&:hover, &:focus
+			.a-nav__dir:before,
+			.a-nav__dir:after
+				width: 30px
+		&--prev
+			.a-nav__dir
+				&:before
+					content: ""
+					margin-right: 10px
+		&--next
+			margin-left: auto
+			.a-nav__dir
+				justify-content: flex-end
+				&:after
+					content: ""
+					margin-left: 10px
+	&__dir
+		max-width: 300px
+		position: relative
+		display: flex
+		align-items: center
+		font-size: 12px
+		text-transform: uppercase
+		margin-bottom: 20px
+		&:before, &:after
+			width: 50px
+			height: 1px
+			background: $color-black
+			transition: width .2s
+			+max-screen($smartphone-landscape)
+				width: 20px
+
+	&__title
+		font-family: "geo-ebold"
+		font-size: 16px
+		text-transform: uppercase
+		+max-screen($small-tablet)
+			display: none

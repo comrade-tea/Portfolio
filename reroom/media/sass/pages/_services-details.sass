@@ -1,0 +1,64 @@
+.p-services-details
+
+.ddown-list-title
+	padding: 0 30px
+	color: $color-dusty-gray
+	text-transform: uppercase
+	margin-bottom: 45px
+
+.ddown-list
+	&__item
+
+.ddown
+	background: #f3f3f3
+	transition: background .2s
+	border-bottom: 2px solid $color-gallery
+	&:first-child
+		border-top: 2px solid $color-gallery
+	&--active
+		background: #ebebeb
+		.plus__line-2
+			transform: translateY(-50%) rotate(0deg)
+
+.ddown-head
+	display: flex
+	justify-content: space-between
+	align-items: center
+	padding: 22px 50px 22px 30px
+	cursor: pointer
+	&__name
+		font-size: 28px
+		font-family: "geo-bold"
+		+max-screen($mid-tablet)
+			font-size: 22px
+		+max-screen($small-tablet)
+			font-size: 20px
+		+max-screen($smartphone-portrait)
+			font-size: 18px
+
+	&__toggle
+		margin-left: 20px
+
+.ddown-body
+	display: none
+	padding: 0 30px 60px 30px
+	&__inner
+		max-width: 800px
+
+.plus
+	position: relative
+	width: 17px
+	height: 17px
+	> *
+		width: 17px
+		height: 3px
+		background: $color-black
+		position: absolute
+	&__line-1
+		top: 50%
+		transform: translateY(-50%)
+	&__line-2
+		top: 50%
+		transform: translateY(-50%) rotate(90deg)
+		transform-origin: 50% 50%
+		transition: transform .2s

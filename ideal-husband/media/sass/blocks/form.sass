@@ -1,0 +1,41 @@
+.form
+	margin: 0 auto
+
+	&__title
+		color: $color-text-default
+		margin-bottom: 90px
+	&__field-group
+	&__field
+		height: 50px
+		&.is-textarea
+			height: 140px
+			textarea
+				padding-top: 20px
+		&:nth-child(1n+2)
+			margin-top: 20px
+			//+max-screen($small-tablet)
+				margin-top: 20px
+
+	&__caption
+		font-size: 12px
+		margin: 20px 0 40px
+
+	&__submit
+		display: block
+		width: 100%
+		margin-top: 40px
+		background-position: 50% 50%
+		background-repeat: no-repeat
+		+max-screen($small-tablet)
+			margin-top: 80px
+		+max-screen($smartphone-landscape)
+			margin-top: 60px
+		&--ajax
+			user-select: none
+			cursor: default
+			pointer-events: none
+			background-color: transparent!important
+			color: transparent!important
+			background-image: url("../img/preload.gif")!important
+			&:before, &:after
+				opacity: 0

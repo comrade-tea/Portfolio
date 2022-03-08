@@ -1,0 +1,79 @@
+extends layout/master
+
+block title
+	title cart-3
+block content
+	div.p-cart
+		+pageHead("Cart")
+
+		div.container-lg
+			div.cart-steps
+				div.cart-steps__item
+					a.cart-steps__link(href="#") 1. Checkout
+				div.cart-steps__item
+					a.cart-steps__link(href="#") 2. Shipping & Payment
+				div.cart-steps__item
+					a.cart-steps__link.cart-steps__link--current(href="#") 3. Confirmation
+
+			div.cart-confirm
+				div.cart-confirm__inner.row
+					div.col-md-6
+						div.cart-confirm__title Your order
+						div.table-order
+							- for(var x = 0; x < 2; x++)
+								div.table-order__row
+									div.table-order__cell
+										img(src="media/img/order-preview.jpg" alt="")
+									div.table-order__cell.table-order__cell--description
+										div.title Posture Position
+										div COLOR: BLACK
+										div SIZE: XL
+									div.table-order__cell.table-order__cell--price
+										div.row
+											div.key Qty.:
+											div.value 1
+										div.row
+											div.key Price:
+											div.value $65,95
+										div.row
+											div.key Subtotal:
+											div.value $65,95
+
+						div.cart-extra.d-flex.flex-column.align-items-end
+							div.cart-extra__ship.mb-2 Shipping cost: #[span free]
+							div.cart-extra__cost Total cost: #[span $105.9]
+
+					div.col-md-6
+						div.customer-info
+							div.cart-confirm__title Customer information
+							div.customer-card.bg-grey
+								div.customer-card__block
+									div.d-flex
+										span.key Name:
+										span.value John Smith
+									div.d-flex
+										span.key Email:
+										span.value js@gmail.com
+
+								div.customer-card__block
+									div.customer-card__title Shipping address
+									p 1574 Buchanan Trail E, Greencastle, PA 17225
+
+								div.customer-card__block
+									div.customer-card__title Payment
+									div
+										img.d-inline-block.mr-4(src="media/img/visa-logo.png" alt="")
+										|1111  ×××× ×××× ××11
+
+				div.cart__payment.d-sl-flex.justify-content-between
+					a.cart-extra__link.mt-4(href="#")
+						i.icon-arrow.icon-flip.mr-3
+						| Back to Shipping & Payment
+					div.cart-confirm__done
+						a.btn.btn--blob.float-right(href="#") Done!
+						+checkbox("GET 10% OFF YOUR NEXT ORDER")
+
+
+
+
+		include static-blocks/b-subscribe

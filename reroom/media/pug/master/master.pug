@@ -1,0 +1,60 @@
+block vars
+doctype html
+html(class=`${bodyOverflow ? "overflow-hidden" : ""}` lang="ru")
+	//- тута будут доступны переменные страниц в master
+	head(prefix="og: http://ogp.me/ns#")
+		block title
+		meta(charset="utf-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(property='og:title', content='Reroom')
+		meta(name='description', content='Меняем любое пространство к лучшему')
+		meta(property='og:description', content='Меняем любое пространство к лучшему')
+		meta(property='og:image', content='http://__website__.ru/media/img/social-share.jpg')
+		meta(property='og:type', content='website')
+		meta(property='og:url', content='http://__website__.ru')
+		|<!--[if IE 9]> <script type="text/javascript"> window.location = "https://www.google.ru/chrome/browser/desktop/"; </script> <![endif]-->
+		link(rel="stylesheet", href="media/css/screen.css")
+
+		//- script.
+			paceOptions = {
+				elements: false,
+				ajax: false,
+				restartOnPushState: false,
+				restartOnRequestAfter: false
+			};
+
+	include ../mixins/page-head
+	include ../mixins/anotherService
+	//- include ../mixins/page-body
+
+	body
+		div.wrapper(class=stickyFooter ? "wrapper--sticky" : "")
+			include header
+			block content
+			if (!disableFooter)
+				include footer
+
+
+		//- не трогай, сейчас правильный отступ
+		//- script(defer src="media/js/pace.min.js")
+		script(src="https://maps.googleapis.com/maps/api/js?language=ru")
+		//- script(defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js")
+
+		script(defer src="media/js/tweenmax.min.js")
+		script(defer src="media/js/jquery-3.2.1.js")
+		script(defer src="media/js/jquery.maskedinput.min.js")
+		script(defer src="media/js/jquery.ba-throttle-debounce.min.js")
+		script(defer src="media/js/jquery.validate.min.js")
+		script(defer src="media/js/jquery.validate.unobtrusive.min.js")
+		script(defer src="media/js/sweetalert2.min.js")
+		//- script(defer src="media/js/perfect-scrollbar.jquery.min.js")
+		//- script(defer src="media/js/remodal.js")
+		script(defer src="media/js/hammer.min.js")
+		script(defer src="media/js/slick.min.js")
+		script(defer src="media/js/ofi.min.js")
+		script(defer src="media/js/modernizr-touch.js")
+		script(defer src="media/js/aos.js")
+		//- script(defer src="media/js/img2svg.js")
+		script(defer src="media/js/es5.js")
+		script(defer src="media/js/form.js")
+		script(defer src="media/js/dev.navigation.js")

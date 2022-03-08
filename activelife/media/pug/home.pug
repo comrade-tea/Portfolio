@@ -1,0 +1,17 @@
+extends layout/master
+
+block title
+	title home-page
+block content
+	div.p-home
+		div.hero
+			div.hero__inner.container.d-flex.align-items-center
+				div.pillow
+					div.pillow__title 99.99$ now!
+					div.pillow__text.
+						Posture Classic<br/>
+						Best april price for something
+					a.pillow__btn.btn.btn--border(href="#") Get more!
+
+		include static-blocks/b-tiles
+		include static-blocks/b-subscribe

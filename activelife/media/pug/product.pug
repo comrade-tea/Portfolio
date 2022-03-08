@@ -1,0 +1,97 @@
+extends layout/master
+
+block title
+	title product
+block content
+	div.p-product
+		div.breadcrumbs-wrap.container
+			include static-blocks/breadcrumbs
+
+		div.product-details
+			div.product-details__inner.container
+				div.product-details__view
+					div.product-view
+						div.product-view__thumbs
+							div.product-thumbs
+								- for(var x = 0; x < 3; x++)
+									div.product-thumbs__item(class=x == 0 ? "is-active" : ""): img(src="media/img/slider-thumb.jpg" alt="")
+						div.product-view__slider
+							div.fotorama.product-fotorama(data-allowfullscreen="true", data-nav="thumbs" data-dots="false" data-arrows="false")
+								- for(var x = 0; x < 3; x++)
+									img(src="media/img/product-600.jpg" alt="")
+
+				div.product-details__info
+					form.product-info(action="/")
+						h1.product-info__title Posture Classic
+						div.product-info__price
+							div.old $50
+							div.current $39.95
+						div.product-info__color
+							div.title COLOR
+							include static-blocks/b-colors
+						div.product-info__inputs
+							div.size
+								div.title SIZE
+								select.nice-select
+									option(data-display="L-XL") L-XL
+									option(value="1") value
+									option(value="2") value 2
+							div.qty
+								div.title quantity
+								div.quantity
+									input(type='number', min='1', max='9', step='1', value='1')
+
+						button.product-info__btn.btn.btn--blob(type="submit") ADD TO CART
+
+						div.product-info__extra
+							div Brand: #[a(href="#") Shedish Posture]
+							div Categories: #[a(href="#") Posture]
+
+		div.product-features.bg-grey
+			div.product-features__inner.container
+				div.product-features__intro.maw-sm.mx-auto
+					p Posture Classic is a kind reminder that improves your posture. It’s a harness that reminds rather than supports your muscles. Wear your harness with a loose fit, so it only tightens if you slouch which encourage you to straighten up.
+					p Classic gives you a low intense training while you’re doing other things. The harness is comfortable and discrete and can be worn every day in front of the computer or at the gym.
+				div.features-list.row.no-gutters
+					div.features-list__item.col-sm-4
+						div.card-feature
+							div.card-feature__head Features
+							div.card-feature__body
+								div.card-feature__img-w: img(src="media/img/feature-icon-1.png" alt="")
+								div.card-feature__text
+									p A king reminder that activates your muscles for improved posture
+									p Adjustable strap for perfect fit
+					div.features-list__item.col-sm-4
+						div.card-feature
+							div.card-feature__head Sizing
+							div.card-feature__body
+								div.card-feature__img-w: img(src="media/img/feature-icon-2.png" alt="")
+								div.card-feature__text
+									p Wear it 1-3 hours at the time twice a day
+					div.features-list__item.col-sm-4
+						div.card-feature
+							div.card-feature__head Specs
+							div.card-feature__body
+								div.card-feature__img-w: img(src="media/img/feature-icon-3.png" alt="")
+								div.card-feature__text
+									p Wear loose, only as a reminder
+									p Straightening up activates your core muscles
+
+		div.video-block.text-center
+			div.container
+				div.video-block__pretitle VIDEO
+				h3.video-block__title Posture Balance Core Trainer Exercises
+			div.video-block__slider.maw-sm.mx-auto
+				div.video-slick(data-slick='{"dots": true, "arrows": false, "fade": true}')
+					- for(var x = 0; x < 3; x++)
+						div.slick__slide
+							div.video-container
+								video(poster="media/img/temp-video-preview.jpg")
+									source(src="media/video/video.webm")
+								i.icon-play
+
+		+b-related("Similar items")
+		+b-related("Frequently Bought Together")
+		include static-blocks/b-subscribe
+
+

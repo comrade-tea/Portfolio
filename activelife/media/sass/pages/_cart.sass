@@ -1,0 +1,258 @@
+.p-cart
+
+.cart-steps
+	display: flex
+	align-items: baseline
+	font-family: "geo-bold"
+	font-size: 26px
+	margin-bottom: 50px
+	+max-screen($mid-tablet)
+		flex-direction: column
+	&__item
+		&:nth-child(1n+2)
+			+icon(arrow, before)
+			&:before
+				font-size: 14px
+				margin: 0 20px
+				+max-screen($mid-tablet)
+					display: none
+	&__link
+		&--current
+			color: $color-main
+
+//.cart-table
+	td
+		//width: 20%
+	//td:nth-child(1)
+	//	width: 40%
+	//td:nth-child(2)
+	//	width: 120px
+	//td:nth-child(3)
+	thead
+		font-size: 12px
+		text-transform: uppercase
+		color: $color-text-grey
+		td
+			padding: 25px 10px
+			border-bottom: 1px solid $color-grey
+	tbody
+		td
+			padding: 30px 0
+
+.cart
+	margin-bottom: 140px
+	&__payment
+		margin-top: 40px
+
+.cart-table
+	margin-bottom: 30px
+	&__head
+		df
+		font-size: 12px
+		text-transform: uppercase
+		color: $color-text-grey
+		border-bottom: 1px solid $color-grey--dark
+		padding: 25px 0
+	&__body
+		//padding: 30px 0
+	&__row
+		display: flex
+		padding: 30px 0
+		border-bottom: 1px solid $color-grey--dark
+	&__cell
+		&:nth-child(1)
+			flex-basis: 360px
+		&:nth-child(2)
+			//max-width: 200px
+			flex-basis: 200px
+			padding-left: 20px
+			padding-right: 20px
+		&:nth-child(5)
+			flex-grow: 0
+			flex-basis: 60px
+		&:nth-child(1n+2)
+			display: flex
+			align-items: center
+			flex-grow: 1
+		&:nth-child(1n+3)
+			padding-left: 20px
+			padding-right: 20px
+
+	&__count
+		flex-basis: 130px
+	&__price
+		.current-price
+			font-family: "geo-bold"
+			font-size: 18px
+		div + div
+			margin-top: 6px
+	&__subtotal
+		font-family: "geo-bold"
+		font-size: 18px
+	&__remove
+		color: $color-text-grey
+		transition: transform .2s
+		&:hover
+			transform: rotate(180deg)
+		i
+			font-size: 22px
+
+.cart-product
+	display: flex
+	&__img-w
+	&__info
+		margin-left: 40px
+	&__title
+		font-family: "roboto-bold"
+		font-size: 20px
+		margin-bottom: 30px
+	&__types
+		font-size: 12px
+		text-transform: uppercase
+		div + div
+			margin-top: 6px
+
+.cart-extra
+	&__link
+		font-size: 12px
+		color: $color-main
+		text-transform: uppercase
+		&:hover, &:focus
+			color: $color-main--dark
+	&__ship
+		font-family: "geo-bold"
+		font-size: 18px
+		color: $color-text-grey
+		span
+			margin-left: 10px
+			color: $color-text-default
+	&__cost
+		font-family: "geo-bold"
+		font-size: 18px
+		color: $color-text-grey
+		span
+			color: $color-text-default
+			font-size: 24px
+			margin-left: 10px
+
+.cart-form
+	&__block
+		& + &
+			margin-top: 60px
+	&__title
+		font-family: "geo-bold"
+		font-size: 24px
+		margin-bottom: 34px
+	&__subtitle
+		margin-bottom: 24px
+	&__paycards
+		display: flex
+		margin-top: 24px
+		margin-bottom: 30px
+		span
+			display: inline-block
+			padding-top: 4px
+	.row
+		> div
+			height: 50px
+		.col-sm-6 + .col-sm-6
+			+max-screen(576px)
+				margin-top: 20px
+		& + .row
+			margin-top: 25px
+			+max-screen(576px)
+				margin-top: 20px
+
+.paycards
+	display: flex
+	align-items: center
+	margin-left: 15px
+	&__item
+		display: flex
+		align-items: center
+		&:nth-child(1n+2)
+			&:before
+				display: inline-block
+				content: ""
+				width: 1px
+				height: 21px
+				background: $color-text-grey
+				margin: 0 13px
+
+.cart-confirm
+	&__inner
+		padding-bottom: 40px
+		border-bottom: 1px solid $color-grey--dark
+	&__title
+		font-family: "geo-bold"
+		font-size: 24px
+		margin-bottom: 40px
+	&__done
+		width: 260px
+		display: flex
+		flex-direction: column
+		+max-screen($smartphone-landscape)
+			margin-top: 20px
+		.checkbox
+			span:after
+				color: $color-text-default!important
+		.btn
+			text-align: center
+			margin-bottom: 20px
+	.cart-extra
+		padding: 30px 0
+
+.table-order
+	&__row
+		display: flex
+		padding: 30px 0
+		border-bottom: 1px solid $color-grey--dark
+		&:first-child
+			border-top: 1px solid $color-grey--dark
+	&__cell
+		&:nth-child(1n+2)
+			flex: 1
+			padding: 0 10px
+		//&:nth-child(2)
+			flex-basis: 140px
+
+		&--description
+			font-size: 12px
+		&--price
+			.key,
+			.value
+				width: 50%
+			.row + .row
+				margin-top: 6px
+
+	.title
+		font-family: "roboto-bold"
+		font-size: 17px
+		margin-bottom: 14px
+
+.customer-info
+	+min-screen($common-tablet)
+		padding-left: 40px
+
+.customer-card
+	padding: 35px
+	&__block
+		margin-bottom: 30px
+		.d-flex + .d-flex
+			margin-top: 6px
+		.key
+			width: 56px
+	&__title
+		font-family: "roboto-bold"
+		font-size: 17px
+		margin-bottom: 20px
+
+.cart-success
+	&__info
+		h2, h3
+			margin-bottom: 50px
+	&__addition
+		padding: 40px 0
+		a.btn
+			margin-bottom: 80px
+

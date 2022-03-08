@@ -1,0 +1,191 @@
+include mixins
+
+doctype html
+html(lang="en")
+	head
+		title comrade-tea&apos;s projects
+		meta(charset="utf-8")
+		meta(http-equiv="X-UA-Compatible", content="chrome=1")
+		meta(name="description", content="Comrade-tea.GitHub.io : my last projects here")
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		link(rel="stylesheet", type="text/css", media="screen", href="css/bootstrap.min.css")
+		link(rel="stylesheet", type="text/css", media="screen", href="css/custom.css")
+		
+		//- ya metrika ↓
+		include pug/ya-metrica
+		//- ya metrika ↑
+
+	body
+		div.wrapper(id="wrapper")
+			main#main.main
+				div.main__inner.container.p-5.rounded-3(id="main_content")
+					div.intro.block
+						h1.mb-4 My web projects
+						h6 HTML/CSS: All sites are responsive and created with BEM methodology
+						h6 JS: GSAP, jQuery - for advanced animations
+
+					div.web-projects.block
+						div.row.gy-2
+							.col-sm-6
+								h4 Special sites:
+								ul.list-unstyled
+									li
+										+trimLink("https://alphaopen.com")
+									li
+										+trimLink("https://edisson-boat.com")
+										+linkInfo("https://www.awwwards.com/sites/edisson")
+									li
+										+trimLink("https://helmetex.ru")
+										+linkInfo("https://www.awwwards.com/sites/helmetex")
+									li
+										+trimLink("https://frontside.ru")
+									li
+										+trimLink("https://spectrium.ru")
+										
+									li
+										+trimLink("http://tesorobrand.com")
+
+							.col-sm-6
+								h4 Interesting non-supporting projects:
+								ul.list-unstyled
+									li: +trimLink("./reroom/home.html", "reroom")
+									li: +trimLink("./insomnia/home.html", "insomnia")
+									li: +trimLink("./ideal-husband/home.html", "theidealhusband")
+									li: +trimLink("./activelife/home.html", "activelife")
+
+						div.row.gy-2
+							.col-sm-6
+								h4 Working sites:
+								.row
+									.col-md-6
+										+trimLink("https://temac-group.com")
+									.col-md-6
+										+trimLink("https://protein.ru")
+									.col-md-6
+										+trimLink("https://belomortrans.ru")
+									.col-md-6
+										+trimLink("https://oblako.gcs.ru")
+									.col-md-6
+										+trimLink("https://lanatm.ru")
+									.col-md-6
+										+trimLink("https://head-point.ru")
+									.col-md-6
+										+trimLink("https://bkg.global")
+									.col-md-6
+										+trimLink("https://inconsult.msk.ru")
+									.col-md-6
+										+trimLink("https://apr.moscow")
+									.col-md-6
+										+trimLink("http://www.opencore.pro")
+									.col-md-6
+										+trimLink("http://smart4smart.ru")
+									.col-md-6
+										+trimLink("http://www.systematic.ru")
+									.col-md-6
+										+trimLink("http://milesgroup.ru")
+									.col-md-6
+										+trimLink("http://casyhome.com")
+									.col-md-6
+										+trimLink("http://sedmax.ru")
+									.col-md-6
+										+trimLink("https://gcs.ru")
+									.col-md-6
+										+trimLink("https://ptmstudio.ru")
+									.col-md-6
+										+trimLink("http://aetrexnordic.com")
+									.col-md-6
+										+trimLink("https://ybw-group.com")
+									.col-md-6
+										+trimLink("https://fasst-m.ru")
+									.col-md-6
+										+trimLink("https://kuhni-express.ru")
+									.col-md-6
+										+trimLink("http://audit-and-safety.ru")
+									//- <div class="col-md-6"><a target="_blank" href="http://starkwood.ru/ ">Starkwood</a></div>
+									//- <div class="col-md-6"><a target="_blank" href="http://foodbuyerschool.ru">Foodbuyerschool</a></div>
+									//- <div class="col-md-6"><a target="_blank" href="http://trendisland.ru">TrendIsland</a></div>
+
+							.col-sm-6
+								h4 Working landings:
+								.row
+									.col-md-6
+										a(target="_blank", href="http://tribeca-office.ru") Tribeca-office
+									.col-md-6
+										a(target="_blank", href="https://loft.nf") https://loft.nf/
+									//- <div class="col-md-6"><a target="_blank" href="http://activelifesolutions.org">Activelife</a></div>
+									//- <div class="col-md-6"><a target="_blank" href="http://millwork.starkwood.ru">Starkwood-millwork</a></div>
+									//- <div class="col-md-6"><a target="_blank" href="http://systematic-group.ru/brand">Systematic(promo)</a></div>
+									//- <div class="col-md-6"><a target="_blank" href="http://stafford.starkwood.ru">Starkwood-stafford</a></div>
+									//- <div class="col-md-6"><a target="_blank" href="http://weightsoles.ru">Weighsoles</a></div>
+									//- <div class="col-md-6"><a target="_blank" href="http://anapolisdom.com">Anapolis</a></div>
+									//- <div class="col-md-6"><a target="_blank" href="http://tribeca-aparts.ru">Tribeca-aparts</a></div>
+									//- <div class="col-md-6"><a target="_blank" href="http://central-yard2.ru">Central-yard</a></div>
+									//- <li> <a target=_blank href="http://irrigator-bwell.ru">Irrigator-bwell</a></li>
+
+					.block
+						.row
+							.col-md-12
+								h3 Test tasks performed with React (redux)
+								ul
+									li
+										a(target="_blank", href="https://comrade-tea.github.io/react-todo") Todo
+									li
+										a(target="_blank", href="./react-challenge-sort-and-search") Filtering/sorting
+
+					.block
+						.row
+							.col-md-6
+								h3 Playground(old):
+								p: b bootstrap, uikit
+								ul
+									li
+										a(target="_blank", href="./framework--uikit") framework --uikit (1)
+									li
+										a(target="_blank", href="./withmon-uikit") framework --uikit (2)
+									li
+										a(target="_blank", href="./framework--bootstrap") framework --bootstrap
+
+								p: b BEM methodology
+								ul
+									li
+										a(target="_blank", href="./bem-fixed") bem-fixed
+									li
+										a(target="_blank", href="./qiwi--bem-responsive-ie8") bem-responsive-ie8
+									// <li><a target=_blank href="./bem-responsive-tile">bem-responsive-tile</a> </li>
+	
+
+					div.gamedev-projects.block
+						h3 Gamedev experience:
+						.row
+							.col-md-6
+								p: b Html, css, js
+								ul
+									li
+										a(target="_blank", href="./snake") Snake
+								p: b Canvas
+								ul
+									li
+										a(target="_blank", href="./arkanoid") Arkanoid
+									li
+										a(target="_blank", href="./dangeon") Dangeon
+
+					div.contacts.block
+						h3 Contacts
+						
+						p
+							b email:
+							span  comrade.tea@gmail.com
+
+						ul.social
+							li.social__item: a(href="mailto:comrade.tea@gmail.com"): i.bi-envelope
+							li.social__item: a(href="https://wa.me/+79266365431"): i.bi-whatsapp
+							li.social__item: a(href="https://github.com/comrade-tea"): i.bi-github
+							
+					p
+						a(target="_blank", href="https://www.upwork.com/freelancers/~013c59478e4f33f0d6")
+							b upwork link
+
+		script(defer, src="https://code.jquery.com/jquery-3.0.0.min.js")
+		script(defer, src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/0.4.0/trianglify.min.js")
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+		script(defer, src="js/main.js")

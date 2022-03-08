@@ -1,0 +1,29 @@
+extends master/master
+
+block title
+	title blog
+block content
+	div.p-blog
+
+		include master/breadcrumbs
+
+		div.block
+			div.container
+				+blockTitle("01", "Блог")
+
+				div.row.row-multi
+					- for(var x = 0; x < 6; x++)
+						div.col-sm-6(data-aos="slide-up" data-aos-delay=x % 2 == 0 ? 0 : 200)
+							a.card-blog(href="#")
+								div.card-blog__img-w
+									img(src="media/img/blog-1.jpg" alt="")
+								div.card-blog__date 13 ЯНВАРЯ 2017
+								h3.card-blog__title 10 подарков без повода
+
+				include static-blocks/more
+
+		div.feedback.block
+			div.container
+				+blockTitle("02", "как со мной связаться")
+
+				include static-blocks/feedback

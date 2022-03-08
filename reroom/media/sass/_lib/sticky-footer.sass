@@ -1,0 +1,16 @@
+=sticky-footer($footer-height)
+	//don't use <main> for .wrapper, bug ie11 ^_-
+	.wrapper
+		min-height: 100%
+		margin-bottom: $footer-height * -1
+	.wrapper:after
+		content: ""
+		display: block
+	.footer, .wrapper:after
+		height: $footer-height
+
+=sticky-footer-break($footer-height)
+	.wrapper
+		margin-bottom: $footer-height * -1
+	.footer, .wrapper:after
+		height: $footer-height

@@ -1,0 +1,79 @@
+*
+	box-sizing: border-box
+	padding: 0
+	margin: 0
+	&:before, &:after
+		box-sizing: inherit
+
+html
+	&.no-preserve3d
+		// if ie - disable cube and show background
+		.cube
+			display: none
+		.hero
+			padding-top: 0
+		.hero__inner
+			padding-top: 60px
+			height: 100%
+			max-height: 700px
+			cursor: default
+			background-image: url("../img/static-cube.png")
+			background-repeat: no-repeat
+			background-size: contain
+			background-position: 50% 50%
+
+html, body
+	//width: 100%
+	//height: 100%
+
+body
+	font: 16px/1.3 "geo-reg", sans-serif
+	color: $color-black
+	+max-screen($smartphone-landscape)
+		font: 14px/1.3 "geo-reg", sans-serif
+
+img
+	max-width: 100%
+	height: auto
+	border: 0
+	vertical-align: middle
+
+ul, li
+	list-style: none
+
+a, input, textarea
+	color: inherit
+
+a
+	font-size: inherit
+	text-decoration: none
+
+// в button вкладывать i, а не вешать на button
+i
+	display: inline-block
+	font: normal normal normal 16px/1 "gulp-svg-font"
+	vertical-align: middle
+	&.icon-flip
+		transform: scaleX(-1)
+	&.icon-lg
+
+textarea
+	resize: none
+
+button
+	margin: 0
+	font-family: "geo-reg"
+	font-size: 16px
+	background: transparent
+	outline: none
+	border: none
+	cursor: pointer
+	overflow: visible
+
+// auto generate classes for sprites
++sprites($spritesheet-sprites)
+
+//global icofont
+//[class*="icon-"]
+	&:before, &:after
+		font-size: 40px

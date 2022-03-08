@@ -1,0 +1,27 @@
+{
+	"page": {
+		"name": "ёпрст"
+	},
+	"name": "vasil",
+	"skills": [
+		"html",
+		"css",
+		"js"
+	],
+	"size": {
+		"width": "40px",
+		"height": "41px"
+	},
+	"cards": [
+		{
+			"title": "first title",
+			"text": "lorem lorem lorem",
+			"img": "logo.png"
+		},
+		{
+			"title": "second title",
+			"text": "lorem-2 lorem-2 lorem-2",
+			"img": "logo.png"
+		}
+	]
+}

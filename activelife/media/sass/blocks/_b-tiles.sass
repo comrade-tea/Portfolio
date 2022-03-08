@@ -1,0 +1,42 @@
+.b-tiles
+	margin: 40px 0
+.b-tiles-grid
+	+make-grid(50%, 28px, 28px)
+	.col
+		margin-top: 28px
+
+.b-tile
+	display: block
+	position: relative
+	//&:hover, &:focus
+		.b-tile__title
+			color: $color-main
+	&__title
+		position: absolute
+		font-size: 30px
+		//color: $color-text-default
+
+// mods
+.b-tile--lg
+	.b-tile__title
+		@extend h2
+		top: 25px
+		left: 25px
+		color: $color-text-grey
+		&--white
+			color: $color-white
+	.pillow
+		position: absolute
+		bottom: 25px
+		left: 0
+
+.b-tile--md
+	.b-tile__title
+		@extend h3
+		bottom: 25px
+		left: 25px
+
+.b-tile--sm
+	.b-tile__title
+		bottom: 25px
+		left: 25px

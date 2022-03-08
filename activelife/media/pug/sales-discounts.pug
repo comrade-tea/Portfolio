@@ -1,0 +1,21 @@
+extends layout/master
+
+block title
+	title Sales & Discounts
+block content
+	div.p-discounts
+		+pageHead("Sales & Discounts")
+
+		div.container-lg.mb-lg
+			div.discount-list
+				- for(var x = 0; x < 2; x++)
+					div.discount-list__item
+						div.discount-preview
+							div.discount-preview__date End date: 15 June 2017
+							div.discount-preview__i-wrap: img(src="media/img/sale-preview.jpg" alt="")
+							div.discount-preview__title Buy two items and get third for free!
+							div.discount-preview__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.
+							a.link-arrow.discount-preview__link(href="#") SHOP NOW
+
+
+		include static-blocks/b-subscribe

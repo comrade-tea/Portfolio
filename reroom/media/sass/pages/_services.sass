@@ -1,0 +1,49 @@
+.p-servies
+
+.all-services
+	&__item
+		&:nth-child(1n+2)
+			margin-top: 30px
+
+.service-link
+	display: block
+	position: relative
+	&:before
+		opacity: 0
+		+b
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background: rgba(0, 0, 0, 0.4)
+		transition: opacity .2s ease-in
+		z-index: 1
+
+	&:hover, &:focus
+		&:before
+			opacity: 1
+	&__img-w
+		position: relative
+		z-index: 0
+		img
+			+object-fit(cover)
+			min-height: 150px
+	&__name
+		+centre(y)
+		left: 100px
+		color: $color-white
+		z-index: 2
+		+max-screen($smartphone-landscape)
+			left: 40px
+			right: 20px
+
+		&:before
+			display: inline-block
+			content: ""
+			width: 290px
+			height: 2px
+			background: $color-white
+			vertical-align: middle
+			margin-right: 20px
+			+max-screen($big-tablet)
+				display: none

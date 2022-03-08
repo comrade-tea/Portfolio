@@ -1,0 +1,107 @@
+extends layout/master
+
+block title
+	title cart-2
+block content
+	div.p-cart
+		+pageHead("Cart")
+
+		div.container-lg
+			div.cart-steps
+				div.cart-steps__item
+					a.cart-steps__link(href="#") 1. Checkout
+				div.cart-steps__item
+					a.cart-steps__link.cart-steps__link--current(href="#") 2. Shipping & Payment
+				div.cart-steps__item
+					a.cart-steps__link(href="#") 3. Confirmation
+
+			div.cart
+
+				form.cart-form(action="#")
+					div.cart-form
+						div.cart-form__block
+							div.cart-form__title Customer information
+							div.row
+								div.col-sm-6
+									input.input-default(type="text" placeholder="First name")
+								div.col-sm-6
+									input.input-default(type="text" placeholder="Last name")
+							div.row
+								div.col
+									input.input-default(type="email" placeholder="Email")
+
+						div.cart-form__block
+							div.cart-form__title Shipping address
+							div.row
+								div.col
+									input.input-default(type="text" placeholder="Address")
+							div.row
+								div.col-sm-6
+									input.input-default(type="text" placeholder="City")
+								div.col-sm-6
+									select.nice-select
+										option(value="1") state-1
+										option(value="2") state-2
+										option(value="3") state-3
+							div.row
+								div.col-sm-6
+									input.input-default(type="text" placeholder="ZIP")
+
+						div.cart-form__block
+							div.cart-form__title Billing address
+							div.d-flex
+								label.control.control--radio
+									| Same as shipping address
+									input(type='radio', name='radio', checked='checked')
+									div.control__indicator
+								label.control.control--radio
+									| Use different address
+									input(type='radio', name='radio')
+									div.control__indicator
+
+
+						div.cart-form__block
+							div.cart-form__title Card
+							div.cart-form__subtitle All transactions are secure and encrypted.
+							div.cart-form__paycards
+								span We accept:
+								div.paycards
+									div.paycards__item: img(src="media/img/visa-logo.png" alt="")
+									div.paycards__item: img(src="media/img/mastercard-logo.png" alt="")
+
+							div.row
+								div.col
+									input.input-default(type="text" placeholder="Card number")
+							div.row
+								div.col
+									input.input-default(type="text" placeholder="Name on card")
+							div.row
+								div.col-sm-6
+									div.row.no-gutters
+										div.col
+											select.nice-select
+												option(value="1") state-1
+												option(value="2") state-2
+												option(value="3") state-3
+										div.col
+											select.nice-select
+												option(value="1") state-1
+												option(value="2") state-2
+												option(value="3") state-3
+								div.col-sm-3
+									input.input-default(type="text" placeholder="CVV")
+								div.col.d-flex.align-items-center
+									button.cvv-tip(title="The 3 or 4 digit code usually<br/>found on the back of your card")
+										img(src="media/img/question-circle.png" alt="")
+
+
+				div.cart__payment.d-flex.justify-content-between
+					a.cart-extra__link(href="#")
+						i.icon-arrow.icon-flip.mr-3
+						| Back to Checkout
+					a.btn.btn--blob.float-right(href="#") Complete order
+
+
+
+
+		include static-blocks/b-subscribe

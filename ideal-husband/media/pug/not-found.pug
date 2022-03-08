@@ -1,0 +1,36 @@
+extends master/master
+
+block title
+	title cube
+block content
+	div.p-cube
+		div.hero
+			div.hero__inner.container#cube-wrap
+				div.cube.cube--empty
+					div.cube__side.front
+					div.cube__side.left
+					div.cube__side.right
+					div.cube__side.back
+					div.cube__side.top
+					div.cube__side.bottom
+
+			div.not-found
+				div.not-found__nums 404
+				div.not-found__text.
+					Мы искали такую страницу,<br>
+					но не нашли
+
+
+			a.hero-scroll(href="/")
+				div.hero-scroll__line
+				div.hero-scroll__text На главную страницу
+
+		//- .cube-wrap
+			.cube
+				.side.front front
+				.side.back back
+				.side.right right
+				.side.left left
+				.side.top top
+				.side.bottom bottom
+

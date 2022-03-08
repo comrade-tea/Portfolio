@@ -1,0 +1,239 @@
+extends master/master
+
+block title
+	title home
+block content
+	div.p-home
+		div.hero
+			div.hero__inner.container#cube-wrap
+
+				div.cube
+					div.cube__side.front
+					div.cube__side.left
+					div.cube__side.right
+					div.cube__side.back
+					div.cube__side.top
+					div.cube__side.bottom
+
+				div.hero__text
+					h1.hero__title ИДЕАЛЬНЫЙ<br/>МУЖ
+					div.hero__subtitle.
+						Подбор подарков для&nbsp;любимой<br/>
+						с&nbsp;персональным стилистом
+
+				div.hero-scroll(data-scroll-to=".features")
+					div.hero-scroll__line
+					div.hero-scroll__text Scroll
+
+		div.features.block
+			div.features__inner.container
+				div.row.row-grid-md
+					div.col-sm-4(data-aos="slide-up" data-aos-delay="0")
+						div.feature-card
+							div.feature-card__num 1
+							h3.feature-card__title Впечатлите свою любимую
+							div.feature-card__text.
+								Как профессиональный стилист я всегда знаю, что сейчас модно и что нравится женской половине человечества. Я умею подбирать то, что украсит женщину и подойдет к её стилю жизни. Вам остается только преподнести сам подарок и наслаждаться произведеннымэффектом!
+					div.col-sm-4(data-aos="slide-up" data-aos-delay="200")
+						div.feature-card
+							div.feature-card__num 2
+							h3.feature-card__title Выбирайте из лучшего
+							div.feature-card__text.
+								Я поберу несколько вариантов подарков для каждой даты и укажу места для их приобретения. Вам больше не надо тратить время на их поиск.
+					div.col-sm-4(data-aos="slide-up" data-aos-delay="400")
+						div.feature-card
+							div.feature-card__num 3
+							h3.feature-card__title Вы всегда готовы ко всем датам
+							div.feature-card__text.
+								Подарки выбраны и куплены заранее. За несколько дней до даты вам приходит от меня письмо с напоминанием – вы успеете упаковать подарок и заказать цветы.
+
+		div.block#section-1
+			div.container
+				+blockTitle("01", "Как выглядит подбор подарка")
+
+				ul.steps-list
+					li.steps-list__item(data-aos="slide-up" data-aos-delay="0")
+						div.card-step
+							div.card-step__img-w
+								img(src="media/img/step-1.png" alt="")
+							div.card-step__info
+								h3.card-step__title 1. встреча
+								div.card-step__text Мы договариваемся о встрече, личной или онлайн. Обычно встреча длится полчаса-час. Мы обсуждаем количество и бюджет подарков, даты событий, подарки, которые вы дарили раньше, говорим о вашей любимой женщине — эта информация мне понадобится для работы.
+					li.steps-list__item(data-aos="slide-up" data-aos-delay="0")
+						div.card-step
+							div.card-step__info
+								h3.card-step__title 2. Анкета
+								div.card-step__text Потом вы заполняете анкету о своей спутнице. При желании присылаете её фотографию и фотографии имеющихся предметов гардероба.
+							div.card-step__img-w
+								img(src="media/img/step-2.png" alt="")
+					li.steps-list__item(data-aos="slide-up" data-aos-delay="0")
+						div.card-step
+							div.card-step__img-w
+								img(src="media/img/step-3.png" alt="")
+							div.card-step__info
+								h3.card-step__title 3. подарки
+								div.card-step__text
+									p Через 2-3 дня я присылаю презентацию с подборкой подарков и указанием мест, где их можно приобрести или заказать.
+									p При подготовке плана подарков на год — мне может потребоваться 2-3 недели.
+
+		div.block#section-2
+			div.container
+				+blockTitle("02", "Варианты сотрудничества")
+
+				div.row.row-grid-sm
+					div.col-sm-6
+						div.card-coop(data-aos="slide-up" data-aos-delay="0")
+							div.card-coop__key 1 year
+							div.card-coop__dash
+							div.card-coop__info
+								h3.card-coop__title Долгосрочное планирование
+								div.card-coop__text.
+									Все важные даты на 1 год вперед с напоминанием перед важной датой.
+									Удобный формат мы выберем с вами вместе.
+					div.col-sm-6
+						div.card-coop(data-aos="slide-up" data-aos-delay="200")
+							div.card-coop__key 1 event
+							div.card-coop__dash
+							div.card-coop__info
+								h3.card-coop__title Краткосрочное планирование
+								div.card-coop__text.
+									Подбор подарка под конкретное событие с презентацией.
+
+		div.block
+			div.container
+				+blockTitle("03", "Какие бывают подарки")
+
+				div.row.row-multi
+					div.col-sm-6(data-aos="slide-up" data-aos-delay="0")
+						div.card-gift
+							h3.card-gift__title
+								i.icon-ukrash
+								| Украшения
+							div.card-gift__img-w
+								img(src="media/img/gift-1.png" alt="")
+					div.col-sm-6(data-aos="slide-up" data-aos-delay="200")
+						div.card-gift
+							h3.card-gift__title
+								i.icon-accsesories
+								| Аксессуары
+							div.card-gift__img-w
+								img(src="media/img/gift-2.png" alt="")
+					div.col-sm-6(data-aos="slide-up" data-aos-delay="0")
+						div.card-gift
+							h3.card-gift__title
+								i.icon-predmety
+								| Предметы гардероба
+							div.card-gift__img-w
+								img(src="media/img/gift-3.png" alt="")
+					div.col-sm-6(data-aos="slide-up" data-aos-delay="200")
+						div.card-gift
+							h3.card-gift__title
+								i.icon-sobitiya
+								| События
+							div.card-gift__img-w
+								img(src="media/img/gift-4.png" alt="")
+
+		div.block#section-3
+			div.container
+				+blockTitle("04", "Пример презентации для&nbsp;клиента")
+
+				div.slick.slick-presentation
+					- for(var x = 1; x <= 10; x++)
+						div.slick__slide
+							img(src=`media/img/prezent/${x}.png` alt="")
+
+		div.block
+			div.container
+				+blockTitle("05", "Кто мои клиенты")
+
+				div.row.row-grid-sm.mb-md
+					div.col-sm-4(data-aos="slide-up" data-aos-delay="0")
+						img(src="media/img/client-1.png" alt="")
+					div.col-sm-4(data-aos="slide-up" data-aos-delay="200")
+						img(src="media/img/client-2.png" alt="")
+					div.col-sm-4(data-aos="slide-up" data-aos-delay="400")
+						img(src="media/img/client-3.png" alt="")
+
+				div.client-block
+					h3.client-block__title Почему они обратились ко мне
+					div.client-block__grid.row
+						div.client-block__item.col-md-4(data-aos="slide-up" data-aos-delay="0")
+							div.card-line
+								div.card-line__title Антон, 40 лет
+								div.card-line__text Я знаю, как многое успевать, — надо планировать заранее. Это работает в бизнесе, и вот уже третий сезон работает в вопросе выбора подарков для супруги. У меня появилась помощница — Александра Малкина. Она профессиональный стилист, живёт и работает в Нью-Йорке. Её клиенты ездят по рабочим вопросам и для отдыха по всему миру, но за советом всё равно обращаются только к Саше.
+						div.client-block__item.col-md-4(data-aos="slide-up" data-aos-delay="200")
+							div.card-line
+								div.card-line__title Стефан, 45 лет
+								div.card-line__text Мы поговорили один раз о моей жене. Я рассказал, что она любит, чем увлекается, что я уже дарил, на какие даты приходятся наши значимые события. Ещё мы обсудили бюджет для подарков. Оказалось, этого достаточно, чтобы подарки радовали любимую. Саша лучше знает о том, что происходит в женском мире, и никогда не переходит границ в личных вопросах. Благодаря её экспертному подходу у меня просто гора с плеч упала.
+						div.client-block__item.col-md-4(data-aos="slide-up" data-aos-delay="400")
+							div.card-line
+								div.card-line__title Марк, 37 лет
+								div.card-line__text Саша подготовила мне презентацию на 3-4 года вперёд с вариантами подарков для всех значимых событий и местами, где их купить. Ближе к делу я выбираю и оплачиваю. Жена довольна, я тоже.
+
+				div.client-block.client-block--partly-hide
+					h3.client-block__title Что они говорят о подборе подарка
+					div.client-block__grid.row
+						- for(var x = 0; x < 2; x++)
+							div.client-block__item.col-md-4(data-aos="slide-up" data-aos-delay="0")
+								div.card-line
+									div.card-line__title Майкл, 32 года
+									div.card-line__text В деловых вопросах я умею добиваться успеха, но когда речь заходит о подарке любимой супруге, я теряюсь. Я подхожу к вопросу слишком серьёзно. Мне хочется, чтобы подарок был идеальным, но нередко оказывается, что жена от меня ожидала совсем другого. Для любимой женщины я хочу сделать больше, чем просто купить букет и отвести в ресторан.
+							div.client-block__item.col-md-4(data-aos="slide-up" data-aos-delay="200")
+								div.card-line
+									div.card-line__title Василий 35 лет
+									div.card-line__text Когда мы только начинали встречаться, моего креатива хватало на все события. Спустя 5 лет брака, моя фантазия часто терпит фиаско. Сейчас мне бывает сложно что-то придумать даже на 8 марта или ко дню свадьбы. Кстати, оба события выпадают на март, — и задача становится вдвойне сложнее.
+							div.client-block__item.col-md-4(data-aos="slide-up" data-aos-delay="400")
+								div.card-line
+									div.card-line__title Василий 35 лет
+									div.card-line__text Когда мы только начинали встречаться, моего креатива хватало на все события. Спустя 5 лет брака, моя фантазия часто терпит фиаско. Сейчас мне бывает сложно что-то придумать даже на 8 марта или ко дню свадьбы. Кстати, оба события выпадают на март, — и задача становится вдвойне сложнее.
+
+					// если больше 3-х отзывов - показать кнопку, блоки 3+ скрываются классом .client-block--partly-hide
+					div.link-more-wrap
+						button.link-more(type="button" data-show-reviews) Показать еще
+
+		div.block#section-4
+			div.container
+				+blockTitle("06", "обо мне")
+
+				div.row.row-grid-sm
+					div.col-sm-6(data-aos="slide-up" data-aos-delay="0")
+						img(src="media/img/about.png" alt="")
+					div.col-sm-6(data-aos="slide-up" data-aos-delay="200")
+						div.about
+							h3.about__title Александра Малкина
+							div.about__role персональный стилист
+							div.about__main.
+								Мой сервис помогает мужчинам делать оригинальные
+								и красивые подарки, чтобы их спутницы чувствовали заботу
+								и&nbsp;внимание.
+							div.about__text
+								p.
+									Я основательница сервиса «Идеальный муж» и персональный стилист. Живу в Нью-Йорке.
+								p.
+									Моя задача — подобрать несколько вариантов подарков и напомнить о важных датах, чтобы избавить мужчин от необходимости тратить много времени на подготовку к ним.
+								p.
+									Как профессиональный стилист я всегда знаю, что сейчас модно и популярно. Я умею подбирать то, что украсит женщину и подойдёт к её стилю жизни, и умею делать приятные сюрпризы.
+								p.
+									Со мной вы всегда будете готовы ко всем датам: идеи подарков и места их приобретения будут у вас заранее.
+
+		div.block#section-5
+			div.container
+				+blockTitle("07", "Блог")
+
+				div.row.row-multi
+					- for(var x = 0; x < 4; x++)
+						div.col-sm-6(data-aos="slide-up" data-aos-delay=x % 2 == 0 ? 0 : 200)
+							a.card-blog(href="#")
+								div.card-blog__img-w
+									img(src="media/img/blog-1.jpg" alt="")
+								div.card-blog__date 13 ЯНВАРЯ 2017
+								h3.card-blog__title 10 подарков без повода
+
+				div.link-more-wrap
+					a.link-more(href="#") Перейти в блог
+
+		div.feedback.block#section-6
+			div.container
+				+blockTitle("08", "как со мной связаться")
+
+				include static-blocks/feedback

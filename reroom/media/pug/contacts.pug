@@ -1,0 +1,38 @@
+extends master/master
+
+block title
+	title contacts
+block content
+	div.p-contacts
+		+pageHead("Контакты")
+
+		div.block.bg-white.pb-sm
+			div.contacts-grid.container-md.mb-md
+				div.row
+					div.col-md-6
+						p.
+							Название организации<br/>
+							ООО «РЕРУМ» / REROOM<br/>
+						p.
+							Адрес<br/>
+							Москва, 1-ый Кожуховский<br/>
+							проезд, дом 11
+
+					div.col-md-6
+						p
+							div Телефон
+							a(href="tel:+74952552172") +7 (495) 255 21 72
+						p
+							div Время работы
+							div Пн-Вс: с 9.00 до 20.00
+						p
+							div E-mail
+							a(href="mailto:info@reroom.ru") info@reroom.ru
+
+			div.container
+				div#map.map
+
+		div.block
+			div.container-md.mb-md
+				h2.text-center.mb-lg НАПИСАТЬ СООБЩЕНИЕ
+				include static-blocks/form

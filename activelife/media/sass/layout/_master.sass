@@ -1,0 +1,108 @@
+// override if need  usage: +container(maw, gutter)
+// true - размеры, gutter-ы не влияют
+$container-types: (default: 1200px, lg: 920px, md: 700px, sm: 600px, xs: 480px )
+$maws-types: (md: 780px, sm: 600px, xs: 480px )
+$mb-types: (lg: 120px, md: 80px, sm: 60px )
+$container-gutter: 20px
+
+// containers
+.container-proto
+	width: 100%
+	margin-left: auto
+	margin-right: auto
+	padding-left: $container-gutter
+	padding-right: $container-gutter
+
+@each $container-width in map-keys($container-types)
+	@if ($container-width == default)
+		.container
+			@extend .container-proto
+			max-width: map_get($container-types, $container-width) + ($container-gutter * 2)
+	@else
+		.container-#{$container-width}
+			@extend .container-proto
+			max-width: map_get($container-types, $container-width) + ($container-gutter * 2)
+
+// max-widths containers (without padding)
+@each $maw in map-keys($maws-types)
+	.maw-#{$maw}
+		width: 100%
+		max-width: map_get($maws-types, $maw)
+
+// margin-bottom blocks
+@each $maw in map-keys($mb-types)
+	.mb-#{$maw}
+		margin-bottom: map_get($mb-types, $maw)
+
+.wrapper
+
+.gutter
+	padding-left: $container-gutter
+	padding-right: $container-gutter
+
+.page-head
+	background: $color-grey
+	padding: 25px 0 50px
+	margin-bottom: 30px
+	&__title
+
+
+.static-block
+	h1, h2, h3, h4
+		&:first-child
+			margin-top: 0
+	h1, h2
+		font-family: "roboto-bold"
+		font-size: 24px
+		margin-top: 30px
+		margin-bottom: 30px
+	h3, h4
+		font-family: "roboto-bold"
+		font-size: 20px
+		margin-top: 20px
+		margin-bottom: 20px
+	img
+		display: block
+		margin: 50px 0
+	p
+		margin: 20px 0
+		line-height: 24px
+		& + h1,
+		& + h2,
+		& + h3,
+		& + h4
+			margin-top: 50px
+
+	.btn
+		margin: 50px 0
+
+.block
+	padding-top: 80px
+	padding-bottom: 80px
+
+
+//default grids
+.u-grid-1-2
+	+make-grid(50%, 70px)
+	+max-screen($big-tablet)
+		+break-grid(100%, 0, 40px)
+
+.u-grid-1-3
+	+make-grid(33.33333%, 90px)
+	+max-screen($big-tablet)
+		+break-grid(100%, 0, 40px)
+
+.u-grid-1-5
+	+make-grid(20%, 70px)
+	+max-screen($big-tablet)
+		//!!!!
+		+break-grid(33.3333%, 40px, 60px)
+		justify-content: center
+	+max-screen($small-tablet)
+		+break-grid(50%, 30px, 40px)
+	+max-screen($smartphone-portrait)
+		+break-grid(100%, 0px, 40px)
+
+.block-bb
+	padding-bottom: 80px
+	border-bottom: 1px solid $color-grey--dark

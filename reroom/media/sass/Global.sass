@@ -1,0 +1,91 @@
+$z-layers: ("header": 9001, "menu-panel": 8000, "navigation": 1, "below":  -1, "bottomless-pit": -9000)
+
+*
+	box-sizing: border-box
+	padding: 0
+	margin: 0
+	&:before, &:after
+		box-sizing: inherit
+
+html, body
+	width: 100%
+	height: 100%
+	&.overflow-hidden
+		overflow: hidden
+		.wrapper
+			height: 100%
+
+body
+	background-color: #f3f3f3
+	min-width: 320px
+	font: 14px/1.3 'geo', sans-serif
+	color: $color-text-default
+	&.body-hidden
+		overflow: hidden
+
+	//+max-screen($smartphone-landscape)
+		font: 12px/1.3 'geo', sans-serif
+
+img
+	max-width: 100%
+	height: auto
+	border: 0
+	vertical-align: middle
+
+ul, li
+	list-style: none
+
+a, input, textarea
+	color: inherit
+
+a
+	font-size: inherit
+	text-decoration: none
+
+// в button вкладывать i, а не вешать на button
+i
+	display: inline-block
+	font: normal normal normal 20px/1 "gulp-svg-font"
+	vertical-align: middle
+	&.icon-flip
+		transform: scaleX(-1)
+	&.icon-lg
+	&.icon-sm
+		font-size: 13px
+
+textarea
+	resize: none
+
+button
+	margin: 0
+	font-size: inherit
+	font-family: inherit
+	background: transparent
+	outline: none
+	border: none
+	cursor: pointer
+	overflow: visible
+
+// auto generate classes for sprites
++sprites($spritesheet-sprites)
+
+//global icofont
+//[class*="icon-"]
+	&:before, &:after
+		font-size: 40px
+
+[class*="sp-"]
+	display: inline-block
+	vertical-align: middle
+
+@mixin object-fit($fit: fill, $position: null)
+	object-fit: $fit
+	@if $position
+		object-position: $position
+		font-family: 'object-fit: #{$fit}; object-position: #{$position}'
+	@else
+		font-family: 'object-fit: #{$fit}'
+
+.img-fit
+	+object-fit(cover)
+	height: 100%

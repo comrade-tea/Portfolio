@@ -1,0 +1,146 @@
+.p-product
+
+.product-details
+	margin-bottom: 60px
+	&__inner
+		display: flex
+	&__view
+	&__info
+		flex: 1
+
+
+.product-view
+	display: flex
+	&__thumbs
+		margin-right: 25px
+	&__slider
+		.fotorama--fullscreen
+			.fotorama__nav-wrap
+				display: block
+		.fotorama__nav-wrap
+			display: none
+
+.product-thumbs
+	&__item
+		position: relative
+		&:before
+			+b
+			opacity: 0
+			left: 0
+			top: 0
+			width: 100%
+			height: 100%
+			background: rgba(0, 0, 0, 0.4)
+			transition: all .2s
+		&.is-active
+			&:before
+				opacity: 1
+		&:nth-child(1n+2)
+			margin-top: 25px
+
+.product-info
+	padding-left: 35px
+	&__title
+		font-family: "geo-bold"
+		font-size: 40px
+		margin-bottom: 60px
+	&__price
+		font-family: "geo-bold"
+		margin-bottom: 30px
+		.old
+			font-size: 24px
+			color: $color-text-grey
+			text-decoration: line-through
+		.current
+			font-size: 40px
+
+	&__color
+		margin-bottom: 20px
+		.title
+			margin-bottom: 18px
+	&__inputs
+		margin-bottom: 30px
+		display: flex
+		.title
+			color: $color-text-grey
+			margin-bottom: 10px
+			text-transform: uppercase
+		.size
+			flex-basis: 280px
+			.nice-select
+				width: 100%
+		.qty
+			flex-grow: 1
+			margin-left: 20px
+
+	&__btn
+		width: 100%
+		margin-bottom: 40px
+	&__extra
+		color: $color-text-default--light
+		div + div
+			margin-top: 8px
+		a
+			border-bottom: 2px solid $color-text-default--light
+			transition: border-color .2s
+			&:hover, &:focus
+				border-color: transparent
+
+// section
+.product-features
+	padding-top: 60px
+	padding-bottom: 130px
+	&__inner
+	&__intro
+		margin-bottom: 80px
+
+.features-list
+	&__item
+
+.card-feature
+	&__head
+		position: relative
+		font-family: "roboto-bold"
+		padding-bottom: 20px
+		border-bottom: 1px solid $color-grey--darkest
+		text-transform: uppercase
+		&:after
+			+b
+			left: 0
+			bottom: -1px
+			width: 138px
+			height: 5px
+			background: $color-main
+	&__body
+		display: flex
+		padding-top: 80px
+		padding-right: 80px
+	&__img-w
+		flex: 1 0 80px
+	&__text
+		margin-left: 24px
+
+.video-block
+	padding: 50px 0 80px
+	background: $color-grey--dark
+	&__pretitle
+		margin-bottom: 60px
+	&__title
+		margin-bottom: 40px
+	&__slider
+
+.video-container
+	position: relative
+	i
+		position: absolute
+		top: 50%
+		left: 50%
+		margin-top: -40px
+		margin-left: -40px
+		font-size: 80px
+		color: $color-white
+		transition: all .2s
+		&.hide
+			opacity: 0
+			transform: scale(1.4)
+

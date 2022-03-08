@@ -1,0 +1,23 @@
+extends master/master
+
+block title
+	title not-found
+block vars
+	- var stickyFooter = true;
+block content
+	div.p-not-found
+		div.container-sm
+			div.row.row-grid-md
+				div.col-md-6
+					img(src="media/img/logo-404.png" alt="")
+				div.col-md-6.nf-info
+					div.nf-info__inner
+						div.nf-info__title.
+							Мы искали такую страницу,
+							но не нашли
+
+						div.nf-info__pre-list Вы можете:
+						ul.nf-info__list
+							li пройти на #[a(href="/") главную страницу] или в #[a(href="#") каталог проектов]
+							li позвонить нам по телефону #[a(href="tel:74993407032") + 7 499 340 70 32]
+							li написать письмо #[a(href="mailto:info@reroom.ru") info@reroom.ru]

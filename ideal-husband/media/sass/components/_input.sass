@@ -1,0 +1,29 @@
+.input-default
+	display: block
+	width: 100%
+	height: 100%
+	border: 1px solid $color-black
+	margin: 0
+	padding: 10px 20px
+	outline: 0
+	vertical-align: baseline
+	background: transparent
+	font: 16px/1.3 "geo-reg", Verdana, sans-serif
+	transition: all 0.5s ease
+	+max-screen($big-tablet)
+		padding: 12px
+	&:focus
+		border-color: #ccc
+		box-shadow: inset 0 1px 1px rgba(205, 205, 205, 0.075), 0 0 8px rgba(216, 216, 216, 0.69)
+		outline: 0
+	+placeholder
+		color: $color-text-default
+		font-size: 16px
+		font-family: "geo-reg", Verdana, sans-serif
+		+max-screen($smartphone-portrait)
+			font-size: 14px
+	&.input-validation-error
+		border-color: #c00
+		box-shadow: 0 0 6px #ee4d55
+		+placeholder
+			color: #ee4d55

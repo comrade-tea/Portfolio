@@ -1,0 +1,77 @@
+.p-category
+
+.products
+	&__head
+		padding-bottom: 20px
+	&__body
+		display: flex
+	&__filter
+		//width: calc(25% + 35px)
+		width: 0
+		overflow: hidden
+		border-top: 1px solid $color-grey
+		transition: width .4s ease-out
+		&.is-open
+			width: 307px
+	&__cards
+		flex: 1
+
+.filter-toggle
+	&__title
+		font-size: 18px
+		margin-right: 65px
+	&__btn
+
+.sort-ui
+	&__title
+		margin-right: 20px
+	&__select
+		width: 226px
+
+.product-filter
+	padding-right: 20px
+
+	&__item
+		padding: 26px 0
+		border-top: 1px solid $color-grey--darkest
+		&:last-child
+			border-bottom: 1px solid $color-grey
+	&__title
+		font-family: "roboto-bold"
+		margin-bottom: 20px
+		text-transform: uppercase
+	&__input-w
+		&:nth-child(1n+2)
+			margin-top: 10px
+
+.product-cards-grid
+	display: flex
+	flex-flow: row wrap
+	&__item
+		width: 280px
+		margin-bottom: 80px
+
+// cards
+.card-product
+	&__img-w
+		position: relative
+		margin-bottom: 20px
+	&__badge
+		position: absolute
+		top: 15px
+		left: 0
+	&__title
+		font-family: "roboto-bold"
+		font-size: 17px
+		margin-bottom: 20px
+	&__price
+		display: flex
+		align-items: center
+		font-family: "geo-bold"
+		.current
+			font-size: 24px
+		.old
+			font-size: 16px
+			color: $color-text-grey
+			text-decoration: line-through
+			margin-left: 16px

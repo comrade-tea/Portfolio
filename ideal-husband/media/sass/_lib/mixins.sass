@@ -1,0 +1,198 @@
+/*
+		|--------------------------------------------------------------------------
+		| BEST UTILS
+		|--------------------------------------------------------------------------
+	*//
+
+=box
+	box-sizing: border-box
+
+=shadow-border($width, $color)
+	-webkit-box-sizing: inset 0px 0px 0px $width $color
+		-moz-box-sizing: inset 0px 0px 0px $width $color
+			box-shadow: inset 0px 0px 0px $width $color
+
+=bg-cover
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: 50% 50%
+
+=ghostVerticalAlign
+	&:before
+		content: ''
+		display: inline-block
+		vertical-align: middle
+		height: 100%
+		width: .1px
+
+=centre($axis: "both")
+	@if $axis == "y"
+		position: absolute
+		top: 50%
+		-webkit-transform: translateY(-50%)
+		-moz-transform: translateY(-50%)
+		-ms-transform: translateY(-50%)
+		-o-transform: translateY(-50%)
+		transform: translateY(-50%)
+	@if $axis == "x"
+		position: absolute
+		left: 50%
+		-webkit-transform: translateX(-50%)
+		-moz-transform: translateX(-50%)
+		-ms-transform: translateX(-50%)
+		-o-transform: translateX(-50%)
+		transform: translateX(-50%)
+	@if $axis == "both"
+		position: absolute
+		top: 50%
+		left: 50%
+		-webkit-transform: translate(-50%, -50%)
+		-moz-transform: translate(-50%, -50%)
+		-ms-transform: translate(-50%, -50%)
+		-o-transform: translate(-50%, -50%)
+		transform: translate(-50%, -50%)
+	@if $axis == "none"
+		position: relative
+		top: auto
+		left: auto
+		-webkit-transform: none
+		-moz-transform: none
+		-ms-transform: none
+		-o-transform: none
+		transform: none
+
+=b
+	display: block
+	position: absolute
+	content: " "
+
+=up
+	text-transform: uppercase
+	letter-spacing: 0.05em
+
+=down
+	text-transform: none
+	letter-spacing: normal
+
+=scaps
+	font-variant: small-caps
+	letter-spacing: 0.05em
+
+=clearfix
+	&:after
+		display: table
+		width: 100%
+		content: " "
+		clear: both
+		height: 0
+		width: 0
+
+=opacity($level)
+	opacity: $level
+	filter: alpha(opacity=$level*100)
+
+/*
+		|--------------------------------------------------------------------------
+		| Text stuff
+		|--------------------------------------------------------------------------
+	*//
+
+=text-overflow
+	overflow: hidden
+	-ms-text-overflow: ellipsis
+	text-overflow: ellipsis
+	white-space: nowrap
+
+=text-hide
+	font: 0/0 a
+	text-shadow: none
+	color: transparent
+
+=text-prevent
+	-ms-word-break: break-all
+	word-break: break-all
+	word-break: break-word
+	-webkit-hyphens: auto
+	-moz-hyphens: auto
+	hyphens: auto
+
+/*
+		|--------------------------------------------------------------------------
+		| Font
+		|--------------------------------------------------------------------------
+	*//
+
+=font($alias, $name)
+	@font-face
+		font-family: $alias
+		src: url("../fonts/" + $name + ".eot")
+		src: url("../fonts/" + $name + ".eot?#iefix") format("embedded-opentype"), url("../fonts/" + $name + ".woff") format("woff"), url("../fonts/" + $name + ".ttf") format("truetype")
+		font-weight: normal
+		font-style: normal
+
+=font-smoothing($val: antialiased)
+	-webkit-font-smoothing: $val
+	-moz-font-smoothing: $val
+	-ms-font-smoothing: $val
+	-o-font-smoothing: $val
+
+/*
+		|--------------------------------------------------------------------------
+		| Placeholder
+		|--------------------------------------------------------------------------
+	*//
+
+=placeholder-color($color)
+	&:-moz-placeholder
+		color: $color
+	&::-webkit-input-placeholder
+		color: $color
+
+=placeholder
+	&:-ms-input-placeholder
+		@content
+	&:-moz-placeholder
+		@content
+	&::-moz-placeholder
+		@content
+	&::-webkit-input-placeholder
+		@content
+	&::placeholder
+		@content
+
+/*
+		|--------------------------------------------------------------------------
+		| Scrollbar
+		|--------------------------------------------------------------------------
+	*//
+=scrollbar
+	& ::-moz-scrollbar
+		@content
+	& ::-webkit-scrollbar
+		@content
+	& ::scrollbar
+		@content
+
+=scrollbar-track
+	& ::-moz-scrollbar-track
+		@content
+	& ::-webkit-scrollbar-track
+		@content
+	& ::scrollbar-track
+		@content
+
+=scrollbar-thumb
+	& ::-moz-scrollbar-thumb
+		@content
+	& ::-webkit-scrollbar-thumb
+		@content
+	& ::scrollbar-thumb
+		@content
+
+=scrollbar-track-piece
+	& ::-moz-scrollbar-track-piece
+		@content
+	& ::-webkit-scrollbar-track-piece
+		@content
+	& ::scrollbar-track-piece
+		@content

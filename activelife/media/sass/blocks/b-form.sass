@@ -1,0 +1,46 @@
+.b-form
+	//text-align: center
+	.checkbox
+		span:after
+			color: $color-text-default!important
+
+	&__top
+		max-width: 380px
+		margin: 0 auto
+		padding-bottom: 40px
+	&__title
+		//color: $color-text-default
+		margin-bottom: 60px
+	&__soc-auth
+		margin: -20px 0 40px
+	&__link-wrap
+		margin: 20px 0 30px
+		a
+			margin: 0
+		& + .b-form__submit
+			margin-top: 0
+
+	&__field
+		height: 44px
+		&:nth-child(1n+2)
+			margin-top: 24px
+		&--textarea
+			height: 160px
+	&__submit
+		display: block
+		width: 100%
+		margin-top: 24px
+
+	// basement
+	&__bot
+		background: $color-grey
+		margin: 0 -35px -35px
+		padding: 40px 20px 20px
+	&__bot-inner
+		max-width: 380px
+		margin: 0 auto
+		> .btn--blob
+			display: block
+			width: 100%
+			& + .btn--blob
+				margin-top: 30px

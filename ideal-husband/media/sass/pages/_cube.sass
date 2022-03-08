@@ -1,0 +1,223 @@
+$cube-breakpoint: 700px
+
+.p-cube
+	//margin-top: 100px
+	//perspective: 100px
+	//perspective: 1000px
+	perspective: 6000px
+	//perspective-origin: 50% 50%
+
+.cube
+	position: relative
+	//margin: 200px auto
+	margin: 100px auto
+	//width: 630px
+	//height: 362px
+	width: 790px
+	height: 430px
+	transform-style: preserve-3d
+	//transform-origin: 50% 50% -181px
+	//transform: rotateX(-20deg) rotateY(32deg)
+	transform: rotateX(-30deg) rotateY(32deg)
+
+	&--empty
+		.cube__side
+			background: none!important
+			border: 5px solid $color-black
+
+
+	+max-screen($cube-breakpoint)
+		width: 300px
+		height: 150px
+		//transform-origin: 50% 50% -75px
+
+	&__side
+		opacity: 0
+		position: absolute
+		//border: 5px solid #000000
+		color: $color-white
+		font-size: 40px
+		line-height: 362px
+		//transition: all 1s
+
+
+	.front
+		background-image: url("../img/cube-4.png")
+		+bg-cover
+		width: 790px
+		height: 430px
+		transform-origin: bottom center
+		transform: rotateX(-90deg)
+		+max-screen($cube-breakpoint)
+			width: 300px
+			height: 150px
+
+	.left
+		width: 430px
+		height: 430px
+		transform-origin: left bottom
+		background: #d4d9dd
+		//transform: rotateY(90deg)
+		//transform: rotate3d(90, 45, 0, 90deg)
+		+max-screen($cube-breakpoint)
+			width: 150px
+			height: 150px
+
+	.right
+		width: 430px
+		height: 430px
+		right: 0
+		transform-origin: right bottom
+		background: #d4d9dd
+		//transform: rotateY(-90deg) rotateX(90deg)
+		+max-screen($cube-breakpoint)
+			width: 150px
+			height: 150px
+
+	.back
+		background-image: url("../img/cube-2.png")
+		+bg-cover
+		width: 790px
+		height: 430px
+		transform-origin: bottom center
+		//transform: translateZ(-362px) rotateY(180deg) rotateX(-90deg)
+		+max-screen($cube-breakpoint)
+			width: 300px
+			height: 150px
+
+	.bottom
+		background-image: url("../img/cube-3.png")
+		+bg-cover
+		width: 790px
+		height: 430px
+		transform-origin: bottom center
+		transform: rotateX(90deg)
+		+max-screen($cube-breakpoint)
+			width: 300px
+			height: 150px
+
+	.top
+		background-image: url("../img/cube-1.png")
+		+bg-cover
+		//opacity: 1
+		width: 790px
+		height: 430px
+		transform-origin: top center
+		//transform: translateZ(-362px) rotateX(-110deg)
+		+max-screen($cube-breakpoint)
+			width: 300px
+			height: 150px
+
+.animate-cube
+	.front,
+	.left,
+	.right,
+	.back
+		transform: rotateX(0deg)
+
+//.cube-wrap
+	position: relative
+	margin: 200px auto
+	width: 630px
+	height: 362px
+	//perspective: 500px
+	perspective: 1250px
+
+	.cube
+		width: inherit
+		height: inherit
+		transform-style: preserve-3d
+
+	.side
+		position: absolute
+		width: inherit
+		height: inherit
+		border: 5px solid #000000
+		font: normal 70px Arial
+		text-align: center
+		line-height: 362px
+		color: #fff
+		//background: rgba(0, 0, 0, 0.67)
+		background: url("../img/cube-03_362x630px.png")
+		//transform-origin: 50% 50% 0
+
+
+	.front
+		width: 630px
+		height: 362px
+		transform: translateZ(181px)
+		transform-origin: 50% 100%
+		//transform: translateZ(181px) rotateX(-90deg)
+
+	.back
+		width: 630px
+		height: 362px
+		transform: rotateY(180deg) translateZ(181px)
+
+	.right
+		width: 362px
+		height: 362px
+		//transform: rotateY(90deg) translateZ(450px)
+		transform: rotateY(90deg) translateZ(448px)
+
+	.left
+		width: 362px
+		height: 362px
+		//transform: rotateY(-90deg) translateZ(174px)
+		transform: rotateY(-90deg) translateZ(181px)
+
+	.top
+		width: 630px
+		height: 362px
+		transform: rotateX(90deg) translateZ(181px)
+
+	.bottom
+		width: 630px
+		height: 362px
+		transform: rotateX(-90deg) translateZ(181px)
+
+//.cube
+	position: relative
+	width: 300px
+	height: 300px
+	transform-style: preserve-3d
+	//transform-origin: 50% 50% -150px
+	transform-origin: 50% 50% -150px
+	&__side
+		position: absolute
+		width: 300px
+		height: 300px
+		border: 1px solid darkred
+		//background: rgba(0, 0, 0, 0.51)
+		background-image: url(http://baconmockup.com/300/300)
+		background-size: cover
+
+		color: $color-white
+		font-size: 50px
+		line-height: 300px
+		text-align: center
+		transform-origin: 50% 50% -150px
+		//backface-visibility: hidden
+		&:nth-child(2)
+			transform: rotateY(-90deg)
+		&:nth-child(3)
+			transform: rotateY(90deg)
+		&:nth-child(4)
+			transform: rotateX(-90deg)
+		&:nth-child(5)
+			transform: rotateX(90deg)
+		&:nth-child(6)
+			transform: rotateY(180deg)
+
+//.test
+	width: 400px
+	height: 400px
+	border: 1px solid #000
+	background: rgba(0, 0, 0, 0.56)
+	transition: all 1s
+	transform-origin: 50% 50%
+	&:hover
+		//transform: rotate3d(0, -1, 0, 90deg)
+		transform: rotateY(90deg)
+
+

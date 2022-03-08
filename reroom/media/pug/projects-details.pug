@@ -1,0 +1,69 @@
+extends master/master
+
+block title
+	title projects-details
+block vars
+	//- var bodyOverflow = true;
+	//- var disableFooter = true;
+block content
+	div.p-projects-details
+
+		div.pd-panel.pd-panel--closed
+			div.pd-panel-head
+				a.pd-panel-head__all(href="#")
+					i.icon-all-projects
+					span все проекты
+				button.pd-panel-head__info(type="button")
+					i.icon-close
+					span инфо
+
+			div.pd-panel-body
+				div.pd-panel-body__inner
+
+					div.pd-panel-body__control
+						a(href="#" title="Все проекты"): i.icon-all-projects
+						button(type="button" data-pdslider-arr="next"): i.icon-arrow-right
+						button(type="button" data-pdslider-arr="prev"): i.icon-arrow-left
+
+					h1.pd-panel-body__title.h2-like Квартира в стиле минимализм
+					ul.pd-panel-body__list
+						li.pd-row
+							div.pr-row__icon
+								i.icon-date
+							div.pd-row__info
+								div.pd-row__key Дата
+								div.pd-row__value 17/06/2016
+						li.pd-row
+							div.pr-row__icon
+								i.icon-address
+							div.pd-row__info
+								div.pd-row__key Адрес
+								div.pd-row__value Москва, Айвазовского, 7
+						li.pd-row
+							div.pr-row__icon
+								i.icon-architect
+							div.pd-row__info
+								div.pd-row__key Архитектор
+								div.pd-row__value Сергей Наседкин (arch 625)
+						li.pd-row
+							div.pr-row__icon
+								i.icon-photographer
+							div.pd-row__info
+								div.pd-row__key Фотограф
+								div.pd-row__value Илья Егоркин
+
+					div.pd-panel-body__gallery
+						div.fraction
+							div.fraction__nums
+								span.fraction__current 1
+								span.fraction__separ /
+								span.fraction__max 16
+							div.fraction__caption фотогалерея
+							button.fraction__arrow(type="button" data-pdslider-arr="next"): i.icon-arrow-right
+
+		//- SLIDEEEEEEEEEEEER!
+		div.pd-slider
+			- for(var x = 0; x < 4; x++)
+				div.pd-slider__slide
+					div.slick-effect
+						img.slick-effect__img(src="media/img/pr-details-1.jpg" alt="")

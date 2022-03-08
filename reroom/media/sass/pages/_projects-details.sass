@@ -1,0 +1,218 @@
+.p-projects-details
+	+min-screen($small-tablet)
+		overflow: hidden
+	& + .footer
+		+min-screen($small-tablet)
+			display: none
+
+.pd-slider
+	width: 100%
+	height: 100vh
+	padding-bottom: 0
+	+max-screen($common-tablet)
+		//min-height: 500px
+		//height: auto
+		padding-top: 120px
+		padding-bottom: 40px
+		margin-bottom: 60px
+	+max-screen($small-tablet)
+		min-height: 400px
+
+	.slick-track, .slick-list
+		height: 100%
+	&__slide
+		height: 100%
+		.slick-effect
+			+max-screen($small-tablet)
+				display: flex
+				justify-content: center
+				align-items: center
+	img
+		width: 100%
+		height: 100%
+		+object-fit(cover)
+		//+min-height(400px)
+			width: 100%
+			height: 100%
+			+object-fit(cover)
+		//+min-screen($small-tablet)
+			height: 100%
+			+object-fit(cover)
+
+.pd-panel
+	display: flex
+	flex-direction: column
+	color: $color-black
+	+centre(y)
+	left: 20px
+	z-index: 2
+	width: 420px
+	min-height: 280px
+	max-height: 700px
+	height: 70vh
+	transition: width .4s linear .3s
+	+max-screen($smartphone-landscape)
+		transform: translateX(0px)
+		top: 20%
+
+// toggle (delay's to small)
+.pd-panel--closed
+	width: 70px
+
+	.pd-panel-head
+	.pd-panel-head__info
+		span
+			opacity: 0
+			width: 0
+			transition: width .2s, opacity .3s
+		i
+			transform: rotate(45deg)
+			margin-right: 0
+
+	.pd-panel-body
+	.pd-panel-body__inner
+		height: 210px
+		top: 50%
+		transform: translateY(-50%)
+		transition: all .3s linear, height .3s linear .6s
+		> *:not(.pd-panel-body__control)
+			opacity: 0
+			transition: opacity .3s ease-in-out
+	.pd-panel-body__control
+		opacity: 1
+		visibility: visible
+		transition: opacity .3s linear .8s
+
+//------
+.pd-panel-head
+	flex: 0 0 70px
+	position: relative
+	display: flex
+	height: 70px
+	font-family: "geo-bold"
+	font-size: 11px
+	text-transform: uppercase
+	background: $color-white
+	overflow: hidden
+	//border-bottom: 2px solid $color-gallery
+	&:before
+		+b
+		left: 0
+		bottom: 0
+		width: 100%
+		height: 2px
+		background: $color-gallery
+		//z-index: -1
+	&__all
+		position: absolute
+		top: 27px
+		left: 0
+		//height: 100%
+		display: flex
+		align-items: center
+		padding-left: 30px
+		i
+			margin-right: 20px
+	&__info
+		position: relative
+		z-index: 2
+		margin-left: auto
+		width: 120px
+		color: $color-white
+		background: $color-black
+		height: 100%
+		display: flex
+		justify-content: center
+		align-items: center
+		cursor: pointer
+		transition: background .4s
+		//&:hover, &:focus
+			background: $color-black--light
+		span
+			display: inline-block
+			width: 36px
+			overflow: hidden
+			transition: width .2s linear .4s, opacity .3s
+			text-transform: uppercase
+		i
+			transform: rotate(0deg)
+			margin-right: 15px
+			transition: all .5s
+
+//------
+.pd-panel-body
+	//flex: 1
+	position: relative
+	height: 100%
+	&__inner
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		transform: translateY(0%)
+		background: $color-white
+		padding: 50px 40px 30px 30px
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		transition: all .2s linear .1s, width .2s linear 1s
+		> *
+			transition: opacity .2s ease-in-out .6s
+
+	&__control
+		position: absolute
+		//top: 0
+		left: 0
+		opacity: 0
+		top: 50%
+		transform: translateY(-50%)
+		visibility: hidden
+		transition: all .1s linear
+		//outline: 1px solid lightseagreen
+		z-index: 2
+		> *
+			display: block
+			width: 70px
+			height: 70px
+			line-height: 70px
+			text-align: center
+			transition: all .2s
+			&:hover
+				background: $color-black
+				color: $color-white
+
+	&__title
+	&__list
+		li
+			&:nth-child(1n+2)
+				margin-top: 20px
+	&__gallery
+
+.pd-row
+	display: flex
+	//white-space: nowrap
+	&__icon
+	&__info
+		margin-left: 20px
+	&__key
+		font-family: "geo-bold"
+	&__value
+
+.fraction
+	position: relative
+	text-align: center
+	&__nums
+		font-family: "geo-bold"
+		font-size: 20px
+	&__caption
+		margin-top: 10px
+		font-size: 11px
+		font-family: "geo-bold"
+		text-transform: uppercase
+	&__arrow
+		position: absolute
+		top: 50%
+		right: 0
+		transform: translateY(-50%)
+		color: $color-black

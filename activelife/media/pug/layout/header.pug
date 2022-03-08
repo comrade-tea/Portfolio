@@ -1,0 +1,80 @@
+header.header
+	div.header-top
+		div.header-top__inner.container
+			div.header-top__left-bar
+				a.header-top__item(href="#") Brands
+				a.header-top__item(href="#") Sales & discounts
+				a.header-top__item(href="#") Shipping & payment
+			div.header-top__right-bar
+				a.header-top__item(href="tel:1-717-409-5033") 1-717-409-5033
+				a.header-top__item.hidden-sp-down(href="mailto:info@activelifesolutions.org") info@activelifesolutions.org
+				button.header-top__item(data-remodal-target="login" type="button") Sign in
+					i.icon-login.ml-2
+
+
+
+	div.header-bot
+		div.header-bot__inner.container
+			div.header-bot__logo
+				img(src="media/img/logo.png" alt="")
+
+			nav.header-bot__navigation
+				ul.nav
+					li.nav__item
+						a(href="#" class="nav__link") Shoes
+						div.subnav
+							div.subnav__inner.container-md
+								div.subnav__column.subnav__column--hot
+									div.subnav__item: a.subnav__link(href="#") BEST SELLERS
+									div.subnav__item: a.subnav__link(href="#") Sale
+								- for(var x = 0; x < 3; x++)
+									div.subnav__column
+										div.subnav__item: a.subnav__link(href="#") Men shoes
+										div.subnav__item: a.subnav__link(href="#") All Shoes
+										div.subnav__item: a.subnav__link(href="#") Running
+										div.subnav__item: a.subnav__link(href="#") Training & Gym
+										div.subnav__item: a.subnav__link(href="#") Tennis
+										div.subnav__item: a.subnav__link(href="#") Sandals & Flip Flops
+										div.subnav__item: a.subnav__link(href="#") Custom Shoes
+
+					li.nav__item
+						a(href="#" class="nav__link") Insoles
+					li.nav__item
+						a(href="#" class="nav__link") Fitness tools
+					li.nav__item
+						a(href="#" class="nav__link") Posture
+					li.nav__item
+						a(href="#" class="nav__link") Food supplements
+					li.nav__item
+						a(href="#" class="nav__link") More
+							i.icon-menu.ml-2
+
+			div.header-bot__actions.d-flex
+				form.header-search(action="/")
+					div.header-search__inner
+						button#header-search-btn.header-search__mag(type="button" data-ready-to-submit="no"): i.icon-search
+						div.header-search__field
+							input.header-search__input.input-default(type="search" placeholder="Search for products")
+						button#header-search-close-btn.header-search__close(type="button"): i.icon-close
+
+				a.header-cart.d-flex.align-items-center(href="#")
+					i.icon-cart.mr-3
+					span.header-cart__amount 1
+				// tip
+				div#cart-preview.d-none
+					div.cart-preview.text-left
+						div.cart-preview__title.text-center CART
+						ul.cart-preview__products
+							- for(var x = 0; x < 2; x++)
+								li
+									div.cart-preview-product.d-flex
+										div.cart-preview-product__img-w: img(src="media/img/temp-cart-product.jpg" alt="")
+										div.cart-preview-product__body
+											div.cart-preview-product__title
+												|Posture Classic
+												button.cart-preview-product__remove.icon-close(type="button")
+											div.cart-preview-product__price
+												div.old $50
+												div.current $39.95
+
+						a.cart-preview__btn.btn.btn--blob(href="#") VIEW CART

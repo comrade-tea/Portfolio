@@ -1,0 +1,44 @@
+.remove-margin
+	margin: 0!important
+
+.overflow-container
+	overflow: auto
+	-webkit-overflow-scrolling: touch
+
+.text-center
+	text-align: center
+.relative
+	position: relative
+
+.clr-white
+	color: $color-white
+.clr-black
+	color: $color-black
+.clr-grey
+	color: $color-text-grey
+
+.bg-grey
+	background: $color-grey
+
+.old-price
+	color: $color-text-grey
+	text-decoration: line-through
+
+.link-arrow
+	+icon(arrow)
+	color: $color-main
+	transition: color .2s
+	&:before
+		display: inline-block
+		margin-right: 12px
+		vertical-align: middle
+	&:hover, &:focus
+		color: $color-main--dark
+
+.link-border
+	display: inline-block
+	border-bottom: 1px solid #000
+	margin: 20px 0
+	transition: border-color .2s
+	&:hover, &:focus
+		border-color: transparent

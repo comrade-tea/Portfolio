@@ -1,0 +1,35 @@
+extends master/master
+
+block title
+	title services
+block content
+	div.p-services
+		+pageHead("Услуги")
+
+		div.block.bg-white
+			div.container-md.mb-md
+				div.row
+					- for (var i = 1; i <= 2; ++i)
+						div.col-md-6
+							p.
+								В штате компании, есть как универсальные мастера, так и мастера узкого профиля. Все сложные работы, требующие профильных знаний (например, сантехнические или электромонтажные работы), выполняются грамотными специалистами, имеющими все необходимые допуски. Все процессы строительства и ремонта, контролируются одним из главных инженеров компании. Все сотрудники компании, имют высокую квалификацию и большой опыт в строительной сфере.
+							p.
+								Мы готовы предложить полный спектр ремонтно-строительных услуг, чтобы вы могли насладиться качеством и комфортом, отвечающим всем правилам безопасности.
+
+			-
+				var services = [
+					["Дизайн и проектирование", "media/img/services-preview/design.jpg"],
+					["Ремонт квартир и домов", "media/img/services-preview/repair-house.jpg"],
+					["Ремонт офисов", "media/img/services-preview/repair-office.jpg"],
+					["Строительство домов", "media/img/services-preview/house-build.jpg"],
+					["Согласование перепланировок", "media/img/services-preview/redevelope.jpg"],
+					["Технический надзор", "media/img/services-preview/supervision.jpg"]
+				]
+
+			div.container
+				ul.all-services
+					each item in services
+						li.all-services__item(data-aos="fade-up")
+							a.service-link(href="#")
+								div.service-link__img-w: img(src=item[1] alt="")
+								div.service-link__name.h3-like!= item[0]

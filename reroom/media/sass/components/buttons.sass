@@ -1,0 +1,33 @@
+.btn
+	+shutter-in-vertical
+	//display: inline-block
+	//position: relative
+	font-family: "geo-bold"
+	padding: 0 50px
+	height: 50px
+	line-height: 50px
+	color: $color-black
+	//background: transparent
+	//background: $color-black
+	border: 2px solid $color-black
+	cursor: pointer
+	transition: all .2s
+	text-transform: uppercase
+	overflow: visible
+	+max-screen($smartphone-landscape)
+		height: 40px
+		line-height: 40px
+
+
+.btn-status
+	background-position: 50% 50%!important
+	background-repeat: no-repeat!important
+	&--ajax
+		user-select: none
+		cursor: default
+		pointer-events: none
+		background-color: transparent !important
+		color: transparent !important
+		background-image: url("../img/preload.gif") !important
+		&:before, &:after
+			opacity: 0

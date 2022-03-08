@@ -1,0 +1,88 @@
+extends master/master
+
+block title
+	title about
+block vars
+	//- var bodyOverflow = true;
+block content
+	div.p-about
+		+pageHead("О компании")
+
+		div.block.bg-white.pb-sm
+			div.container-md.mb-md
+				h2.title-decor
+					span.
+						Умные решения
+						для качественного
+						ремонта
+
+				div.row.row-grid-sm
+					- for (var i = 1; i <= 2; ++i)
+						div.col-md-6
+							p.
+								В штате компании, есть как универсальные мастера, так и мастера узкого профиля. Все сложные работы, требующие профильных знаний (например, сантехнические или электромонтажные работы), выполняются грамотными специалистами, имеющими все необходимые допуски. Все процессы строительства и ремонта, контролируются одним из главных инженеров компании. Все сотрудники компании, имют высокую квалификацию и большой опыт в строительной сфере.
+							p.
+								Мы готовы предложить полный спектр ремонтно-строительных услуг, чтобы вы могли насладиться качеством и комфортом, отвечающим всем правилам безопасности.
+
+			div.container
+				div.jumb( style="background-image: url(media/img/about-jumb.jpg)")
+					div.jumb__overhead Манифест
+					div.jumb__content
+						div.h3-like.
+							Мы предлагаем полный спектр ремонтно&nbsp;-&nbsp;строительных услуг,
+							чтобы вы могли насладиться качеством
+							и&nbsp;комфортом, отвечающим всем правилам безопасности.
+					div.jumb__line
+
+		div.block
+			div.container-md.mb-md
+				h2.title-decor
+					span.
+						Умные решения
+						для качественного
+						ремонта
+
+				div.row
+					div.col-md-6
+						p.
+							В компании reroom, есть как штатные дизайнеры и архитекторы, готовые помочь с подготовкой проекта будущего помещения, так и известные в России и за её пределами дизайнеры, с которыми мы сотрудничаем.
+					div.col-md-6
+						p.
+							Комплексный подход к ремонтным работам позволяет реализовать практически любой проект. Мы всегда идем навстречу и готовы предоставить необходимую информацию, а так же ответить на возникшие вопросы.
+
+			div.container
+				div.row.row-multi
+					- for (var i = 1; i <= 6; ++i)
+						div.col-sl-6.col-md-4
+							div.card-person(data-person-id=`person-${i}`)
+								div.card-person__img-w: img(src="media/img/person-1.png" alt="")
+								div.card-person__info
+									div.card-person__name Сергей Наседкин
+									div.card-person__from Архитектурная компания ARCH.625
+
+		// persons pop-ups
+		- for (var y = 1; y <= 6; ++y)
+			div.person-popup(id=`person-${y}`)
+				div.person-popup__inner
+
+					div.person-popup__backWrap.col-sm-6.offset-sm-6
+						button.person-popup__back(type="button")
+							i.icon-arrow-left.mr-2
+							span назад
+
+					div.card-person-full.row.row-grid-sm
+						div.card-person-full__img-w.col-sm-6
+							img(src="media/img/person-1.png" alt="")
+						div.card-person-full__info.col-sm-6
+							div.card-person-full__name.h2-like Сергей Наседкин
+							div.card-person-full__from Архитектурная компания ARCH.625
+							div.card-person-full__text
+								p.
+									ARCH.625 выполняет весь комплекс проектных работ: от первых консультаций и разработки архитектурной концепции до рабочей документации, согласования и авторского надзора за производством строительных работ.
+								p.
+									Работы ARCH.625 являются победителями и лауреатами многих российских и международных смотров конкурсов и выставок, отмечены знаком высокий дизайн, союза дизайнеров РФ, а также периодически публикуются в различных специализированных изданиях как в РФ, так и за рубежом, в том числе в ведущих мирововых изданиях: Taschen, Sunday Publishing,  Wallpaiper, Domus AZ, Arch Daily.
+							a.card-person-full__link(href="#")
+								i.icon-link.icon-sm.mr-3
+								span www.arch-625.ru
+
+		+anotherService("Услуги")

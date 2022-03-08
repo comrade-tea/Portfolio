@@ -1,0 +1,33 @@
+table.cart-table
+	thead
+		tr
+			td item
+			td count
+			td price
+			td subtotal
+			td
+	tbody
+		tr
+			td
+				div.cart-product
+					div.cart-product__img-w: img(src="media/img/cart-product.jpg" alt="")
+					div.cart-product__info
+						div.cart-product__title.h4-like Posture Classic
+						div.cart-product__types
+							div COLOR: #[span BLACK]
+							div SIZE: #[span XL]
+
+			td
+				div.quantity
+					input(type='number', min='1', max='9', step='1', value='1')
+
+			td
+				div.
+					$39.95
+					$50
+			td
+				div.
+					$39.95
+			td
+				button.icon-close(type="button")
+

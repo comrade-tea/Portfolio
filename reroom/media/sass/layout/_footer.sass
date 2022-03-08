@@ -1,0 +1,87 @@
+//+sticky-footer(40px)
+.footer
+	background: $color-black
+	//+max-screen($big-tablet)
+		display: none
+
+
+.footer-top
+	color: $color-white
+	border-bottom: 1px solid $color-mainshaft
+	//padding: 30px 0 50px
+	padding: 20px 0
+	&__inner
+
+.footer-bot
+	font-size: 12px
+	padding: 20px 0
+	color: $color-text-gray
+	&__inner
+		display: flex
+		justify-content: space-between
+	&__info
+		display: flex
+		flex-direction: column
+		justify-content: center
+	&__copyright
+	&__dev
+		margin-top:  4px
+	&__scrolltop
+		width: 60px
+		height: 60px
+		text-align: center
+		line-height: 50px
+		color: $color-text-gray
+		border: 2px solid $color-text-gray
+		+max-height(660px)
+			width: 34px
+			height: 34px
+			line-height: 28px
+		i
+			+max-height(660px)
+				font-size: 12px
+
+.footer-list
+	&--sm
+		text-transform: uppercase
+		font-size: 11px
+	li
+		display: flex
+		&:nth-child(1n+2)
+			margin-top: 20px
+
+	.group
+		display: flex
+		span
+			margin-left: 17px
+
+.footer-row
+	margin: 0 -20px
+	display: flex
+	justify-content: space-between
+	+max-screen($big-tablet)
+		flex-direction: column
+	&__col
+		width: 40%
+		display: flex
+		padding: 0 20px
+		+max-screen(1530px)
+			width: 50%
+		+max-screen($big-tablet)
+			width: 100%
+		+max-screen($small-tablet)
+			flex-direction: column
+		&:nth-child(1)
+			//+max-screen($big-tablet)
+				display: none
+		&:nth-child(2)
+			+max-screen($big-tablet)
+				display: none
+				//margin-left: 20px
+			//+max-screen($big-tablet)
+				margin-top: 40px
+		.footer-list + .footer-list
+			+max-screen($small-tablet)
+				margin-top: 20px
+			+min-screen($small-tablet)
+				margin-left: 40px

@@ -1,0 +1,45 @@
+//+sticky-footer(313px)
+
+.footer
+	background: $color-text-default
+	color: $color-white
+	a
+		transition: color .2s
+		&:hover, &:focus
+			color: $color-main
+
+	.b-share
+		color: #636363
+
+.footer-top
+	padding: 45px 0
+	border-bottom: 1px solid #424242
+
+.footer-bot
+	color: #959595
+	padding: 12px 0
+	&__inner
+		//display: flex
+		//justify-content: space-between
+	//&__left-bar
+		display: flex
+	&__payment
+		display: flex
+		> div
+			&:nth-child(1n+2)
+				margin-left: 10px
+
+	.row
+		align-items: center
+
+.footer-nav
+	&__col
+		&:nth-child(1n+3)
+			+max-screen($common-tablet)
+				margin-top: 40px
+	&__title
+		margin-bottom: 24px
+	&__item
+		&:nth-child(1n+2)
+			margin-top: 12px
+

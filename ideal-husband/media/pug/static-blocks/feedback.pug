@@ -1,0 +1,29 @@
+div.row.row-grid-lg
+	div.col-sm-6
+		div.contacts
+			h3.contacts__title мои контакты
+			div.contacts__desc.
+				Напишите мне письмо<br/>
+				или свяжитесь в WhatsApp:
+			ul.contacts__list
+				li
+					a.link-default(href="mailto:hello@theidealhusband.com")
+						i.icon-envelope
+						| hello@theidealhusband.com
+				li
+					a.link-default(href="tel:+7965250 0030")
+						i.icon-whatsupp
+						| +7 965 250 0030
+				li
+					//- a.link-default(href="#")
+					div
+						i.icon-location
+						| New York City, GMT -04:00
+
+	div.col-sm-6
+		h3 Нужна консультация?
+
+		include form
+
+div.scroll-to-top.link-more-wrap
+	button.link-more(data-scroll-to="top") Вверх

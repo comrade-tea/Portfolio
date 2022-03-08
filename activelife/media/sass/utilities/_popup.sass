@@ -1,0 +1,225 @@
+.popup-overlay
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	z-index: 101
+	background: rgba(255,255,255,0.9)
+
+.popup-window
+	position: relative
+	// padding: 38px 48px
+	padding: 50px
+	border: 1px solid #b3bec7
+	z-index: 10
+	background: #fff
+	+box
+	+max-screen(600px)
+		padding: 70px 20px
+	.popup-window__close
+		width: 25px
+		height: 25px
+		position: absolute
+		top: 19px
+		right: 19px
+		cursor: pointer
+		color: $color-red
+		//background: url("../img/close.png")no-repeat
+		//background-size: cover
+		z-index: 20
+		&:before
+			font-size: 26px
+	.popup-window__content
+		//max-width: 1060px
+		max-width: 560px
+		margin: 0 auto
+		position: relative
+	h3
+		margin-bottom: 60px
+	.description-list_title
+		display: block
+		margin: 30px 0
+
+.popup-portfolio-wrapper
+	// position: fixed
+	position: absolute
+	top: 50%
+	left: 50%
+	margin-left: -600px
+	width: 1200px
+	z-index: 4000
+	.popup-portfolio-wrapper__window
+		position: relative
+		// max-width: 650px
+		margin: 100px auto 0 auto
+		border: 3px solid $color-red
+		&.popup-video
+			width: 640px
+	+max-screen(1024px)
+		width: 100%
+		margin: 0
+		left: 0
+		top: 0
+		.popup-portfolio-wrapper__window
+			width: 80%
+			margin: 50px auto
+
+.popup-portfolio-form
+	position: relative
+	.popup-portfolio-form__title
+		position: relative
+		margin-bottom: 42px
+		padding-bottom: 12px
+		border-bottom: 1px solid #d2d2d2
+		font-size: 18px
+		line-height: 24px
+		font-weight: 600
+	.popup-portfolio-form__box
+		position: relative
+		margin: 65px 0 15px 0
+		padding-top: 19px
+		border-top: 1px solid #d2d2d2
+	.popup-portfolio-form__submit
+		display: inline-block
+		position: relative
+		margin-right: 15px
+		padding: 0 34px
+	.popup-portfolio-form__clear
+		display: inline-block
+		position: relative
+		color: #000
+		text-transform: uppercase
+	.popup-portfolio-form__pseudobox
+		position: relative
+	.popup-portfolio-form__pseudo
+		display: inline-block
+		position: relative
+		margin: 0 0 36px 175px
+	.popup-portfolio-form__desc
+		display: inline-block
+		position: relative
+		vertical-align: middle
+		margin-left: 11px
+		font-size: 13px
+		line-height: 18px
+		&.popup-portfolio-form__desc_file
+			position: absolute
+			top: 0
+			left: 210px
+		&.popup-portfolio-form__desc_edit
+			vertical-align: bottom
+			margin-left: 46px
+			color: #000
+			font-size: 12px
+			font-weight: 600
+			text-transform: uppercase
+			cursor: pointer
+			&:before
+				@extend .b
+				top: -2px
+				left: -29px
+				//+s(edit-icon)
+		&.popup-portfolio-form__desc_delete
+			vertical-align: bottom
+			margin-left: 48px
+			font-size: 12px
+			font-weight: 600
+			text-transform: uppercase
+			&:before
+				@extend .b
+				top: -2px
+				left: -29px
+				//+s(cross-icon)
+	.popup-portfolio-form__image
+		display: inline-block
+		position: relative
+
+.popup-buy-resume
+	position: relative
+	text-align: center
+	.popup-buy-resume__text 
+		position: relative
+		margin-bottom: 16px
+		font-size: 14px
+	.popup-buy-resume__button
+		display: inline-block
+		position: relative
+		padding: 5px 21px
+		border: 1px solid #000
+		font-size: 13px
+		text-transform: uppercase
+		&:hover
+			padding: 4px 20px
+			border: 2px solid #000
+
+
+
+
+//Paravozik styles
+.how-inh-list
+	li
+		display: table
+		position: relative
+		+clearfix
+		+max-screen($mid-tablet)
+			display: block
+			width: 100%
+			img
+				display: block
+				margin: 0 auto
+		&:nth-child(1n+2):before
+			+b
+			top: 0
+			left: 0
+			width: 100%
+			height: 1px
+			background: #bde9fc
+		.how-inh-list_ic-wrap
+			display: table-cell
+			width: 30%
+			vertical-align: middle
+			padding: 25px 0
+			+max-screen($mid-tablet)
+				display: block
+				width: 100%
+
+			// float: left
+		.how-inh-list_text
+			display: table-cell
+			vertical-align: middle
+			padding: 25px 0
+			+max-screen($mid-tablet)
+				display: block
+
+.popup-mini-h
+	font-size: 20px
+	margin-top: 30px
+
+.popup-img-offset
+	display: block
+	margin: 20px 0
+.popup-img-offset-big
+	display: block
+	margin: 20px 0 50px
+.popup-text-offset
+	display: block
+	margin: 20px 0
+.popup-text-offset-top
+	margin-top: 50px
+
+.description-list_title
+	font-size: 20px
+.decimal li
+	list-style: decimal
+	font-weight: 700
+	&:nth-child(1n+2)
+		margin-top: 30px
+	span
+		font-weight: 400
+	div
+		margin-top: 30px
+		p
+			margin-top: 0
+	p
+		margin-top: 30px

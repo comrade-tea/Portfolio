@@ -1,0 +1,47 @@
+.trans-slowerest
+	transition: all 1400ms ease-in-out
+	transition-timing-function: cubic-bezier(.16,.01,.77,1)
+
+.slick-effect
+	@extend .trans-slowerest
+	position: relative
+	height: 100%
+	overflow: hidden
+	z-index: 1
+	transform: translateX(140%)
+	&__img
+		@extend .trans-slowerest
+		transform: translateX(-100%)
+
+.slick-slide.slick-active .slick-effect,
+.slick-slide.slick-active .slick-effect__img
+	transform: translateX(0%)
+
+.slick-slide.slick-out .slick-effect
+	transform: translateX(-40%)!important
+.slick-slide.slick-out .slick-effect__img
+	transform: translateX(25%)!important
+
+//.slider-image-holder
+//	position: relative
+//	overflow: hidden
+//	z-index: 1
+
+
+// type 1
+//.slick-slide .move-hor-reverse
+//	transform: translateX(-100%)
+//
+//.slick-slide .move-hor
+//	transform: translateX(140%)
+
+// type 2
+//.slick-slide .move-hor // frame
+//	//transform: translateX(80%)
+//	transform: translateX(100%)
+//
+//.slick-slide .move-hor-reverse // image
+//	transform: translateX(-40%)
+
+
+

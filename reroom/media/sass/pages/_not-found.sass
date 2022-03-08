@@ -1,0 +1,37 @@
+.p-not-found
+	//height: calc(100vh - 291px)
+	//min-height: 580px
+	padding: 120px 0
+	flex: 1 0 auto
+	display: flex
+	align-items: center
+	//flex-direction: column
+
+.nf-info
+	//flex: 1
+	display: flex
+	align-items: center
+	&__inner
+	&__title
+		font-family: "geo-bold"
+		font-size: 24px
+		margin-bottom: 25px
+	&__pre-list
+		margin-bottom: 20px
+	&__list
+		li
+			position: relative
+			padding-left: 20px
+			&:before
+				+b
+				left: 0
+				top: 7px
+				width: 4px
+				height: 4px
+				background: $color-black
+			&:nth-child(1n+2)
+				margin-top: 14px
+
+			a
+				white-space: nowrap
+				@extend .link-border

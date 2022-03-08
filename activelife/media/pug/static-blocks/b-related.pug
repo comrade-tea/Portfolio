@@ -1,0 +1,14 @@
+mixin b-related(title)
+	div.b-related
+		div.b-related__inner.container
+			h3.b-related__title.text-center= title
+			div.b-related__grid.row
+				- for(var x = 0; x < 4; x++)
+					div.b-related__item.col-sm-3
+						a.card-product(href="#")
+							div.card-product__img-w
+								img(src="media/img/card-product.jpg" alt="")
+								div.card-product__badge.badge.badge--border best seller
+							div.card-product__title Posture Feminine
+							div.card-product__price
+								div.current $49.95

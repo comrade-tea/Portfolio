@@ -1,0 +1,110 @@
+doctype html
+html(lang="en")
+	head(prefix="og: http://ogp.me/ns#")
+		block title
+		meta(charset="utf-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		| <!--[if IE 9]> <script type="text/javascript"> window.location = "https://www.google.ru/chrome/browser/desktop/"; </script> <![endif]-->
+		link(rel="stylesheet", href="media/css/tippy.css")
+		link(rel="stylesheet", href="media/css/screen.css")
+		//link(rel="stylesheet", href="media/css/index.min.css")
+		//- script.
+			paceOptions = {
+				elements: false,
+				ajax: false,
+				restartOnPushState: false,
+				restartOnRequestAfter: false
+			};
+
+	include ../mixins/page-head
+	include ../mixins/page-card
+	include ../mixins/checkbox
+	include ../static-blocks/b-related
+
+	body
+		include header
+		div.wrapper
+			block content
+		include footer
+
+		// login pop-up
+		div.remodal(data-remodal-id='login')
+			button.remodal-close(data-remodal-action='close'): i.icon-close
+			form.b-form(action="###")
+				div.b-form__top
+					h2.b-form__title Login
+					div.b-form__soc-auth
+						img(src="media/img/soc-auth.png" alt="")
+					div.b-form__group
+						div.b-form__field: input.input-default(type="email" placeholder="Email")
+						div.b-form__field: input.input-default(type="password" placeholder="Password")
+					div.b-form__link-wrap
+						a.link-border(href="#") Forgot your password?
+					button.btn.btn--blob.b-form__submit(type="submit") Sign in
+
+				div.b-form__bot
+					div.b-form__bot-inner
+						button.btn.btn--blob.btn--white(type="button" data-remodal-target="create-account") Create account
+						button.btn.btn--blob.btn--white(type="button" data-remodal-target="create-partners-account") Create partners account
+						a.link-border(href="#") Read more about the partners programm
+
+		// account pop-up
+		div.remodal(data-remodal-id='create-account')
+			button.remodal-close(data-remodal-action='close'): i.icon-close
+			form.b-form(action="###")
+				div.b-form__top
+					h2.b-form__title Create account
+
+					div.b-form__group
+						div.b-form__field: input.input-default(type="email" placeholder="Email")
+						div.b-form__field: input.input-default(type="text" placeholder="First name")
+						div.b-form__field: input.input-default(type="text" placeholder="Last name")
+						div.b-form__field: input.input-default(type="password" placeholder="Password")
+					div.b-form__link-wrap
+						+checkbox("Keep me logged in")
+
+					button.btn.btn--blob.b-form__submit(type="submit") Create account
+
+				div.b-form__bot
+					div.b-form__bot-inner
+						button.btn.btn--blob.btn--white(type="button" data-remodal-target="login") Sign In
+
+		// account partners pop-up
+		div.remodal(data-remodal-id='create-partners-account')
+			button.remodal-close(data-remodal-action='close'): i.icon-close
+			form.b-form(action="###")
+				div.b-form__top
+					h2.b-form__title Create partners account
+
+					div.b-form__group
+						div.b-form__field: input.input-default(type="email" placeholder="Email")
+						div.b-form__field: input.input-default(type="text" placeholder="First name")
+						div.b-form__field: input.input-default(type="text" placeholder="Last name")
+						div.b-form__field: input.input-default(type="password" placeholder="Password")
+					div.b-form__link-wrap
+						+checkbox("Keep me logged in")
+
+					button.btn.btn--blob.b-form__submit(type="submit") Create account
+
+				div.b-form__bot
+					div.b-form__bot-inner
+						button.btn.btn--blob.btn--white(type="button" data-remodal-target="login") Sign In
+
+
+
+		//- не трогай, сейчас правильный отступ
+		//script(defer src="media/js/pace.min.js")
+		script(defer src="media/js/jquery-3.2.0.js")
+		//script(defer src="media/js/tweenmax.min.js")
+		//- script(src="https://maps.googleapis.com/maps/api/js?language=ru")
+		//- script(type="text/javascript" src="http://google-maps-utility-library-v3.googlecode.com/svn/tags/infobox/1.1.9/src/infobox.js")
+		script(defer src="media/js/slick.min.js")
+		script(defer src="media/js/fotorama.js")
+		script(defer src="media/js/tippy.js")
+		script(defer src="media/js/remodal.js")
+		script(defer src="media/js/jquery.nice-select.min.js")
+		script(defer src="media/js/masonry.pkgd.min.js")
+		script(defer src="media/js/jquery.ba-throttle-debounce.min.js")
+		script(defer src="media/js/tea-grid.js")
+		script(defer src="media/js/ofi.min.js")
+		script(defer src="media/js/es5.js")

@@ -1,0 +1,91 @@
+@font-face {
+  font-family: "gulp-svg-font";
+  src: url('../../media/fonts/svg-font/gulp-svg-font.eot');
+  src: url('../../media/fonts/svg-font/gulp-svg-font.eot?#iefix') format('eot'),
+  url('../../media/fonts/svg-font/gulp-svg-font.woff') format('woff'),
+  url('../../media/fonts/svg-font/gulp-svg-font.ttf') format('truetype'),
+  url('../../media/fonts/svg-font/gulp-svg-font.svg#gulp-svg-font') format('svg');
+}
+
+@mixin icon-styles {
+  font-family: "gulp-svg-font";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  // speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+  text-decoration: none;
+  text-transform: none;
+}
+
+%icon {
+  @include icon-styles;
+}
+
+@function icon-char($filename) {
+  $char: "";
+
+  @if $filename == accsesories {
+  $char: "\E001";
+}
+  @if $filename == close {
+  $char: "\E002";
+}
+  @if $filename == envelope {
+  $char: "\E003";
+}
+  @if $filename == location {
+  $char: "\E004";
+}
+  @if $filename == predmety {
+  $char: "\E005";
+}
+  @if $filename == sobitiya {
+  $char: "\E006";
+}
+  @if $filename == ukrash {
+  $char: "\E007";
+}
+  @if $filename == whatsupp {
+  $char: "\E008";
+}
+
+@return $char;
+}
+
+@mixin icon($filename, $insert: before, $extend: true) {
+&:#{$insert} {
+  @if $extend {
+    @extend %icon;
+  } @else {
+    @include icon-styles;
+  }
+  content: icon-char($filename);
+}
+}
+
+.icon-accsesories {
+  @include icon(accsesories);
+}
+.icon-close {
+  @include icon(close);
+}
+.icon-envelope {
+  @include icon(envelope);
+}
+.icon-location {
+  @include icon(location);
+}
+.icon-predmety {
+  @include icon(predmety);
+}
+.icon-sobitiya {
+  @include icon(sobitiya);
+}
+.icon-ukrash {
+  @include icon(ukrash);
+}
+.icon-whatsupp {
+  @include icon(whatsupp);
+}

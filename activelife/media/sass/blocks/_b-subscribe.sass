@@ -1,0 +1,28 @@
+.b-subscribe
+	background: $color-grey
+	padding: 100px 0
+	margin: 40px 0
+	+max-screen($mid-tablet)
+		padding: 60px 0
+	&__title
+		margin-bottom: 60px
+	&__form
+		display: flex
+		justify-content: center
+		+max-screen($small-tablet)
+			flex-direction: column
+	&__item
+		//flex-grow: 1
+		height: 50px
+		+max-screen($small-tablet)
+			margin-bottom: 15px
+		&:nth-child(1n+2)
+			+min-screen($small-tablet)
+				margin-left: 15px
+		&--name
+			+min-screen($small-tablet)
+				flex-basis: 268px
+		&--email
+			+min-screen($small-tablet)
+				flex-basis: 386px
+		&--submit

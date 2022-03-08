@@ -1,0 +1,32 @@
+extends layout/master
+
+block title
+	title blog
+block content
+	div.p-blog
+		+pageHead("Blog")
+
+		div.container.mb-sm
+			div.articles
+				div.articles-filter.mb-sm
+					div.articles-filter__caption Filter by
+					select.nice-select
+						option(data-display="Tags") Tags
+						option(value="1") Balance Seat
+						option(value="2") Bed Sheets
+						option(value="3") Organic
+						option(value="4") Health
+
+				div.articles-grid.row
+					- for(var x = 1; x <= 8; x++)
+						div.brands__item.col-sl-6.col-md-3
+							div.article-preview
+								div.article-preview__i-wrap: img(src="media/img/article-preview.jpg" alt="")
+								div.article-preview__date 12.05.2017
+								div.article-preview__title How daylight saving time affects your health
+								div.article-preview__tags #health
+
+		div.container.mb-lg
+			include static-blocks/b-pager
+
+		include static-blocks/b-subscribe

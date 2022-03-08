@@ -1,0 +1,25 @@
+.breadcrumbs-wrap
+	margin-top: 20px
+	margin-bottom: 60px
+
+.breadcrumbs
+	margin-bottom: 20px
+	&__link
+		display: inline-block
+		font-size: 12px
+		text-transform: uppercase
+		transition: all .2s
+		&:hover, &:focus
+			color: $color-main!important
+
+		&.active,
+		&--active
+			color: $color-main
+
+		&:nth-child(1n+2)
+			color: $color-text-grey
+			&:before
+				display: inline-block
+				content: "|"
+				margin: 0 4px
+				color: $color-text-grey !important

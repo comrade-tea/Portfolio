@@ -1,0 +1,9 @@
+form.form(action="/")
+	div.form__field-group
+		div.form__field
+			input.input-default(data-val="true" name="Name" data-val-required="" type="text" placeholder="Представьтесь, пожалуйста")
+		div.form__field
+			input.input-default(data-val="true" name="Email" data-val-required="" data-val-email type="email" placeholder="Ваш e-mail")
+		div.form__field
+			input.input-default(data-val="true" name="Comments" data-val-required="" type="text" placeholder="Ваш комментарий")
+	button.form__submit.btn.btn-status(type="submit") отправить

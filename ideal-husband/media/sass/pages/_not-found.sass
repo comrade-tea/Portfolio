@@ -1,0 +1,26 @@
+.not-found
+	+centre(both)
+	user-select: none
+	text-align: center
+	&__nums
+		font-family: "geo-heavy"
+		font-size: 270px
+		color: #d3d8dc
+		+max-screen($small-tablet)
+			font-size: 160px
+		+max-screen($smartphone-landscape)
+			font-size: 120px
+
+
+	&__text
+		font-family: "geo-light"
+		font-size: 30px
+		line-height: 48px
+		text-transform: uppercase
+		+max-screen($small-tablet)
+			font-size: 24px
+		+max-screen($smartphone-landscape)
+			font-size: 22px
+			line-height: 30px
+		+max-screen($smartphone-portrait)
+			font-size: 14px

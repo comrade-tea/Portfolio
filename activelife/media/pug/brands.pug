@@ -1,0 +1,49 @@
+extends layout/master
+
+block title
+	title brands
+block content
+	div.p-brands
+		+pageHead("Brands")
+
+		div.container
+			+pageCard("brands-intro.jpg", "At Active Life Solutions we believe that physiology creates emotions. We see our mission as to bring people fulfillment, happiness and improved quality of life through pursuing active lifestyle.")
+				p.
+					In partnership with physicians, physical therapists and chiropractors we thoroughly evaluate, select and bring to the marketplace products that are proven to change lifestyle of many people to active and healthy one.
+				p.
+					Life is movement. Movement is life.
+
+			div.brands
+				div.brands__filter
+					select.nice-select
+						option(data-display="Choose the country") Choose the country
+						option(value="1") United States
+						option(value="2") United Kingdom
+						option(value="3") France
+						option(value="4") Sweden
+						option(value="5") Finland
+
+				div.brands-grid.row
+					- for(var x = 1; x <= 2; x++)
+						div.brands__item.col-md-6
+							- for(var y = 1; y <= 2; y++)
+								div.brand-preview
+									div.brand-preview__logo-w: img(src="media/img/brands-logo/logo-brand-0" + x + ".png" alt="")
+									div.brand-preview__name Anabolic Laboratories
+									div.brand-preview__toggle-block
+										p.brand-preview__text The company was founded in 1924; they are a pharmaceutical manufacturer of clinically dispensed nutritional products for licensed health care professionals. Anabolic’s mission is to supply you with “pharmaceutical made” products vs. “pharmaceutical grade” products…which simply means that they go through and extensive manufacturing process to guarantee purity and potency. They have facilities in Colorado Springs, Colorado and Irvine, California. Both sites are routinely inspected by the US FDA for quality.
+										button.brand-preview__toggler.btn-more(type="button")
+											span.btn-more__plus
+											span.btn-more__text
+												span.btn-more__open read more
+												span.btn-more__close collapse
+									a.brand-preview__link.link-arrow(href="#") Show Products
+
+
+
+
+
+
+
+
+		include static-blocks/b-subscribe

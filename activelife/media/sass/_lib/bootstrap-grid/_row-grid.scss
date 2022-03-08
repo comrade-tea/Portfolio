@@ -1,0 +1,28 @@
+// создать классы для адаптивных отступов ломания колонок
+// дает отступ меж колонками, при 100% ломании
+
+$row-grid-offsets: (
+	xs: 20px,
+	sm: 40px,
+	md: 60px,
+	lg: 70px,
+	xl: 80px
+);
+
+@each $offset in map-keys($row-grid-offsets) {
+	.row-grid-#{$offset} {
+		[class*="col-"] + [class*="col-"] {
+			margin-top: map_get($row-grid-offsets, $offset)
+		}
+	}
+}
+
+@each $bp in map-keys($grid-breakpoints) {
+	[class*="row-grid"] {
+		[class*="col-#{$bp}-"] + [class*="col-#{$bp}-"] {
+			@include media-breakpoint-up($bp) {
+				margin-top: 0;
+			}
+		}
+	}
+}

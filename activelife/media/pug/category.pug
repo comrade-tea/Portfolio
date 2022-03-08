@@ -1,0 +1,76 @@
+extends layout/master
+
+block title
+	title category
+block content
+	div.p-category
+		+pageHead("Category")
+
+		div.container
+			div.products
+				div.products__head.d-flex.justify-content-between.align-items-center
+					div.filter-toggle.d-flex.align-items-center
+						div.filter-toggle__title Filters
+						button.filter-toggle__btn.btn.btn--toggler(type="button")
+							|close Filters
+							span.el.el-1
+							span.el.el-2
+					div.sort-ui.d-flex.align-items-center
+						div.sort-ui__title Sort by
+						select.nice-select.sort-ui__select
+							option(data-display="From min to max price") From min to max price
+							option(value="1") Some option
+							option(value="2") Another option
+							option(value="3") Potato
+
+
+				div.products__body
+					div.products__filter.is-open
+						div.product-filter
+							div.product-filter__item
+								div.product-filter__title Categories
+								div.product-filter__input-w
+									+checkbox("All")
+								div.product-filter__input-w
+									+checkbox("Vest")
+								div.product-filter__input-w
+									+checkbox("Pumps")
+								div.product-filter__input-w
+									+checkbox("Seats")
+								div.product-filter__input-w
+									+checkbox("Harness")
+								div.product-filter__input-w
+									+checkbox("Tapes")
+							div.product-filter__item
+								div.product-filter__title Brands
+								div.product-filter__input-w
+									+checkbox("All")
+								div.product-filter__input-w
+									+checkbox("Humantool")
+								div.product-filter__input-w
+									+checkbox("Posture Pump")
+								div.product-filter__input-w
+									+checkbox("Swedish Posture")
+							div.product-filter__item
+								div.product-filter__title Colors
+								include static-blocks/b-colors
+
+
+					// products
+					div.products__cards
+						div.product-cards-grid
+							- for(var x = 0; x < 5; x++)
+								div.product-cards-grid__item
+									a.card-product(href="#")
+										div.card-product__img-w
+											img(src="media/img/card-product.jpg" alt="")
+											// 2 вида баджа, или без баджа
+											div.card-product__badge.badge.badge--border best seller
+										div.card-product__title Posture Feminine
+										div.card-product__price
+											// поле "old" опционально
+											div.current $49.95
+											div.old $80.95
+
+
+		include static-blocks/b-subscribe

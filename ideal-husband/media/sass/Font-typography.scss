@@ -1,0 +1,62 @@
+//noinspection SassScssResolvedByNameOnly
+
+//@include font("geo-reg", Geometria)
+@include font("geo-reg", Geometria-webfont)
+@include font("geo-bold", Geometria-Bold)
+@include font("geo-ebold", Geometria-ExtraBold)
+@include font("geo-heavy", Geometria-Heavy)
+//@include font("geo-light", Geometria-Light)
+@include font("geo-light", Geometria-Light-webfont)
+@include font("geo-elight", Geometria-ExtraLight)
+@include font("geo-thin", Geometria-Thin)
+
+$headlines: (
+	h1: 60px,
+	h2: 48px,
+	h3: 26px,
+	h4: 16px,
+	h5: 24px,
+	h6: 20px
+);
+
+%bold {
+	font-family: "geo-ebold";
+	line-height: 1.2;
+}
+
+// герерация Hn, .hn-like классов
+@each $item in map-keys($headlines) {
+	$itemSize: map_get($headlines, $item);
+
+	#{$item}, .#{$item}-like {
+		font-size: $itemSize;
+		@extend %bold; // это глобальный extend на все заголовки
+		
+		@include max-screen($big-tablet) {
+			font-size: $itemSize * 0.8;
+		}
+		@include max-screen($common-tablet) {
+			font-size: $itemSize * 0.7;
+		}
+		@include max-screen($small-tablet) {
+			font-size: $itemSize * 0.6;
+		}
+		@include max-screen($smartphone-landscape) {
+			font-size: $itemSize * 0.5;
+		}
+	}
+}
+
+// !не удалять! если разные шрифты заголовков - использовать цикл для обвеса
+
+@for $i from 1 through 3 {
+	h#{$i}, .h#{$i}-like {
+		text-transform: uppercase;
+	}
+}
+
+
+//Paragraphs
+p + p {
+	margin-top: 20px
+}

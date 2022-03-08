@@ -1,0 +1,116 @@
+extends master/master
+
+block title
+	title home
+block vars
+	- var bodyOverflow = true;
+	- var disableFooter = true;
+block content
+	div.p-home
+
+		// всплывающие блоки при наведении на ссылки на 1-ом слайде
+		div.panels-wrap
+			- for(var k = 1; k <= 3; k++)
+				div.hero-panel(id=`hero-panel-${k}`)
+					div.hero-panel__inner
+						ul.hero-panel__list
+							- for(var x = 0; x < 4; x++)
+								li
+									a.project-card.project-card--tile(href="#")
+										div.project-card__img-w: img(src="media/img/project-grid-sm-1.png" alt="")
+										div.project-card__decor
+										div.project-card__text
+											div.project-card__title Квартира в стиле минимализм
+											div.project-card__subtitle Москва, Айвазовского, 7
+		//---------
+
+
+		div#section-wrap
+			div.section.section-hero.section--active(data-nav-color="#ffffff")
+				div.section-hero__bg: img(src="media/img/slide-hero.jpg" alt="")
+
+				div.container
+					div.row
+						div.col-lg-9
+							h1.hero-title.
+								Меняем любое пространство
+								к&nbsp;лучшему: строим #[a.hero-title__link(data-show-panel="hero-panel-1" href="#") дома],
+								делаем ремонт в&nbsp;#[a.hero-title__link(data-show-panel="hero-panel-2" href="#") квартирах]
+								и #[a.hero-title__link(data-show-panel="hero-panel-3" href="#") офисах]
+
+
+				button.scroll-down(type="button")
+					div.scroll-down__caption scroll<br/>down
+					div.scroll-down__line
+
+			div.section.section-design(data-from="bottom")
+				div.container
+					div.parallax-block
+						div.parallax-block__img-w: img(src="media/img/desig-slide.png" alt="")
+						div.parallax-block__text
+							h2.parallax-block__title.h1-like Дизайн<br/>и&nbsp;проектирование
+							div.parallax-block__subtitle.h3-like Продумываем до мелочей,<br/> бережём ваше время
+							a.parallax-block__more.to-left(href="#") узнать больше
+
+
+			div.section.section-repair-house(data-from="left")
+				div.container
+					div.parallax-block
+						div.parallax-block__img-w: img(src="media/img/repair-slide.png" alt="")
+						div.parallax-block__text
+							h2.parallax-block__title.h1-like Ремонт квартир<br/>и&nbsp;домов
+							div.parallax-block__subtitle.h3-like Минимализм и&nbsp;лаконичность для&nbsp;комфортной жизни
+							a.parallax-block__more.to-right.to-bottom(href="#") узнать больше
+
+			div.section.section-repair-office(data-from="bottom")
+				div.container
+					div.parallax-block
+						div.parallax-block__img-w: img(src="media/img/repair-office-slide.png" alt="")
+						div.parallax-block__text
+							h2.parallax-block__title.h1-like.to-top Ремонт<br/>офисов
+							div.parallax-block__subtitle.h3-like.
+								Создаём пространство,<br/>
+								где удобно заниматься
+								своим делом
+							a.parallax-block__more.to-right(href="#") узнать больше
+
+			div.section.section-house-build(data-from="right")
+				div.container
+					div.parallax-block
+						div.parallax-block__img-w: img(src="media/img/house-build.png" alt="")
+						div.parallax-block__text
+							h2.parallax-block__title.h1-like Строительство домов
+							div.parallax-block__subtitle.h3-like.
+								Эстетичные и функциональные<br/>
+								дома, снаружи и внутри
+							a.parallax-block__more.to-left(href="#") узнать больше
+
+			div.section.section-projects(data-from="bottom")
+				div.container
+					h2.section__title.h1-like Проекты
+
+					include static-blocks/projects-stack
+
+					// показ слайдера вместо блоков на 480-=
+					div.slider-projects.slick
+						- for(var x = 0; x < 3; x++)
+							div.slider-projects__item
+								a.d-block(href="#"): img(src="media/img/project-grid-lg.png" alt="")
+
+
+
+					div.projects-all.text-center
+						button.btn.projects-all__btn(type="button") все проекты
+
+			div.section.section-feedback(data-from="bottom")
+				div.container
+					h2.section__title.h1-like Заказать проект
+
+					include static-blocks/form
+
+				include master/footer
+
+
+		div.home-nav
+			- for(var x = 0; x < 7; x++)
+				div.home-nav__item(class=`${x == 0 ? "is-active" : ""}` data-to-section=x)

@@ -1,0 +1,127 @@
+// override if need  usage: +container(maw, gutter)
+// true - размеры, gutter-ы не влияют
+$container-types: (default: 1240px, lg: 920px, md: 800px, sm: 600px, xs: 480px )
+$maws-types: (md: 780px, sm: 600px, xs: 480px )
+$container-gutter: 20px
+
+// containers
+.container-proto
+	width: 100%
+	margin-left: auto
+	margin-right: auto
+	padding-left: $container-gutter
+	padding-right: $container-gutter
+
+@each $container-width in map-keys($container-types)
+	@if ($container-width == default)
+		.container
+			@extend .container-proto
+			max-width: map_get($container-types, $container-width) + ($container-gutter * 2)
+	@else
+		.container-#{$container-width}
+			@extend .container-proto
+			max-width: map_get($container-types, $container-width) + ($container-gutter * 2)
+
+// max-widths containers (without padding)
+[class*="maw"]
+	width: 100%
+@each $maw in map-keys($maws-types)
+	.maw-#{$maw}
+		max-width: map_get($maws-types, $maw)
+
+
+.wrapper
+	position: relative
+	overflow: hidden
+	padding-top: 120px
+	min-height: calc(100vh - 65px)
+	+max-screen($small-tablet)
+		padding-top: 68px
+
+	&:before
+		opacity: 0
+		visibility: hidden
+		+b
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background: rgba(0, 0, 0, 0.8)
+		transition: all .2s
+		z-index: 2
+		+min-screen($big-tablet)
+			display: none
+	&.is-blacked
+		&:before
+			opacity: 1
+			visibility: visible
+
+.gutter
+	padding-left: $container-gutter
+	padding-right: $container-gutter
+
+.mb-lg
+	margin-bottom: 100px // unused
+.mb-md
+	margin-bottom: 60px
+.mb-sm
+	margin-bottom: 40px // unused
+
+.block
+	padding-top: 80px
+	padding-bottom: 80px
+	+max-screen($mid-tablet)
+		padding-top: 60px
+		padding-bottom: 60px
+
+
+.block-title
+	position: relative
+	display: flex
+	align-items: center
+	margin-bottom: 100px
+	//&:before
+	&__line
+		//+b
+		position: absolute
+		width: 1000px
+		top: 50%
+		//left: 0
+		right: 100%
+		//transform: translateX(-100%)
+		transform: translateX(-100%)
+		background: $color-black
+		height: 1px
+	&__info
+		opacity: 0
+		display: flex
+		align-items: center
+		transform: translateX(-30px)
+	&__num
+		font-family: "geo-light"
+		font-size: 24px
+		margin: 0 42px 0 12px
+	&__text
+
+.slick-presentation
+	max-width: 1060px
+	margin: 0 auto
+
+.row-multi
+	[class*="col"]
+		margin-bottom: 60px
+
+.cursor-rotate
+	cursor: url("../img/rotate.png"), auto
+
+.static-block
+	h3
+		margin-bottom: 25px
+		text-transform: uppercase
+	p
+		margin: 25px 0
+	.slick
+		margin: 50px 0
+
+.scroll-to-top
+	margin-top: 60px

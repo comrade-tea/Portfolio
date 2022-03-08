@@ -1,0 +1,14 @@
+mixin pageCard(img, title)
+	div.page-card
+		div.page-card__inner.row.no-gutters
+			div.col-lg-6.text-center.text-lg-left
+				img.img-fit(src="media/img/" + img alt="")
+			div.col-lg-6
+				div.page-card__text-block
+					h2.page-card__title!= title
+					div.page-card__text
+						block
+						//p.
+						//	In partnership with physicians, physical therapists and chiropractors we thoroughly evaluate, select and bring to the marketplace products that are proven to change lifestyle of many people to active and healthy one.
+						//p.
+						//	Life is movement. Movement is life.

@@ -1,0 +1,121 @@
+// override if need  usage: +container(maw, gutter)
+// true - размеры, gutter-ы не влияют
+$container-types: (lg: 1500px, default: 1240px, md: 1024px, sm: 720px, xs: 480px )
+$maws-types: (md: 780px, sm: 600px, xs: 480px )
+$container-gutter: 20px
+
+// containers
+.container-proto
+	width: 100%
+	margin-left: auto
+	margin-right: auto
+	padding-left: $container-gutter
+	padding-right: $container-gutter
+
+@each $container-width in map-keys($container-types)
+	@if ($container-width == default)
+		.container
+			@extend .container-proto
+			max-width: map_get($container-types, $container-width) + ($container-gutter * 2)
+	@else
+		.container-#{$container-width}
+			@extend .container-proto
+			max-width: map_get($container-types, $container-width) + ($container-gutter * 2)
+
+// max-widths containers (without padding)
+[class*="maw"]
+	width: 100%
+@each $maw in map-keys($maws-types)
+	.maw-#{$maw}
+		max-width: map_get($maws-types, $maw)
+
+.wrapper
+	position: relative
+	overflow: hidden
+	&--sticky
+		display: flex
+		flex-direction: column
+		min-height: 100vh
+
+.gutter
+	padding-left: $container-gutter
+	padding-right: $container-gutter
+
+.pl-shift
+	padding-left: 90px
+
+
+
+.page-head
+	position: relative
+	padding-top: 150px
+	padding-bottom: 35px
+	//overflow: hidden
+	&__title
+
+.page-body
+	background: $color-white
+	padding-top: 80px
+
+.block
+	padding-top: 80px
+	padding-bottom: 80px
+	&.pb-sm
+		padding-bottom: 30px
+
+.mb-lg
+	margin-bottom: 120px
+.mb-md
+	margin-bottom: 80px
+
+.jumb
+	+bg-cover
+	height: 576px
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	padding: 20px
+	&--sm
+		height: 364px
+	&__overhead
+		text-transform: uppercase
+	&__content
+		font-family: "geo-bold"
+		font-size: 32px
+		text-align: center
+		max-width: 700px
+		margin: 50px auto
+	&__line
+		width: 150px
+		height: 2px
+		background: $color-black
+
+.title-decor
+	display: flex
+	margin-bottom: 65px
+	&:before
+		display: inline-block
+		content: ""
+		margin-top: 18px
+		width: 290px
+		height: 2px
+		background: $color-black
+		+max-screen($small-tablet)
+			width: 100px
+
+	span
+		display: inline-block
+		max-width: 320px
+		margin-left: 20px
+
+.row-multi
+	[class*="col-"]
+		margin-bottom: 80px
+		+max-screen($small-tablet)
+			margin-bottom: 60px
+		+max-screen($smartphone-landscape)
+			margin-bottom: 40px
+
+.another-service
+	margin-top: 80px

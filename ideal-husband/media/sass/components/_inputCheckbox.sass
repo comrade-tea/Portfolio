@@ -1,0 +1,66 @@
+// !usage
+//label.checkbox
+//		input(type="checkbox")
+//		span All
+
+label.checkbox
+	line-height: 20px
+	overflow: hidden
+
+	[type="checkbox"]:not(:checked),
+	[type="checkbox"]:checked
+		position: absolute
+		left: -9999px
+
+	[type="checkbox"]:not(:checked) + span,
+	[type="checkbox"]:checked + span
+		position: relative
+		display: inline-block
+		padding-left: 35px
+		user-select: none
+		cursor: pointer
+		white-space: nowrap
+
+	/* checkbox aspect */
+	[type="checkbox"]:not(:checked) + span:before,
+	[type="checkbox"]:checked + span:before
+		content: ''
+		position: absolute
+		left: 0
+		top: 0
+		width: 19px
+		height: 19px
+		border: 1px solid $color-grey--darkest
+		background: #fff
+
+	/* checked mark aspect */
+	[type="checkbox"]:not(:checked) + span:after,
+	[type="checkbox"]:checked + span:after
+		content: '✔'
+		position: absolute
+		top: 4px
+		left: 4px
+		font-size: 16px
+		line-height: 0.8
+		color: $color-main
+		transition: all .2s
+	/* checked mark aspect changes */
+	[type="checkbox"]:not(:checked) + span:after
+		opacity: 0
+		transform: scale(0)
+
+	[type="checkbox"]:checked + span:after
+		opacity: 1
+		transform: scale(1)
+	/* disabled checkbox */
+	[type="checkbox"]:disabled:not(:checked) + span:before,
+	[type="checkbox"]:disabled:checked + span:before
+		box-shadow: none
+		border-color: #bbb
+		background-color: #ddd
+
+	[type="checkbox"]:disabled:checked + span:after
+		color: #999
+
+	[type="checkbox"]:disabled + span
+		color: #aaa

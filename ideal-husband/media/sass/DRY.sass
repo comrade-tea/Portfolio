@@ -1,0 +1,42 @@
+.remove-margin
+	margin: 0 !important
+
+.overflow-container
+	overflow: auto
+	-webkit-overflow-scrolling: touch
+
+.link-default
+	transition: color .2s
+	&:hover, &:focus
+		color: $color-grey
+
+.link-more-wrap
+	text-align: center
+	//margin-top: 60px
+	//margin-top: 100px
+	//+max-screen($small-tablet)
+		//margin-top: 35px
+		//margin-top: 60px
+
+.link-more
+	position: relative
+	display: inline-block
+	padding-top: 60px
+	//display: flex
+	//flex-direction: column
+	//align-items: center
+	//cursor: pointer
+	&:hover
+		&:before
+			height: 30px
+	&:before
+		//display: inline-block
+		content: ""
+		+centre(x)
+		top: 0
+		width: 1px
+		height: 50px
+		background: $color-black
+		margin-bottom: 8px
+		transition: all .2s
+

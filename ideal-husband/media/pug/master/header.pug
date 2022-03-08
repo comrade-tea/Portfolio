@@ -1,0 +1,57 @@
+header.header
+	div.header-top
+		div.header-top__inner.container
+			a.header-top__item.header-top__phone(href="tel:+79652500030")
+				i.icon-whatsupp
+				|+7 965 250 0030
+			div.header-top__item.header-top__place
+				i.icon-location
+				|New York City, GMT -04:00
+			div.header-top__item.header-top__lang
+				span.is-active RU
+				a(href="#") EN
+
+	div.header-bot
+		div.header-bot__inner.container
+			div.header-bot__logo: img(src="media/img/logo.png" alt="")
+			nav.header-bot__nav
+				ul.nav(data-nav)
+					li.nav__item: a.nav__link(href="/#section-1") подбор подарка
+					li.nav__item: a.nav__link(href="/#section-2") Варианты сотрудничества
+					li.nav__item: a.nav__link(href="/#section-3") Примеры презентаций
+					li.nav__item: a.nav__link(href="/#section-4") Обо мне
+					li.nav__item: a.nav__link(href="/#section-5") блог
+					li.nav__item: a.nav__link(href="/#section-6") мои контакты
+
+			button.hamburger(type="button" data-mnav-toggler)
+				span
+				span
+				span
+				span
+
+//- div
+	div.header__inner.container
+		div.header__logo: img(src="media/img/logo.png" alt="")
+
+		nav.header__navigation
+			ul.nav
+				li.nav__item
+					a(class="nav__link" href="#") О компании
+				li.nav__item
+					a(class="nav__link" href="#") Услуги
+				li.nav__item
+					a(class="nav__link" href="#") Объекты
+				li.nav__item
+					a(class="nav__link" href="#") Вопросы и ответы
+				li.nav__item
+					a(class="nav__link" href="#") Статьи
+				li.nav__item
+					a(class="nav__link" href="#") Контакты
+
+		div(data-remodal-target="modal") modal-link
+
+		button.nav-icon.hidden-lg-up
+			span
+			span
+			span
+			span

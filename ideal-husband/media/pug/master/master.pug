@@ -1,0 +1,91 @@
+doctype html
+html(lang="ru")
+	head(prefix="og: http://ogp.me/ns#")
+		block title
+		meta(charset="utf-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(property='og:title', content='Идеальный муж')
+		meta(name='description', content='Подбор подарков для любимой с персональным стилистом')
+		meta(property='og:description', content='Подбор подарков для любимой с персональным стилистом')
+		meta(property='og:image', content='http://__website__.ru/share.jpg')
+		meta(property='og:type', content='website')
+		meta(property='og:url', content='http://__website__.ru')
+
+		|<!--[if IE 9]> <script type="text/javascript"> window.location = "https://www.google.ru/chrome/browser/desktop/"; </script> <![endif]-->
+
+		link(rel='apple-touch-icon', sizes='57x57', href='/apple-icon-57x57.png')
+		link(rel='apple-touch-icon', sizes='60x60', href='/apple-icon-60x60.png')
+		link(rel='apple-touch-icon', sizes='72x72', href='/apple-icon-72x72.png')
+		link(rel='apple-touch-icon', sizes='76x76', href='/apple-icon-76x76.png')
+		link(rel='apple-touch-icon', sizes='114x114', href='/apple-icon-114x114.png')
+		link(rel='apple-touch-icon', sizes='120x120', href='/apple-icon-120x120.png')
+		link(rel='apple-touch-icon', sizes='144x144', href='/apple-icon-144x144.png')
+		link(rel='apple-touch-icon', sizes='152x152', href='/apple-icon-152x152.png')
+		link(rel='apple-touch-icon', sizes='180x180', href='/apple-icon-180x180.png')
+		link(rel='icon', type='image/png', sizes='192x192', href='/android-icon-192x192.png')
+		link(rel='icon', type='image/png', sizes='32x32', href='/favicon-32x32.png')
+		link(rel='icon', type='image/png', sizes='96x96', href='/favicon-96x96.png')
+		link(rel='icon', type='image/png', sizes='16x16', href='/favicon-16x16.png')
+		link(rel='manifest', href='/manifest.json')
+		meta(name='msapplication-TileColor', content='#ffffff')
+		meta(name='msapplication-TileImage', content='/ms-icon-144x144.png')
+		meta(name='theme-color', content='#ffffff')
+
+
+		link(rel="stylesheet", href="media/css/screen.css")
+		link(rel="stylesheet", href="media/css/aos.css")
+
+		//- script.
+			paceOptions = {
+				elements: false,
+				ajax: false,
+				restartOnPushState: false,
+				restartOnRequestAfter: false
+			};
+
+	//- подключение глобальных миксинов
+	include ../mixins/blockTitle
+
+
+	body
+		include header
+
+		div.wrapper
+			block content
+		include footer
+		//- include ../static-blocks/remodal-feedback
+
+		div.mobile-menu
+			ul.mobile-nav(data-nav)
+				li.mobile-nav__item: a.mobile-nav__link(href="/#section-1") подбор подарка
+				li.mobile-nav__item: a.mobile-nav__link(href="/#section-2") Варианты сотрудничества
+				li.mobile-nav__item: a.mobile-nav__link(href="/#section-3") Примеры презентаций
+				li.mobile-nav__item: a.mobile-nav__link(href="/#section-4") Обо мне
+				li.mobile-nav__item: a.mobile-nav__link(href="/#section-5") мои контакты
+				li.mobile-nav__item: a.mobile-nav__link(href="/#section-6") блог
+
+
+		//- не трогай, сейчас правильный отступ
+
+		//- script(defer src="media/js/pace.min.js")
+		//- script(src="https://maps.googleapis.com/maps/api/js?language=ru")
+		script(defer src="media/js/tweenmax.min.js")
+		script(defer src="media/js/aos.js")
+		script(defer src="media/js/scrollreveal.min.js")
+		//- script(defer src="media/js/CSSRulePlugin.min.js")
+		script(defer src="media/js/hammer.min.js")
+		script(defer src="media/js/jquery-3.2.1.js")
+		//- script(defer src="media/js/jquery.maskedinput.min.js")
+		script(defer src="media/js/jquery.nav.js")
+		//- script(defer src="media/js/jquery.ba-throttle-debounce.min.js")
+		script(defer src="media/js/jquery.validate.min.js")
+		script(defer src="media/js/jquery.validate.unobtrusive.min.js")
+		script(defer src="media/js/sweetalert2.min.js")
+		//- script(defer src="media/js/tea-grid.js")
+		//- script(defer src="media/js/remodal.js")
+		script(defer src="media/js/slick.min.js")
+		//- script(defer src="media/js/slideout.min.js")
+		script(defer src="media/js/modernizr-preserve3d.js")
+		//- script(defer src="media/js/img2svg.js")
+		script(defer src="media/js/es5.js")
+		script(defer src="media/js/form.js")

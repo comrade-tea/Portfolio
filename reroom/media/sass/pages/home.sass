@@ -1,0 +1,446 @@
+.p-home
+	width: 100%
+	height: 100%
+	overflow: hidden
+	.footer-top
+		+max-height(820px)
+			display: none
+
+// disable section-scroll class
+.disable-auto-scroll
+	overflow: visible!important
+	body
+		overflow: visible!important
+	.wrapper
+		height: auto!important
+		overflow: visible!important
+	.p-home
+		position: relative
+		height: auto
+		overflow: hidden
+	#section-wrap
+		touch-action: auto!important
+		overflow-y: visible!important
+		height: auto
+	.section
+		overflow: hidden
+		position: static
+		transition: none
+		transform: translate(0, 0) !important
+		min-height: 400px
+		padding: 40px 0
+	.to-top,
+	.to-left,
+	.to-right,
+	.to-bottom
+		&:before, &:after
+			display: none!important
+
+	.section-hero
+		height: 100vh
+	.parallax-block__img-w
+		img
+			transform: translate(0, 0)!important
+	.parallax-block__more
+		margin-top: 50px
+//--- end disable section-scroll class
+
+.hero-title
+	position: relative
+	font-size: 60px
+	transform: translateZ(0px)
+	z-index: 2
+	+max-screen($notebook-width)
+		font-size: 46px
+	+max-screen($mid-tablet)
+		font-size: 40px
+	+max-screen($small-tablet)
+		font-size: 8vmin
+
+	&__link
+		display: inline-block
+		position: relative
+		&.is-active
+			&:after
+				height: 5px
+		&:after
+			display: block
+			content: ""
+			position: absolute
+			left: 0
+			bottom: 3px
+			width: 100%
+			height: 2px
+			background: $color-white
+			transition: height .3s
+
+#section-wrap
+	position: relative
+	width: 100%
+	height: 100%
+	overflow: hidden
+
+.section
+	+bg-cover
+	//height: 100vh
+	//min-height: 600px
+	//min-height: 560px
+	min-height: 500px
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	//padding: 100px 0 40px
+	padding: 120px 0 40px
+
+	display: flex
+	flex-direction: column
+	justify-content: center
+	overflow: hidden
+	&__title
+		font-size: 44px
+		text-align: center
+		margin-bottom: 75px
+		+max-screen($big-tablet)
+			font-size: 40px
+		+max-screen($small-tablet)
+			font-size: 32px
+		+max-height(680px)
+			margin-bottom: 40px
+
+	//&[data-from="bottom"]
+	//	transform: translateY(100%)
+	//&[data-from="left"]
+	//	transform: translateX(-100%)
+	//	.parallax-block__img-w img
+	//		//transform: translateX(20%)
+	//&[data-from="right"]
+	//	transform: translateX(100%)
+	//&[data-from="top"]
+
+	> .container
+		//flex: 1
+		height: 100%
+		// test align below
+		display: flex
+		flex-direction: column
+		justify-content: center
+
+	.row
+		+max-screen($notebook-width)
+			margin-left: -150px
+			margin-right: -150px
+		+max-screen($big-tablet)
+			margin-left: -75px
+			margin-right: -75px
+		+max-screen($common-tablet)
+			margin-left: -20px
+			margin-right: -20px
+	.container
+		+max-screen($notebook-width)
+			padding-left: 150px
+			padding-right: 150px
+		+max-screen($big-tablet)
+			padding-left: 75px
+			padding-right: 75px
+		+max-screen($common-tablet)
+			padding-left: 20px
+			padding-right: 20px
+
+
+.section-hero
+	background-image: url("../img/slide-hero.jpg")
+	color: $color-white
+	z-index: 1
+	&:before
+		display: block
+		content: ""
+		opacity: 0
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background: rgba(0, 0, 0, 0.4)
+		transition: opacity .2s
+		z-index: 1
+	&--overlay:before
+		opacity: 1
+	&__bg
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		img
+			+object-fit(cover)
+			width: 100%
+			height: 100%
+	.row
+		display: flex
+		align-items: center
+		height: 100%
+
+.section-design
+
+.section-repair-house
+
+.section-repair-house
+
+.section-repair-office
+
+.section-house-build
+
+.section-projects
+	.projects-stack
+		+max-screen($smartphone-landscape)
+			display: none
+		.project-card
+			height: 100%
+			.project-card__img-w
+				height: 100%
+				img
+					+object-fit(cover)
+					width: 100%
+					height: 100%
+		.project-card--sm
+			height: calc(50% - 13px)
+			.project-card__title
+				+max-height(790px)
+					font-size: 20px
+
+.slider-projects
+	display: none
+	+max-screen($smartphone-landscape)
+		display: block
+
+.section-feedback
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	padding-bottom: 0!important
+	.section__title
+		+max-screen($smartphone-landscape)
+			font-size: 28px
+			margin-bottom: 26px
+		+max-screen($smartphone-portrait)
+			font-size: 24px
+			margin-bottom: 20px
+
+
+	//> .container
+		height: auto
+
+.parallax-block
+	position: relative
+	height: 100%
+	+max-screen(1500px)
+		padding-left: 80px
+	+max-screen($small-tablet)
+		padding-left: 20px
+	&__img-w
+		//+make-col-offset(1)
+		//margin-left: 90px
+		height: 100%
+		overflow: hidden
+		img
+			+object-fit(cover)
+			width: 100%
+			height: 100%
+	&__text
+		position: absolute
+		top: 50%
+		//left: 0
+		left: -90px
+		transform: translateY(-50%) translateZ(0px)
+		z-index: 100
+		+max-screen(1500px)
+			left: 0
+	&__title
+		position: relative
+		font-size: 60px
+		max-width: 640px
+		text-transform: uppercase
+		+max-screen($big-tablet)
+			font-size: 48px
+		+max-screen($small-tablet)
+			font-size: 40px
+		+max-screen($smartphone-landscape)
+			font-size: 7vmin
+
+		&.to-top
+			&:after
+				+b
+				bottom: 100%
+				left: 0
+				width: 2px
+				height: 10000px
+				background: $color-black
+	&__subtitle
+		max-width: 640px
+		margin-top: 70px
+		+max-screen($smartphone-landscape)
+			margin-top: 40px
+			font-size: 5vmin
+			min-height: 90px // test
+	&__more
+		position: relative
+		display: inline-block
+		font-family: "geo-bold"
+		text-transform: uppercase
+		margin-top: 100px
+		transition: transform .3s ease-in-out
+		&:hover, &:focus
+			transform: translateX(20px)
+		+max-screen($smartphone-landscape)
+			margin-top: 60px
+		&.to-left
+			&:before
+				+b
+				top: calc(50% - 2px)
+				right: calc(100% + 12px)
+				width: 1000px
+				height: 2px
+				background: $color-black
+		&.to-right
+			&:before
+				+b
+				top: calc(50% - 2px)
+				left: calc(100% + 12px)
+				width: 4000px
+				height: 2px
+				background: $color-black
+		&.to-bottom
+			&:after
+				transition: transform .3s ease-in-out
+				transform: translateX(0px)
+			&:hover, &:focus
+				&:after
+					transform: translateX(-20px)
+			&:after
+				+b
+				top: 100%
+				left: 0
+				width: 2px
+				height: 10000px
+				background: $color-black
+		&.to-top
+			&:after
+				+b
+				bottom: 100%
+				left: 0
+				width: 2px
+				height: 10000px
+				background: $color-black
+
+.projects-all
+	margin-top: 75px
+	+max-height(680px)
+		display: none
+		//margin-top: 40px
+	&__btn
+
+.OVERLAY
+	background: whitesmoke
+	z-index: 10000
+	transform: translate(0%, 0%) !important
+	//height: auto
+	overflow: scroll
+	//height: 140vh
+
+.home-nav
+	position: fixed
+	top: 50%
+	transform: translateY(-50%)
+	right: 10px
+	//right: 0
+	z-index: 3
+	border-color: $color-white
+	+max-screen($common-tablet)
+		display: none
+
+	+max-screen($small-tablet)
+		right: 0
+	&__item
+		position: relative
+		width: 40px
+		height: 40px
+		box-sizing: content-box
+		cursor: pointer
+		border-color: inherit
+		+max-screen($small-tablet)
+			width: 20px
+		&.is-active
+			&:before
+				width: 8px
+				height: 8px
+		&:before
+			+centre(both)
+			display: inline-block
+			content: ""
+			border-width: 2px
+			border-style: solid
+			border-color: inherit
+			width: 0
+			height: 0
+			transition: all .2s ease-in
+
+.scroll-down
+	position: absolute
+	left: 50%
+	transform: translateX(-50%) translateZ(0px)
+	bottom: 0
+	display: flex
+	flex-direction: column
+	align-items: center
+	z-index: 2
+	&__caption
+		text-align: center
+		font-family: "geo-bold"
+		font-size: 12px
+		color: $color-white
+		text-transform: uppercase
+		margin-bottom: 15px
+	&__line
+		margin: 0 auto
+		width: 2px
+		height: 90px
+		background: $color-white
+		+max-screen($mid-tablet)
+			height: 30px
+
+
+// hover right-bar
+.hero-panel
+	opacity: 0
+	//position: absolute
+	position: fixed
+	right: 0
+	top: 0
+	width: 420px
+	height: 100%
+	z-index: 10
+	background: $color-gallery
+	transform: translateX(100%)
+	+max-screen($common-tablet)
+		display: none
+	&__inner
+		height: 100%
+	&__list
+		height: 100%
+		display: flex
+		flex-direction: column
+		justify-content: center
+		li
+			position: relative
+			height: 25%
+			max-height: 270px
+			.project-card,
+			.project-card__img-w
+				height: 100%
+				img
+					+object-fit(cover)
+					width: 420px
+					height: 100%
+

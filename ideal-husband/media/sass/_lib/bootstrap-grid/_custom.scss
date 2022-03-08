@@ -1,0 +1,28 @@
+// For override remove flag !default
+
+$grid-breakpoints: (
+	xs: 0,
+	sp: 381px,
+	sl: 481px,
+	sm: 576px,
+	md: 769px,
+	lg: 992px,
+	xl: 1200px
+);
+
+$container-max-widths: (
+	sm: 540px,
+	md: 720px,
+	lg: 960px,
+	xl: 1140px
+);
+
+$grid-gutter-width-base: 40px;
+/*$grid-gutter-widths: (
+	xs: $grid-gutter-width-base,
+	sm: $grid-gutter-width-base,
+	md: $grid-gutter-width-base,
+	lg: $grid-gutter-width-base,
+	xl: $grid-gutter-width-base
+);*/
+

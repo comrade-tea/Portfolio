@@ -1,0 +1,29 @@
+extends layout/master
+
+block title
+	title catalog
+block content
+	div.p-catalog
+		+pageHead("Catalog")
+
+		div.container
+			div.slick(data-slick='{"dots": true, "arrows": false}')
+				- for(var x = 0; x < 3; x++)
+					div.slick__slide
+						div.card-sale.d-flex.no-gutters
+							div.card-sale__img-w
+								// 2 вида баджей(.badge--border, .badge-bg), или без него
+								div.card-sale__badge.badge.badge--border best seller
+								img(src="media/img/card-sale.jpg" alt="")
+
+							div.card-sale__info
+								h2.card-sale__title Highroller Pink
+								div.card-sale__text.h2-like.clr-grey.
+									All exercise positions are so easy to learn and maintain that you will be able to roll deep muscles effectively.
+								div.card-sale__prices
+									div.old $150
+									div.new $99.99
+								a.card-sale__btn.btn.btn--blob.btn--lg(href="#") SALE NOW
+
+		include static-blocks/b-tiles
+		include static-blocks/b-subscribe

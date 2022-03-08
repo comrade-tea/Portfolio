@@ -1,0 +1,44 @@
+extends master/master
+
+block title
+	title projects
+block content
+	div.p-projects
+		+pageHead("Проекты", true)
+			div.projects-filter
+				a.projects-filter__item.projects-filter__item--current(href="#") все
+				span.projects-filter__separ /
+				a.projects-filter__item(href="#") ремонт квартир и домов
+				span.projects-filter__separ /
+				a.projects-filter__item(href="#") ремонт офисов
+				span.projects-filter__separ /
+				a.projects-filter__item(href="#") строительство домов
+
+		div.block.pb-sm
+			div.container
+				//- 1
+				include static-blocks/projects-stack
+				//- 2
+				div.projects-stack
+					div.projects-stack__col
+						a.project-card.project-card--sm(href="#")
+							div.project-card__img-w: img(src="media/img/project-grid-sm-1.png" alt="")
+							div.project-card__decor
+							div.project-card__text
+								div.project-card__title Квартира в стиле минимализм
+								div.project-card__subtitle Москва, Айвазовского, 7
+
+						a.project-card.project-card--sm(href="#")
+							div.project-card__img-w: img(src="media/img/project-grid-sm-2.png" alt="")
+							div.project-card__decor
+							div.project-card__text
+								div.project-card__title Квартира в стиле минимализм
+								div.project-card__subtitle Москва, Айвазовского, 7
+
+					div.projects-stack__col.projects-stack__col--lg
+						a.project-card.project-card--white-text(href="#")
+							div.project-card__img-w: img(src="media/img/project-grid-lg.png" alt="")
+							div.project-card__decor
+							div.project-card__text
+								div.project-card__title Квартира в стиле минимализм
+								div.project-card__subtitle Москва, Айвазовского, 7

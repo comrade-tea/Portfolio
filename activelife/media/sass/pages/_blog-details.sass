@@ -1,0 +1,23 @@
+.p-blog-details
+
+.article
+	max-width: 700px
+	margin: 0 auto
+
+.article-info
+	display: flex
+	padding: 20px 24px
+	border-left: 1px solid #7d7d7d
+	margin-bottom: 70px
+	div:not(:last-child)
+		&:after
+			display: inline-block
+			content: "|"
+			margin: 0 6px
+	&__date
+		color: $color-text-grey
+	&__author
+		color: $color-text-grey
+	&__tags
+		color: $color-main
+

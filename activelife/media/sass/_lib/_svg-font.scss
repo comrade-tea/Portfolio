@@ -1,0 +1,175 @@
+@font-face {
+  font-family: "gulp-svg-font";
+  src: url('../../media/fonts/svg-font/gulp-svg-font.eot');
+  src: url('../../media/fonts/svg-font/gulp-svg-font.eot?#iefix') format('eot'),
+  url('../../media/fonts/svg-font/gulp-svg-font.woff') format('woff'),
+  url('../../media/fonts/svg-font/gulp-svg-font.ttf') format('truetype'),
+  url('../../media/fonts/svg-font/gulp-svg-font.svg#gulp-svg-font') format('svg');
+}
+
+@mixin icon-styles {
+  font-family: "gulp-svg-font";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  // speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+  text-decoration: none;
+  text-transform: none;
+}
+
+%icon {
+  @include icon-styles;
+}
+
+@function icon-char($filename) {
+  $char: "";
+
+  @if $filename == arrow {
+  $char: "\E001";
+}
+  @if $filename == cart {
+  $char: "\E002";
+}
+  @if $filename == close {
+  $char: "\E003";
+}
+  @if $filename == download {
+  $char: "\E004";
+}
+  @if $filename == footer-payment-logo-01 {
+  $char: "\E005";
+}
+  @if $filename == footer-payment-logo-02 {
+  $char: "\E006";
+}
+  @if $filename == footer-payment-logo-03 {
+  $char: "\E007";
+}
+  @if $filename == footer-payment-logo-04 {
+  $char: "\E008";
+}
+  @if $filename == log-in-with-fb {
+  $char: "\E009";
+}
+  @if $filename == log-in-with-google-plus {
+  $char: "\E00A";
+}
+  @if $filename == log-in-with-twitter {
+  $char: "\E00B";
+}
+  @if $filename == login {
+  $char: "\E00C";
+}
+  @if $filename == menu {
+  $char: "\E00D";
+}
+  @if $filename == payment-logo-01 {
+  $char: "\E00E";
+}
+  @if $filename == payment-logo-02 {
+  $char: "\E00F";
+}
+  @if $filename == payment-logo-03 {
+  $char: "\E010";
+}
+  @if $filename == payment-logo-04 {
+  $char: "\E011";
+}
+  @if $filename == play {
+  $char: "\E012";
+}
+  @if $filename == search {
+  $char: "\E013";
+}
+  @if $filename == social-icon-01-fb {
+  $char: "\E014";
+}
+  @if $filename == social-icon-02-tw {
+  $char: "\E015";
+}
+  @if $filename == social-icon-03-pin {
+  $char: "\E016";
+}
+
+@return $char;
+}
+
+@mixin icon($filename, $insert: before, $extend: true) {
+&:#{$insert} {
+  @if $extend {
+    @extend %icon;
+  } @else {
+    @include icon-styles;
+  }
+  content: icon-char($filename);
+}
+}
+
+.icon-arrow {
+  @include icon(arrow);
+}
+.icon-cart {
+  @include icon(cart);
+}
+.icon-close {
+  @include icon(close);
+}
+.icon-download {
+  @include icon(download);
+}
+.icon-footer-payment-logo-01 {
+  @include icon(footer-payment-logo-01);
+}
+.icon-footer-payment-logo-02 {
+  @include icon(footer-payment-logo-02);
+}
+.icon-footer-payment-logo-03 {
+  @include icon(footer-payment-logo-03);
+}
+.icon-footer-payment-logo-04 {
+  @include icon(footer-payment-logo-04);
+}
+.icon-log-in-with-fb {
+  @include icon(log-in-with-fb);
+}
+.icon-log-in-with-google-plus {
+  @include icon(log-in-with-google-plus);
+}
+.icon-log-in-with-twitter {
+  @include icon(log-in-with-twitter);
+}
+.icon-login {
+  @include icon(login);
+}
+.icon-menu {
+  @include icon(menu);
+}
+.icon-payment-logo-01 {
+  @include icon(payment-logo-01);
+}
+.icon-payment-logo-02 {
+  @include icon(payment-logo-02);
+}
+.icon-payment-logo-03 {
+  @include icon(payment-logo-03);
+}
+.icon-payment-logo-04 {
+  @include icon(payment-logo-04);
+}
+.icon-play {
+  @include icon(play);
+}
+.icon-search {
+  @include icon(search);
+}
+.icon-social-icon-01-fb {
+  @include icon(social-icon-01-fb);
+}
+.icon-social-icon-02-tw {
+  @include icon(social-icon-02-tw);
+}
+.icon-social-icon-03-pin {
+  @include icon(social-icon-03-pin);
+}

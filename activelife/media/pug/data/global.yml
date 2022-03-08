@@ -1,0 +1,24 @@
+# variable
+name: vasil
+
+# array
+skills:
+  - html
+  - css
+  - js
+
+# object key: value
+size:
+  width: 40px
+  height: 41px
+
+# array of objects
+cards:
+  -
+    title: first title
+    text: lorem lorem lorem
+    img: logo.png
+  -
+    title: second title
+    text: lorem-2 lorem-2 lorem-2
+    img: logo.png

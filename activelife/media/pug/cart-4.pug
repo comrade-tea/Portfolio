@@ -1,0 +1,28 @@
+extends layout/master
+
+block title
+	title cart-3
+block content
+	div.p-cart
+		+pageHead("Cart")
+
+		div.container-lg
+			div.cart-success
+				div.cart-success__info.block-bb
+					h2 Your order is successfully paid
+
+					p Order #[b №002-999-346] from #[b 20/01/2018]
+					p.
+						We will contact you soon for further details. Thank you for your purchase!<br/>
+						Kind regards, Active Life Solutions team.
+
+				div.cart-success__addition
+					a.btn.btn--blob(href="#") Continue shopping
+
+					p Your voice is very important for us!
+
+					include static-blocks/b-share
+
+
+
+		//- include static-blocks/b-subscribe

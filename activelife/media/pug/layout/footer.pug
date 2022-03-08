@@ -1,0 +1,33 @@
+footer.footer
+	div.footer-top
+		div.footer-top__inner.container
+			div.footer-nav.row
+				- for(var x = 0; x < 3; x++)
+					div.footer-nav__col.col-6.col-md-3
+						div.footer-nav__title: a(href="#") CUSTOMER SUPPORT
+						div.footer-nav__item: a(href="#") Shipping & payment
+						div.footer-nav__item: a(href="#") Sale & discounts
+						div.footer-nav__item: a(href="#") Refund Policy
+						div.footer-nav__item: a(href="#") Terms of Service
+						div.footer-nav__item: a(href="#") Returns & Replacements
+
+				div.footer-nav__col.col.col-6.col-md-3
+					div.footer-nav__title: a(href="#") GET IN TOUCH
+					div.footer-nav__item: a(href="#") About
+					div.footer-nav__item: a(href="#") Blog
+					div.footer-nav__item info@activelifeusa.com
+
+					include ../static-blocks/b-share
+
+
+
+	div.footer-bot
+		div.footer-bot__inner.container
+			div.row
+				div.footer-bot__copyright.col-md-3 © 2017 ActiveLifeSolutions
+				div.footer-bot__payment.col-md-3
+					- for (var i = 1; i <= 4; ++i)
+						div: img(src=`media/svg/footer-payment-logo-0${i}.svg` alt="")
+
+				div.footer-bot__dev.col-md-3.push-3.text-right
+					a(href="#" class="") developed by dotorg

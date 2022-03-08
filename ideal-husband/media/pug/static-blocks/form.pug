@@ -1,0 +1,12 @@
+form.form(action="/")
+	div.form__field-group
+		div.form__field
+			input.input-default(data-val="true" name="Name" data-val-required="" type="text" placeholder="Ваше имя")
+		div.form__field
+			input.input-default(data-val="true" name="Email" data-val-required="" data-val-email type="Email" placeholder="E-mail")
+		div.form__field.is-textarea
+			textarea.input-default(name="Message" placeholder="Ваше сообщение")
+
+	div.form__caption Я отвечу вам в течение дня, в зависимости от разницы во времени.
+
+	button.form__submit.btn(type="submit") ОТПРАВИТЬ
